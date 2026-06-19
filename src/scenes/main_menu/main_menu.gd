@@ -16,9 +16,8 @@ func opcoes():
 	quit.disabled = settings_menu.visible
 
 func _on_play_pressed() -> void:
-	pass
-	#SceneManager.change_scene(self, "cutscene")
-	#audio_stream_player.stop()
+	SceneManager.change_scene(self, "initial_scene")
+	audio_stream_player.stop()
 
 func _on_options_pressed() -> void:
 	settings_menu.visible = true

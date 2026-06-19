@@ -7,7 +7,7 @@ var trigger_name: String
 
 var scene_dir_path = "res://src/scenes/"
 
-@onready var pause_menu = preload("res://src/scenes/pause_menu/pause_menu.tscn").instantiate()
+#@onready var pause_menu = preload("res://src/scenes/pause_menu/pause_menu.tscn").instantiate()
 
 @onready var transition_effect: ColorRect = $transition_effect
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -40,8 +40,9 @@ func pop_scene():
 	get_tree().current_scene = last
 
 func _ready():
-	add_child(pause_menu)
-	pause_menu.visible = false
+	pass
+	#add_child(pause_menu)
+	#pause_menu.visible = false
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -51,7 +52,7 @@ func _input(event):
 
 func toggle_pause():
 	get_tree().paused = !get_tree().paused
-	pause_menu.visible = get_tree().paused
+	#pause_menu.visible = get_tree().paused
 
 func change_scene(from, to_scene_name: String, transicao: bool = true, detailed: bool = false) -> void:
 	var full_path: String
@@ -60,17 +61,17 @@ func change_scene(from, to_scene_name: String, transicao: bool = true, detailed:
 	else:
 		full_path = scene_dir_path + to_scene_name +"/"+to_scene_name+".tscn"
 	
-	if from is BaseScene:
-		player = from.player
-		player.get_parent().remove_child(player)
+	#if from is BaseScene:
+		#player = from.player
+		#player.get_parent().remove_child(player)
 	
-	if transicao:
-		animation_player.play("carimbo_in")
-		await animation_player.animation_finished
+	#if transicao:
+		#animation_player.play("transition_in")
+		#await animation_player.animation_finished
 	
 	from.get_tree().call_deferred("change_scene_to_file", full_path)
-	if transicao:
-		animation_player.play("carimbo_out")
+	#if transicao:
+		#animation_player.play("transition_out")
 
 func change_scene_circle(from, to_scene_name: String):
 	circle.visible = true

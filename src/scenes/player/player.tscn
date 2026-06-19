@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://dfe13b5urbx78"]
+
+[ext_resource type="Texture2D" uid="uid://bjng6ic6x6k0h" path="res://assets/characters/player/player_spritesheet.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://b1ss58mewhddj" path="res://src/scenes/player/player.gd" id="1_qopur"]
+
+[sub_resource type="Animation" id="Animation_8afob"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [18]
+}
+
+[sub_resource type="Animation" id="Animation_qopur"]
+resource_name = "scream"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(1, 4), Vector2i(0, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_n52bt"]
+resource_name = "sleeping"
+length = 1.3333334
+loop_mode = 1
+step = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_dovo2"]
+resource_name = "new_animation"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.049999997, 0.25, 0.45, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3), Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gmlin"]
+resource_name = "walk_left"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.049999997, 0.25, 0.45, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(2, 0), Vector2i(2, 1), Vector2i(2, 2), Vector2i(2, 3), Vector2i(2, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lvxji"]
+resource_name = "walk_right"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.049999997, 0.25, 0.45, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(3, 0), Vector2i(3, 1), Vector2i(3, 2), Vector2i(3, 3), Vector2i(3, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p47bc"]
+resource_name = "walk_up"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.049999997, 0.25, 0.45, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(1, 0), Vector2i(1, 1), Vector2i(1, 2), Vector2i(1, 3), Vector2i(1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_75vfm"]
+_data = {
+&"RESET": SubResource("Animation_8afob"),
+&"scream": SubResource("Animation_qopur"),
+&"sleeping": SubResource("Animation_n52bt"),
+&"walk_down": SubResource("Animation_dovo2"),
+&"walk_left": SubResource("Animation_gmlin"),
+&"walk_right": SubResource("Animation_lvxji"),
+&"walk_up": SubResource("Animation_p47bc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
+size = Vector2(31, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(31, 30)
+
+[node name="Player" type="CharacterBody2D" unique_id=1008942108]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 9
+script = ExtResource("1_qopur")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1033950022]
+texture_filter = 1
+position = Vector2(0, 1)
+texture = ExtResource("1_8afob")
+offset = Vector2(0, -16)
+hframes = 4
+vframes = 7
+frame = 18
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=859538809]
+libraries/ = SubResource("AnimationLibrary_75vfm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1678011557]
+position = Vector2(-0.5, -5.5)
+shape = SubResource("RectangleShape2D_8afob")
+
+[node name="DialogueInteractionArea" type="Area2D" parent="." unique_id=1251565482]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueInteractionArea" unique_id=156696763]
+position = Vector2(-0.5, -15)
+shape = SubResource("RectangleShape2D_dovo2")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1160226701]
+
+[connection signal="ready" from="." to="." method="_on_ready"]
