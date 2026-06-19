@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bgh6hynxcy5jk"]
+
+[ext_resource type="Texture2D" uid="uid://bo8a5yatmljyf" path="res://assets/main_menu/option_menu.png" id="1_sfrxv"]
+[ext_resource type="Script" uid="uid://dh6p52r0cj0oo" path="res://src/scenes/settings_menu/settings_menu.gd" id="2_4mek6"]
+[ext_resource type="FontFile" uid="uid://bayl34n5s6ic7" path="res://fonts/dungeon-mode.ttf" id="2_tqtwh"]
+[ext_resource type="Script" uid="uid://cr0o3usgdxlqw" path="res://src/scenes/settings_menu/soundtrack.gd" id="3_4mek6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qel0l"]
+texture = ExtResource("1_sfrxv")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2yjq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqtwh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thkx5"]
+
+[node name="settings_menu" type="Panel" unique_id=100246387]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -135.0
+offset_right = 60.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qel0l")
+script = ExtResource("2_4mek6")
+
+[node name="settings_label" type="Label" parent="." unique_id=1927367219]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 10
+text = "OPTION_MENU_TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="settings_menu" type="VBoxContainer" parent="." unique_id=1801259844]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -77.5
+offset_right = 74.5
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fullscreen_cb" type="CheckButton" parent="settings_menu" unique_id=1593495282]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x2yjq")
+text = "OPTION_MENU_FULL_SCREEN"
+
+[node name="lbl_movement" type="Label" parent="settings_menu" unique_id=1626061894]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+text = "OPTION_MENU_MOVEMENT"
+
+[node name="lbl_movement2" type="Label" parent="settings_menu" unique_id=2141086435]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+text = "  W A S D"
+
+[node name="lbl_interaction" type="Label" parent="settings_menu" unique_id=1373345014]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+text = "OPTION_MENU_INTERACTION"
+
+[node name="lbl_interaction2" type="Label" parent="settings_menu" unique_id=446054072]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+text = "OPTION_MENU_INTERACTION2"
+
+[node name="lbl_empty" type="Label" parent="settings_menu" unique_id=961220435]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 6
+
+[node name="lbl_volume" type="Label" parent="settings_menu" unique_id=937749757]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+text = "OPTION_MENU_VOLUME"
+
+[node name="Soundtrack" type="HSlider" parent="settings_menu" unique_id=2052620939]
+layout_mode = 2
+max_value = 0.1
+step = 0.001
+script = ExtResource("3_4mek6")
+bus_name = "Master"
+
+[node name="Language" type="ItemList" parent="settings_menu" unique_id=601992569]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_tqtwh")
+allow_search = false
+auto_width = true
+auto_height = true
+item_count = 2
+fixed_column_width = 100
+item_0/text = "Português (BR)"
+item_1/text = "English"
+
+[node name="close_btn" type="Button" parent="." unique_id=1922799949]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_thkx5")
+text = "OPTION_MENU_CLOSE"
+flat = true
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="toggled" from="settings_menu/fullscreen_cb" to="." method="_on_fullscreen_cb_toggled"]
+[connection signal="item_selected" from="settings_menu/Language" to="." method="_on_item_list_item_selected"]
+[connection signal="pressed" from="close_btn" to="." method="_on_close_btn_pressed"]
