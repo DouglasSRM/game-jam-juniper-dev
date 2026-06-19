@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bgh6hynxcy5jk"]
 
 [ext_resource type="Texture2D" uid="uid://bo8a5yatmljyf" path="res://assets/main_menu/option_menu.png" id="1_sfrxv"]
-[ext_resource type="Script" uid="uid://dh6p52r0cj0oo" path="res://src/scenes/settings_menu/settings_menu.gd" id="2_4mek6"]
+[ext_resource type="Script" uid="uid://26sym7k54ccy" path="res://src/scenes/settings_menu/settings_menu.gd" id="2_4mek6"]
 [ext_resource type="FontFile" uid="uid://bayl34n5s6ic7" path="res://fonts/dungeon-mode.ttf" id="2_tqtwh"]
-[ext_resource type="Script" uid="uid://cr0o3usgdxlqw" path="res://src/scenes/settings_menu/soundtrack.gd" id="3_4mek6"]
+[ext_resource type="Script" uid="uid://dboi0gk8npw25" path="res://src/scenes/settings_menu/soundtrack.gd" id="3_4mek6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qel0l"]
 texture = ExtResource("1_sfrxv")

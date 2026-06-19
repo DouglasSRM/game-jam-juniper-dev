@@ -156,17 +156,16 @@ flat = true
 
 [node name="settings_menu" parent="." unique_id=100246387 instance=ExtResource("9_5o0ss")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 90.0
-offset_top = 35.0
-offset_right = 390.0
-offset_bottom = 235.0
+offset_left = 336.0
+offset_top = 183.0
+offset_right = 803.0
+offset_bottom = 484.0
 grow_horizontal = 1
 grow_vertical = 1
 
