@@ -8,8 +8,7 @@ var trigger_name: String
 var scene_dir_path = "res://src/scenes/"
 
 #@onready var pause_menu = preload("res://src/scenes/pause_menu/pause_menu.tscn").instantiate()
-
-@onready var transition_effect: ColorRect = $transition_effect
+@onready var transition_effect: ColorRect = $TransitionEffect
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var dark_effect: ColorRect = $dark_effect
 @onready var circle: ColorRect = $circle
@@ -65,23 +64,26 @@ func change_scene(from, to_scene_name: String, transicao: bool = true, detailed:
 		#player = from.player
 		#player.get_parent().remove_child(player)
 	
-	#if transicao:
-		#animation_player.play("transition_in")
-		#await animation_player.animation_finished
+	if transicao:
+		await fade_in()
 	
 	from.get_tree().call_deferred("change_scene_to_file", full_path)
-	#if transicao:
-		#animation_player.play("transition_out")
+	if transicao:
+		await fade_out()
 
 func change_scene_circle(from, to_scene_name: String):
 	circle.visible = true
 	(circle.material as ShaderMaterial).set_shader_parameter("pos", Vector2(0.12, 0.4))
 	animation_player.play("circle_trans_in")
+	
 	await SceneManager.animation_player.animation_finished
+	
 	change_scene(from, to_scene_name, false, true)
 	(circle.material as ShaderMaterial).set_shader_parameter("pos", Vector2(0.5, 0.5))
 	animation_player.play("circle_trans_out_2")
+	
 	await SceneManager.animation_player.animation_finished
+	
 	circle.visible = false
 
 func change_scene_weep(from, to_scene_name: String):
