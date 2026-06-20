@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btwtjqlno0g88"]
 
-[ext_resource type="Script" uid="uid://bjgff8nka7rvg" path="res://src/scenes/base_character/base_character.gd" id="1_yogsp"]
+[ext_resource type="Script" uid="uid://bjgff8nka7rvg" path="res://src/objects/base_character/base_character.gd" id="1_yogsp"]
 
 [sub_resource type="Animation" id="Animation_8afob"]
 length = 0.001

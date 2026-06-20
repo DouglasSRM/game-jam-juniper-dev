@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfe13b5urbx78"]
 
 [ext_resource type="Texture2D" uid="uid://bjng6ic6x6k0h" path="res://assets/characters/player/player_spritesheet.png" id="1_8afob"]
-[ext_resource type="Script" uid="uid://b1ss58mewhddj" path="res://src/scenes/player/player.gd" id="1_qopur"]
+[ext_resource type="Script" uid="uid://b1ss58mewhddj" path="res://src/objects/player/player.gd" id="1_qopur"]
 
 [sub_resource type="Animation" id="Animation_8afob"]
 length = 0.001

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bvgp7nbpgp15d"]
+
+[ext_resource type="Script" uid="uid://48yx2yp7ddra" path="res://src/scenes/base_scene/base_scene.gd" id="1_mll7d"]
+[ext_resource type="PackedScene" uid="uid://dfe13b5urbx78" path="res://src/objects/player/player.tscn" id="1_ntg1r"]
+[ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="2_trelp"]
+
+[node name="BaseScene" type="Node2D" unique_id=823413629]
+script = ExtResource("1_mll7d")
+
+[node name="EntranceMarkers" type="Node2D" parent="." unique_id=531511781]
+
+[node name="Player" parent="." unique_id=1008942108 instance=ExtResource("1_ntg1r")]
+position = Vector2(96, 160)
+speed = 100
+
+[node name="TileMaps" type="Node2D" parent="." unique_id=189077090]
+
+[node name="Ground" type="TileMapLayer" parent="TileMaps" unique_id=1266151623]
+tile_set = ExtResource("2_trelp")
+
+[node name="Wall" type="TileMapLayer" parent="TileMaps" unique_id=1506639550]
+tile_set = ExtResource("2_trelp")
+
+[node name="Interactable" type="TileMapLayer" parent="TileMaps" unique_id=744383844]
+tile_set = ExtResource("2_trelp")
+
+[node name="Dialogos" type="Node2D" parent="." unique_id=818597174]

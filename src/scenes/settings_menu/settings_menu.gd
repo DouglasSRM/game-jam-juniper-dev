@@ -4,6 +4,8 @@ extends Panel
 @onready var language: ItemList = $settings_menu/Language
 
 func _ready() -> void:
+	TranslationServer.set_locale("en")
+	
 	if (TranslationServer.get_locale() == "pt_BR"):
 		language.select(0)
 	else:
