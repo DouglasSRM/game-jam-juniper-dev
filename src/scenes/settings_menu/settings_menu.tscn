@@ -28,8 +28,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -240.0
 offset_top = -135.0
-offset_right = 60.0
-offset_bottom = 65.0
+offset_right = 260.0
+offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qel0l")
@@ -42,7 +42,7 @@ anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 14
 text = "OPTION_MENU_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -64,43 +64,43 @@ grow_vertical = 2
 [node name="fullscreen_cb" type="CheckButton" parent="settings_menu" unique_id=1593495282]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 theme_override_styles/focus = SubResource("StyleBoxEmpty_x2yjq")
 text = "OPTION_MENU_FULL_SCREEN"
 
 [node name="lbl_movement" type="Label" parent="settings_menu" unique_id=1626061894]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_MOVEMENT"
 
 [node name="lbl_movement2" type="Label" parent="settings_menu" unique_id=2141086435]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = "  W A S D"
 
 [node name="lbl_interaction" type="Label" parent="settings_menu" unique_id=1373345014]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_INTERACTION"
 
 [node name="lbl_interaction2" type="Label" parent="settings_menu" unique_id=446054072]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_INTERACTION2"
 
 [node name="lbl_empty" type="Label" parent="settings_menu" unique_id=961220435]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 12
 
 [node name="lbl_volume" type="Label" parent="settings_menu" unique_id=937749757]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_VOLUME"
 
 [node name="Soundtrack" type="HSlider" parent="settings_menu" unique_id=2052620939]
@@ -114,13 +114,13 @@ bus_name = "Master"
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 theme_override_styles/panel = SubResource("StyleBoxFlat_tqtwh")
 allow_search = false
 auto_width = true
 auto_height = true
+text_overrun_behavior = 0
 item_count = 2
-fixed_column_width = 100
 item_0/text = "Português (BR)"
 item_1/text = "English"
 
@@ -136,7 +136,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 14
 theme_override_styles/focus = SubResource("StyleBoxEmpty_thkx5")
 text = "OPTION_MENU_CLOSE"
 flat = true
