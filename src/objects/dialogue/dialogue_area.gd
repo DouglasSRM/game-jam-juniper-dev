@@ -4,7 +4,7 @@ const dialogue_system_preload = preload("res://src/objects/dialogue/dialogue_sys
 
 @export var activate_instant: bool
 @export var only_activate_once: bool
-@export var trava_o_player: bool = false
+@export var lock_player: bool = false
 @export var override_dialogue_position: bool
 @export var override_position: Vector2
 @export var dialogue: Array[DE]
@@ -43,7 +43,7 @@ func set_player_reference():
 		player_node = i
 
 func _activate_dialogue() -> void: 
-	if player_node and trava_o_player:
+	if player_node and lock_player:
 		player_node.can_move = false
 	
 	var new_dialogue: DialogueSystem = dialogue_system_preload.instantiate()
@@ -57,7 +57,7 @@ func _activate_dialogue() -> void:
 		desired_dialogue_pos = dialogue_bottom_pos
 	new_dialogue.global_position = self.desired_dialogue_pos
 	new_dialogue.dialogue        = self.dialogue
-	new_dialogue.trava_o_player  = self.trava_o_player
+	new_dialogue.lock_player     = self.lock_player
 	get_parent().add_child(new_dialogue)
 	#push_font_size(10) #.get_font_list)
 	new_dialogue.dialogue_finished.connect(Callable(self, '_on_dialogue_finished'))

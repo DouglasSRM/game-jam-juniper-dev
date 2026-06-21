@@ -12,7 +12,7 @@ const dialogue_button_preload = preload("res://src/objects/dialogue/dialogue_but
 var dialogue: Array[DE]
 var current_dialogue_item: int = 0
 var next_item: bool = true
-var trava_o_player: bool = false
+var lock_player: bool = false
 
 var player_node: Player
 
@@ -21,7 +21,7 @@ signal dialogue_finished
 func _ready() -> void:
 	visible = false
 	button_container.visible = false
-	if trava_o_player:
+	if lock_player:
 		set_player_reference()
 
 func set_player_reference():
@@ -30,12 +30,12 @@ func set_player_reference():
 
 func _process(_delta: float) -> void:
 	if current_dialogue_item == dialogue.size(): # Checa se é o ultimo item do array
-		if !player_node and trava_o_player:
+		if !player_node and lock_player:
 			set_player_reference()
 			return
 		
 		dialogue_finished.emit()
-		if player_node and trava_o_player:
+		if player_node and lock_player:
 			player_node.can_move = true
 		queue_free()
 		return
