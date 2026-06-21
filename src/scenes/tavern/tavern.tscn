@@ -34,18 +34,18 @@ theme_override_fonts/font = ExtResource("3_jqwga")
 theme_override_font_sizes/font_size = 32
 text = "dungeon aqui"
 
-[node name="Interactable" parent="." index="6" unique_id=689924629 instance=ExtResource("4_acua5")]
+[node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(829600880) index="0" unique_id=689924629 instance=ExtResource("4_acua5")]
 position = Vector2(1083, 298)
 function_call = "go_to_next_scene"
 
-[node name="CollisionShape2D" parent="Interactable" index="0" unique_id=1559650857]
+[node name="CollisionShape2D" parent="Interactables/Interactable" index="0" unique_id=1559650857]
 position = Vector2(-3, -2)
 shape = SubResource("RectangleShape2D_3g3of")
 
-[node name="KeyHint" parent="Interactable" index="1" unique_id=316488180]
+[node name="KeyHint" parent="Interactables/Interactable" index="1" unique_id=316488180]
 offset_left = 5.0
 offset_top = -23.0
 offset_right = 18.0
 offset_bottom = -10.0
 
-[editable path="Interactable"]
+[editable path="Interactables/Interactable"]

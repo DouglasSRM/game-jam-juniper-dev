@@ -10,8 +10,10 @@ func _on_ready() -> void:
 
 func _input(event):
 	if function_call and area_active and event.is_action_pressed("ui_accept"):
-		if self.owner.has_method(function_call):
-			self.owner.call(function_call)
+		var scene_root = get_tree().current_scene
+		
+		if scene_root.has_method(function_call):
+			scene_root.call(function_call)
 
 func _on_area_entered(_area: Area2D) -> void:
 	if self.visible:

@@ -25,3 +25,5 @@ tile_set = ExtResource("2_trelp")
 tile_set = ExtResource("2_trelp")
 
 [node name="Dialogos" type="Node2D" parent="." unique_id=818597174]
+
+[node name="Interactables" type="Node2D" parent="." unique_id=829600880]
