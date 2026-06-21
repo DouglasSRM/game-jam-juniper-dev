@@ -4,7 +4,7 @@
 [ext_resource type="Shader" uid="uid://bqmri57k5jl58" path="res://src/post_processing_effects/horizontal_weep_transition.gdshader" id="2_1hwvu"]
 [ext_resource type="Texture2D" uid="uid://bo8a5yatmljyf" path="res://assets/main_menu/option_menu.png" id="3_1hwvu"]
 [ext_resource type="Shader" uid="uid://1ayvxryu4ig2" path="res://src/post_processing_effects/escuro.gdshader" id="4_k57hb"]
-[ext_resource type="Shader" uid="uid://d2y7766vs02w0" path="res://src/post_processing_effects/circle_transition.gdshader" id="5_5djx3"]
+[ext_resource type="Shader" uid="uid://df3s4d4veed8l" path="res://src/post_processing_effects/vignette.gdshader" id="5_5djx3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mbrwa"]
 shader = ExtResource("2_1hwvu")
@@ -210,10 +210,9 @@ shader_parameter/color = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tvm3g"]
 shader = ExtResource("5_5djx3")
-shader_parameter/circle_size = 0.16800000798
-shader_parameter/screen_width = 480.0
-shader_parameter/screen_height = 270.0
-shader_parameter/pos = Vector2(0.12, 0.4)
+shader_parameter/alpha = 0.5
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 2.0
 
 [node name="SceneManager" type="CanvasLayer" unique_id=1913475169]
 process_mode = 3
@@ -258,4 +257,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+
+[node name="vignette" type="ColorRect" parent="." unique_id=2095832655]
+visible = false
+material = SubResource("ShaderMaterial_tvm3g")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 color = Color(0.033853278, 0.033853278, 0.033853274, 1)

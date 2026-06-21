@@ -1,116 +1,152 @@
 [gd_scene format=3 uid="uid://bgh6hynxcy5jk"]
 
-[ext_resource type="Texture2D" uid="uid://bo8a5yatmljyf" path="res://assets/main_menu/option_menu.png" id="1_sfrxv"]
 [ext_resource type="Script" uid="uid://26sym7k54ccy" path="res://src/scenes/settings_menu/settings_menu.gd" id="2_4mek6"]
 [ext_resource type="FontFile" uid="uid://bayl34n5s6ic7" path="res://fonts/dungeon-mode.ttf" id="2_tqtwh"]
 [ext_resource type="Script" uid="uid://dboi0gk8npw25" path="res://src/scenes/settings_menu/soundtrack.gd" id="3_4mek6"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qel0l"]
-texture = ExtResource("1_sfrxv")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cq2hn"]
+bg_color = Color(0.56078434, 0.3019608, 0.34117648, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+corner_detail = 1
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2yjq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvw3h"]
+bg_color = Color(0.56078434, 0.3019608, 0.34117648, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.7411765, 0.41568628, 0.38431373, 0)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqtwh"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
+bg_color = Color(0.7411765, 0.41568628, 0.38431373, 1)
+border_color = Color(0.7411765, 0.41568628, 0.38431373, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thkx5"]
 
 [node name="settings_menu" type="Panel" unique_id=100246387]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -240.0
-offset_top = -135.0
-offset_right = 260.0
-offset_bottom = 185.0
+offset_left = -320.0
+offset_top = -289.0
+offset_right = 320.0
+offset_bottom = 289.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_qel0l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cq2hn")
 script = ExtResource("2_4mek6")
 
 [node name="settings_label" type="Label" parent="." unique_id=1927367219]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_bottom = 98.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 32
 text = "OPTION_MENU_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="settings_menu" type="VBoxContainer" parent="." unique_id=1801259844]
+[node name="InnerSquare" type="Panel" parent="." unique_id=576122354]
+custom_minimum_size = Vector2(400, 360)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.5
-offset_top = -77.5
-offset_right = 74.5
-offset_bottom = 72.5
+offset_left = -279.0
+offset_top = -180.0
+offset_right = 279.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dvw3h")
+
+[node name="VContainer" type="VBoxContainer" parent="InnerSquare" unique_id=1801259844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 15.0
+offset_right = -8.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="fullscreen_cb" type="CheckButton" parent="settings_menu" unique_id=1593495282]
+[node name="fullscreen_cb" type="CheckButton" parent="InnerSquare/VContainer" unique_id=1593495282]
 layout_mode = 2
+offset_transform_enabled = true
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 12
-theme_override_styles/focus = SubResource("StyleBoxEmpty_x2yjq")
+theme_override_font_sizes/font_size = 24
 text = "OPTION_MENU_FULL_SCREEN"
+text_overrun_behavior = 2
+autowrap_trim_flags = 192
 
-[node name="lbl_movement" type="Label" parent="settings_menu" unique_id=1626061894]
+[node name="lbl_movement" type="Label" parent="InnerSquare/VContainer" unique_id=1626061894]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_MOVEMENT"
 
-[node name="lbl_movement2" type="Label" parent="settings_menu" unique_id=2141086435]
+[node name="lbl_movement2" type="Label" parent="InnerSquare/VContainer" unique_id=2141086435]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 text = "  W A S D"
 
-[node name="lbl_interaction" type="Label" parent="settings_menu" unique_id=1373345014]
+[node name="lbl_interaction" type="Label" parent="InnerSquare/VContainer" unique_id=1373345014]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_INTERACTION"
 
-[node name="lbl_interaction2" type="Label" parent="settings_menu" unique_id=446054072]
+[node name="lbl_interaction2" type="Label" parent="InnerSquare/VContainer" unique_id=446054072]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_INTERACTION2"
 
-[node name="lbl_empty" type="Label" parent="settings_menu" unique_id=961220435]
+[node name="lbl_empty" type="Label" parent="InnerSquare/VContainer" unique_id=961220435]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 
-[node name="lbl_volume" type="Label" parent="settings_menu" unique_id=937749757]
+[node name="lbl_volume" type="Label" parent="InnerSquare/VContainer" unique_id=937749757]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 text = "OPTION_MENU_VOLUME"
 
-[node name="Soundtrack" type="HSlider" parent="settings_menu" unique_id=2052620939]
+[node name="Soundtrack" type="HSlider" parent="InnerSquare/VContainer" unique_id=2052620939]
 layout_mode = 2
 max_value = 0.1
 step = 0.001
 script = ExtResource("3_4mek6")
 bus_name = "Master"
 
-[node name="Language" type="ItemList" parent="settings_menu" unique_id=601992569]
+[node name="Language" type="ItemList" parent="InnerSquare/VContainer" unique_id=601992569]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_tqtwh")
@@ -131,17 +167,17 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -34.0
+offset_top = -98.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_thkx5")
 text = "OPTION_MENU_CLOSE"
 flat = true
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="toggled" from="settings_menu/fullscreen_cb" to="." method="_on_fullscreen_cb_toggled"]
-[connection signal="item_selected" from="settings_menu/Language" to="." method="_on_item_list_item_selected"]
+[connection signal="toggled" from="InnerSquare/VContainer/fullscreen_cb" to="." method="_on_fullscreen_cb_toggled"]
+[connection signal="item_selected" from="InnerSquare/VContainer/Language" to="." method="_on_item_list_item_selected"]
 [connection signal="pressed" from="close_btn" to="." method="_on_close_btn_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl4ttmrokf3ef"
-path="res://.godot/imported/capa jogo.png-a29926db3d933fac21c5fa154e66471d.ctex"
+uid="uid://br1p4chsd78mh"
+path="res://.godot/imported/pendulum.png-9693b896e96074bb380c84778be0dede.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main_menu/capa jogo.png"
-dest_files=["res://.godot/imported/capa jogo.png-a29926db3d933fac21c5fa154e66471d.ctex"]
+source_file="res://assets/main_menu/pendulum.png"
+dest_files=["res://.godot/imported/pendulum.png-9693b896e96074bb380c84778be0dede.ctex"]
 
 [params]
 

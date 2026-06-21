@@ -1,18 +1,18 @@
 extends Panel
 
-@onready var fullscreen_cb: CheckButton = $settings_menu/fullscreen_cb
-@onready var language: ItemList = $settings_menu/Language
+@onready var fullscreen_cb: CheckButton = $InnerSquare/VContainer/fullscreen_cb
+@onready var language: ItemList = $InnerSquare/VContainer/Language
 
 func _ready() -> void:
 	TranslationServer.set_locale("en")
-	
+
 	if (TranslationServer.get_locale() == "pt_BR"):
 		language.select(0)
 	else:
 		language.select(1)
 
 func _on_fullscreen_cb_toggled(toggled_on: bool) -> void:
-	var window_mode: DisplayServer.WindowMode = DisplayServer.WINDOW_MODE_FULLSCREEN if toggled_on else DisplayServer.WINDOW_MODE_WINDOWED  
+	var window_mode: DisplayServer.WindowMode = DisplayServer.WINDOW_MODE_FULLSCREEN if toggled_on else DisplayServer.WINDOW_MODE_WINDOWED
 	DisplayServer.window_set_mode(window_mode)
 
 
@@ -27,7 +27,7 @@ func _on_visibility_changed() -> void:
 
 func _on_item_list_item_selected(index: int) -> void:
 	match index:
-		0: 
+		0:
 			TranslationServer.set_locale("pt_BR")
 			Global.dialogue_directory = "res://data/dialogues/dialogues_pt.json"
 		1:
