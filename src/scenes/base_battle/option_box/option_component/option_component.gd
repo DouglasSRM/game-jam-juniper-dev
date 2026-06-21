@@ -1,6 +1,6 @@
 class_name OptionComponent extends Node2D
 
-const option_box_preload = preload("res://src/scenes/base_battle/option_box/option_box.tscn")
+const option_container_preload = preload("res://src/scenes/base_battle/option_box/option_container.tscn")
 
 @export var activate_instant: bool
 @export var only_activate_once: bool
@@ -10,7 +10,7 @@ const option_box_preload = preload("res://src/scenes/base_battle/option_box/opti
 @export var override_option_size: bool
 @export var override_size: Vector2
 @export var options: Array[OptionExport]
-@export var orientation: OptionBox.OrientationType = OptionBox.OrientationType.HORIZONTAL
+@export var orientation: OptionContainer.OrientationType = OptionContainer.OrientationType.HORIZONTAL
 
 var option_top_pos: Vector2 = Vector2(240, 48)
 var option_bottom_pos: Vector2 = Vector2(550, 430)
@@ -33,7 +33,7 @@ func _ready():
 
 
 func activate_option_box() -> void: 
-	var new_option_box: OptionBox = option_box_preload.instantiate()
+	var new_option_box: OptionContainer = option_container_preload.instantiate()
 	
 	if override_option_position:
 		desired_option_pos = override_position

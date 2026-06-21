@@ -1,4 +1,4 @@
-class_name OptionBox extends Node2D
+class_name OptionContainer extends Node2D
 
 const option_button_preload = preload("res://src/scenes/base_battle/option_box/option_button.tscn")
 

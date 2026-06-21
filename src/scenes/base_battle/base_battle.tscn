@@ -1,62 +1,12 @@
 [gd_scene format=3 uid="uid://cqh8al5d54qgk"]
 
 [ext_resource type="Script" uid="uid://deqg8i4fcjusp" path="res://src/scenes/base_battle/base_battle.gd" id="1_v7l58"]
-[ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/scenes/base_battle/option_box/resources/option_export_resource.gd" id="2_2okdr"]
 [ext_resource type="Texture2D" uid="uid://f7tf52f4rbl1" path="res://assets/bosses/template.png" id="2_tpxyl"]
 [ext_resource type="PackedScene" uid="uid://cqkyvd2fk08d3" path="res://src/scenes/base_battle/option_box/option_component/option_component.tscn" id="2_v7l58"]
-[ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/scenes/base_battle/option_box/resources/option_function_resource.gd" id="3_tpxyl"]
-[ext_resource type="Script" uid="uid://dvqw2l4htwcuf" path="res://src/scenes/base_battle/option_box/resources/option_choice_resource.gd" id="4_qfl1a"]
+[ext_resource type="Script" uid="uid://dos3kn2cyk0a6" path="res://src/scenes/base_battle/option_box/resources/option_export_resource.gd" id="4_2okdr"]
+[ext_resource type="Resource" uid="uid://cuumxsayh7120" path="res://src/resources/battle/action_selection.tres" id="5_iig4f"]
+[ext_resource type="Resource" uid="uid://cwbb5xylvu8m4" path="res://src/resources/battle/attack_selection.tres" id="6_qfl1a"]
 [ext_resource type="PackedScene" uid="uid://dsbvolwejgyty" path="res://src/scenes/base_battle/player_frame.tscn" id="7_qfl1a"]
-
-[sub_resource type="Resource" id="Resource_dm3di"]
-script = ExtResource("3_tpxyl")
-target_path = NodePath("../..")
-function_name = "select_attack"
-metadata/_custom_type_script = "uid://bwmccfplhqpda"
-
-[sub_resource type="Resource" id="Resource_4kp8a"]
-script = ExtResource("3_tpxyl")
-target_path = NodePath("../..")
-function_name = "select_skill"
-metadata/_custom_type_script = "uid://bwmccfplhqpda"
-
-[sub_resource type="Resource" id="Resource_2okdr"]
-script = ExtResource("3_tpxyl")
-target_path = NodePath("../..")
-function_name = "select_item"
-metadata/_custom_type_script = "uid://bwmccfplhqpda"
-
-[sub_resource type="Resource" id="Resource_v7l58"]
-script = ExtResource("4_qfl1a")
-font_size = 42
-choice_text = Array[String](["Attack", "Skill", "Item"])
-choice_function_call = Array[ExtResource("3_tpxyl")]([SubResource("Resource_dm3di"), SubResource("Resource_4kp8a"), SubResource("Resource_2okdr")])
-metadata/_custom_type_script = "uid://dvqw2l4htwcuf"
-
-[sub_resource type="Resource" id="Resource_cfidb"]
-script = ExtResource("3_tpxyl")
-target_path = NodePath("../..")
-function_name = "attack_1"
-metadata/_custom_type_script = "uid://bwmccfplhqpda"
-
-[sub_resource type="Resource" id="Resource_7tp58"]
-script = ExtResource("3_tpxyl")
-target_path = NodePath("../..")
-function_name = "attack_2"
-metadata/_custom_type_script = "uid://bwmccfplhqpda"
-
-[sub_resource type="Resource" id="Resource_qfl1a"]
-script = ExtResource("3_tpxyl")
-target_path = NodePath("../..")
-function_name = "go_back"
-metadata/_custom_type_script = "uid://bwmccfplhqpda"
-
-[sub_resource type="Resource" id="Resource_iig4f"]
-script = ExtResource("4_qfl1a")
-font_size = 42
-choice_text = Array[String](["Attack 1", "Attack 2", "Go Back"])
-choice_function_call = Array[ExtResource("3_tpxyl")]([SubResource("Resource_cfidb"), SubResource("Resource_7tp58"), SubResource("Resource_qfl1a")])
-metadata/_custom_type_script = "uid://dvqw2l4htwcuf"
 
 [node name="base_battle" type="Node2D" unique_id=1484066849]
 script = ExtResource("1_v7l58")
@@ -78,14 +28,14 @@ override_option_position = true
 override_position = Vector2(500, 1050)
 override_option_size = true
 override_size = Vector2(1800, 75)
-options = Array[ExtResource("2_2okdr")]([SubResource("Resource_v7l58")])
+options = Array[ExtResource("4_2okdr")]([ExtResource("5_iig4f")])
 
 [node name="AttackSelection" parent="MenuComponents" unique_id=1214399379 instance=ExtResource("2_v7l58")]
 override_option_position = true
 override_position = Vector2(500, 500)
 override_option_size = true
 override_size = Vector2(320, 500)
-options = Array[ExtResource("2_2okdr")]([SubResource("Resource_iig4f")])
+options = Array[ExtResource("4_2okdr")]([ExtResource("6_qfl1a")])
 orientation = 1
 
 [node name="PlayerFrame" parent="." unique_id=1392328580 instance=ExtResource("7_qfl1a")]
