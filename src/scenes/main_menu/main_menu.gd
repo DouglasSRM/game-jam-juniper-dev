@@ -14,6 +14,7 @@ var acc := 0.6
 
 func _ready() -> void:
 	SceneManager.set_vignette()
+	SceneManager.set_filmgrain()
 	settings_menu.visible = false
 	settings_menu.visibility_changed.connect(Callable(self, "opcoes"))
 	main_menu.modulate.a = 0.
