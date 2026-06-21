@@ -24,6 +24,6 @@ tile_set = ExtResource("2_trelp")
 [node name="Interactable" type="TileMapLayer" parent="TileMaps" unique_id=744383844]
 tile_set = ExtResource("2_trelp")
 
-[node name="Dialogos" type="Node2D" parent="." unique_id=818597174]
+[node name="Dialogues" type="Node2D" parent="." unique_id=818597174]
 
 [node name="Interactables" type="Node2D" parent="." unique_id=829600880]

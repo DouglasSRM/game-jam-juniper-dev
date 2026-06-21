@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d0vd42m3sll01"]
+
+[ext_resource type="PackedScene" uid="uid://74yv8kueyncj" path="res://src/scenes/main_menu/main_menu.tscn" id="1_lclnh"]
+[ext_resource type="Script" uid="uid://ca6tk73ps4fyy" path="res://src/scenes/pause_menu/pause_menu.gd" id="2_qyvfh"]
+
+[node name="PauseMenu" unique_id=1253128885 instance=ExtResource("1_lclnh")]
+script = ExtResource("2_qyvfh")
+
+[node name="creditos" parent="background/main_menu" parent_id_path=PackedInt32Array(10489993) index="2" unique_id=511764043]
+visible = false
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

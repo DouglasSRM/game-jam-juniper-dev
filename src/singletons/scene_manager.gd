@@ -7,7 +7,7 @@ var trigger_name: String
 
 var scene_dir_path = "res://src/scenes/"
 
-#@onready var pause_menu = preload("res://src/scenes/pause_menu/pause_menu.tscn").instantiate()
+@onready var pause_menu = preload("res://src/scenes/pause_menu/pause_menu.tscn").instantiate()
 @onready var transition_effect: ColorRect = $TransitionEffect
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var dark_effect: ColorRect = $dark_effect
@@ -40,8 +40,8 @@ func pop_scene():
 
 func _ready():
 	pass
-	#add_child(pause_menu)
-	#pause_menu.visible = false
+	add_child(pause_menu)
+	pause_menu.visible = false
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -51,7 +51,7 @@ func _input(event):
 
 func toggle_pause():
 	get_tree().paused = !get_tree().paused
-	#pause_menu.visible = get_tree().paused
+	pause_menu.visible = get_tree().paused
 
 func change_scene(from, to_scene_name: String, transicao: bool = true, detailed: bool = false) -> void:
 	var full_path: String
