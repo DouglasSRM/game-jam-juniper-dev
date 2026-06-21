@@ -57,9 +57,10 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 98.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 32
-text = "OPTION_MENU_TITLE"
+text = "OM_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -91,21 +92,42 @@ offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="GraphicsLabel" type="Label" parent="InnerSquare/VContainer" unique_id=196392728]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 42
+text = "OM_GRAPHICS"
+
 [node name="fullscreen_cb" type="CheckButton" parent="InnerSquare/VContainer" unique_id=1593495282]
 layout_mode = 2
 offset_transform_enabled = true
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 24
-text = "OPTION_MENU_FULL_SCREEN"
+text = "OM_FULL_SCREEN"
 text_overrun_behavior = 2
 autowrap_trim_flags = 192
+
+[node name="Resolution" type="OptionButton" parent="InnerSquare/VContainer" unique_id=592898710]
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1920x1080"
+popup/item_2/id = 2
+popup/item_3/text = "2560x1440"
+popup/item_3/id = 3
+popup/item_4/text = "3840x2160"
+popup/item_4/id = 4
 
 [node name="lbl_movement" type="Label" parent="InnerSquare/VContainer" unique_id=1626061894]
 visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
-text = "OPTION_MENU_MOVEMENT"
+text = "OM_MOVEMENT"
 
 [node name="lbl_movement2" type="Label" parent="InnerSquare/VContainer" unique_id=2141086435]
 visible = false
@@ -119,14 +141,14 @@ visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
-text = "OPTION_MENU_INTERACTION"
+text = "OM_INTERACTION"
 
 [node name="lbl_interaction2" type="Label" parent="InnerSquare/VContainer" unique_id=446054072]
 visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
-text = "OPTION_MENU_INTERACTION2"
+text = "OM_INTERACTION2"
 
 [node name="lbl_empty" type="Label" parent="InnerSquare/VContainer" unique_id=961220435]
 layout_mode = 2
@@ -137,7 +159,7 @@ theme_override_font_sizes/font_size = 12
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
-text = "OPTION_MENU_VOLUME"
+text = "OM_VOLUME"
 
 [node name="Soundtrack" type="HSlider" parent="InnerSquare/VContainer" unique_id=2052620939]
 layout_mode = 2
@@ -174,10 +196,11 @@ size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/focus = SubResource("StyleBoxEmpty_thkx5")
-text = "OPTION_MENU_CLOSE"
+text = "OM_CLOSE"
 flat = true
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="toggled" from="InnerSquare/VContainer/fullscreen_cb" to="." method="_on_fullscreen_cb_toggled"]
+[connection signal="item_selected" from="InnerSquare/VContainer/Resolution" to="." method="_on_resolution_item_selected"]
 [connection signal="item_selected" from="InnerSquare/VContainer/Language" to="." method="_on_item_list_item_selected"]
 [connection signal="pressed" from="close_btn" to="." method="_on_close_btn_pressed"]

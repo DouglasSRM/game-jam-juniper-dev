@@ -9,15 +9,18 @@ class_name MainMenu extends Control
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var pendulum: AnimatedSprite2D = $background/pendulum
 @onready var main_menu: VBoxContainer = $background/main_menu
+@onready var art: Sprite2D = $background/art
 
 var acc := 0.6
 
 func _ready() -> void:
 	SceneManager.set_vignette()
-	SceneManager.set_filmgrain()
+	SceneManager.set_ac()
+	# SceneManager.set_filmgrain()
 	settings_menu.visible = false
 	settings_menu.visibility_changed.connect(Callable(self, "opcoes"))
 	main_menu.modulate.a = 0.
+	art.modulate.a = 0.
 
 func opcoes():
 	quit.disabled = settings_menu.visible
@@ -46,9 +49,17 @@ func _on_pendulun_animation_finished() -> void:
 	tween.tween_property(pendulum, "position:x", 360., acc)
 
 	await tween.finished
+	show_art()
+
+func show_art() -> void:
+	var tween = create_tween()
+
+	tween.tween_property(art, "modulate:a", 1., .5)
+
+	await tween.finished
 	show_menu()
 
 func show_menu() -> void:
 	var tween = create_tween()
 
-	tween.tween_property(main_menu, "modulate:a", 1., .5)
+	tween.tween_property(main_menu, "modulate:a", 1., 1.)

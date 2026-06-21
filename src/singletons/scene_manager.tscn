@@ -4,7 +4,10 @@
 [ext_resource type="Shader" uid="uid://bqmri57k5jl58" path="res://src/post_processing_effects/horizontal_weep_transition.gdshader" id="2_1hwvu"]
 [ext_resource type="Texture2D" uid="uid://bo8a5yatmljyf" path="res://assets/main_menu/option_menu.png" id="3_1hwvu"]
 [ext_resource type="Shader" uid="uid://1ayvxryu4ig2" path="res://src/post_processing_effects/escuro.gdshader" id="4_k57hb"]
-[ext_resource type="Shader" uid="uid://culv10avutexm" path="res://src/post_processing_effects/film_grain.gdshader" id="5_5djx3"]
+[ext_resource type="Shader" uid="uid://d2y7766vs02w0" path="res://src/post_processing_effects/circle_transition.gdshader" id="5_5djx3"]
+[ext_resource type="Shader" uid="uid://df3s4d4veed8l" path="res://src/post_processing_effects/vignette.gdshader" id="6_tvm3g"]
+[ext_resource type="Shader" uid="uid://culv10avutexm" path="res://src/post_processing_effects/film_grain.gdshader" id="7_t0kbm"]
+[ext_resource type="Shader" uid="uid://clvyb4xq6bwpl" path="res://src/post_processing_effects/chromatic_aberration.gdshader" id="8_xky5x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mbrwa"]
 shader = ExtResource("2_1hwvu")
@@ -51,66 +54,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("circle:material:shader_parameter/_Progress")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.749999983236]
-}
 
 [sub_resource type="Animation" id="Animation_tvm3g"]
 resource_name = "circle_trans"
 length = 2.1666667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("circle:material:shader_parameter/circle_size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.0333333, 2.4666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [1.04999995231628, 0.0, 0.0]
-}
 
 [sub_resource type="Animation" id="Animation_t0kbm"]
 resource_name = "circle_trans_out"
 length = 1.9333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("circle:material:shader_parameter/circle_size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.9666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.04999995231628]
-}
 
 [sub_resource type="Animation" id="Animation_xky5x"]
 resource_name = "circle_trans_out_2"
 length = 2.1666667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("circle:material:shader_parameter/circle_size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.0333333, 2.4666667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 1.04999995231628, 1.04999995231628]
-}
 
 [sub_resource type="Animation" id="Animation_5djx3"]
 resource_name = "escuro"
@@ -208,10 +163,30 @@ shader_parameter/invert = true
 shader_parameter/falloff = 2.5
 shader_parameter/color = Color(0, 0, 0, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvm3g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k57hb"]
 shader = ExtResource("5_5djx3")
-shader_parameter/amount = 0.07999999821184
-shader_parameter/speed = 0.10000000149012
+shader_parameter/circle_size = 0.0
+shader_parameter/screen_width = 0.0
+shader_parameter/screen_height = 0.0
+shader_parameter/pos = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5djx3"]
+shader = ExtResource("6_tvm3g")
+shader_parameter/alpha = 0.15
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tvm3g"]
+shader = ExtResource("7_t0kbm")
+shader_parameter/amount = 0.0999999977648
+shader_parameter/speed = 2.0000000298024
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0kbm"]
+shader = ExtResource("8_xky5x")
+shader_parameter/aberration_intensity = 4.0000000596048
+shader_parameter/r_displacement = Vector2(1, 0)
+shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/b_displacement = Vector2(-1, 0)
 
 [node name="SceneManager" type="CanvasLayer" unique_id=1913475169]
 process_mode = 3
@@ -240,6 +215,7 @@ hframes = 6
 vframes = 5
 
 [node name="dark_effect" type="ColorRect" parent="." unique_id=49567295]
+visible = false
 material = SubResource("ShaderMaterial_1hwvu")
 anchors_preset = 15
 anchor_right = 1.0
@@ -248,18 +224,27 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="circle" type="ColorRect" parent="." unique_id=1236324601]
+[node name="circle" type="ColorRect" parent="." unique_id=1160256438]
 visible = false
-material = SubResource("ShaderMaterial_tvm3g")
+material = SubResource("ShaderMaterial_k57hb")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+mouse_filter = 2
 
-[node name="vignette" type="ColorRect" parent="." unique_id=2095832655]
+[node name="vignette" type="ColorRect" parent="." unique_id=558951795]
 visible = false
+material = SubResource("ShaderMaterial_5djx3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="film_grain" type="ColorRect" parent="." unique_id=1568114186]
 material = SubResource("ShaderMaterial_tvm3g")
 anchors_preset = 15
 anchor_right = 1.0
@@ -267,15 +252,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 
-[node name="film_grain" type="ColorRect" parent="." unique_id=51581023]
+[node name="chromatic_aberration" type="ColorRect" parent="." unique_id=828797518]
 visible = false
-material = SubResource("ShaderMaterial_tvm3g")
+material = SubResource("ShaderMaterial_t0kbm")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.033853278, 0.033853278, 0.033853274, 1)

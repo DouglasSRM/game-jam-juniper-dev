@@ -14,6 +14,7 @@ var scene_dir_path = "res://src/scenes/"
 @onready var circle: ColorRect = $circle
 @onready var vignette: ColorRect = $vignette
 @onready var film_grain: ColorRect  = $film_grain
+@onready var ca: ColorRect = $chromatic_aberration
 
 var dark_effect_value: float = 1.2
 
@@ -115,3 +116,6 @@ func set_vignette() -> void:
 
 func set_filmgrain() -> void:
 	film_grain.visible = true
+
+func set_ac() -> void:
+	ca.visible = true

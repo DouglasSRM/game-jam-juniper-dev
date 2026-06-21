@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://d4kiowkeebyoi" path="res://src/scenes/main_menu/main_menu.gd" id="1_ob46e"]
 [ext_resource type="Texture2D" uid="uid://br1p4chsd78mh" path="res://assets/main_menu/pendulum.png" id="2_cr2su"]
+[ext_resource type="Texture2D" uid="uid://cek51o2u1f1q3" path="res://assets/main_menu/bkg.png" id="2_frlin"]
 [ext_resource type="FontFile" uid="uid://bayl34n5s6ic7" path="res://fonts/dungeon-mode.ttf" id="2_ob46e"]
 [ext_resource type="FontFile" uid="uid://c8a3bqlsomate" path="res://fonts/antiquity-print.ttf" id="3_felax"]
 [ext_resource type="AudioStream" uid="uid://be8nx1m00r0nr" path="res://soundtrack/music/placeholder.ogg" id="5_felax"]
 [ext_resource type="PackedScene" uid="uid://bgh6hynxcy5jk" path="res://src/scenes/settings_menu/settings_menu.tscn" id="9_5o0ss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgtrd"]
-bg_color = Color(0.2, 0.11372549, 0.23529412, 1)
+bg_color = Color(0.078431375, 0.09411765, 0.18039216, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_frlin"]
 atlas = ExtResource("2_cr2su")
@@ -321,6 +322,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pgtrd")
+
+[node name="art" type="Sprite2D" parent="background" unique_id=371767558]
+texture_filter = 1
+position = Vector2(959.99994, 540)
+scale = Vector2(4.9999995, 5)
+texture = ExtResource("2_frlin")
 
 [node name="pendulum" type="AnimatedSprite2D" parent="background" unique_id=1600347433]
 texture_filter = 1
