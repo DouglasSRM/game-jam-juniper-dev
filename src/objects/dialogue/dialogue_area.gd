@@ -50,11 +50,8 @@ func _activate_dialogue() -> void:
 	if override_dialogue_position:
 		desired_dialogue_pos = override_position
 	else:
-		# posição top removida pq não vai caber corretamente com o sprite maior
-		#if (player_node.global_position.y > get_viewport().get_camera_2d().get_screen_center_position().y):
-			#desired_dialogue_pos = dialogue_top_pos
-		#else:
 		desired_dialogue_pos = dialogue_bottom_pos
+	
 	new_dialogue.global_position = self.desired_dialogue_pos
 	new_dialogue.dialogue        = self.dialogue
 	new_dialogue.lock_player     = self.lock_player

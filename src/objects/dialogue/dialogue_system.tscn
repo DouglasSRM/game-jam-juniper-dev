@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ey6fj33i2pst"]
+[gd_scene format=3 uid="uid://c8v7r4q1m2oax"]
 
 [ext_resource type="FontFile" uid="uid://dk4rc8edrx4rd" path="res://fonts/PixelOperator-Bold.ttf" id="1_gsjv7"]
 [ext_resource type="Script" uid="uid://20uhlt0dx2q8" path="res://src/objects/dialogue/dialogue_system.gd" id="1_ibi0v"]
