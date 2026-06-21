@@ -5,19 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bayl34n5s6ic7" path="res://fonts/dungeon-mode.ttf" id="3_55bok"]
 [ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="3_pk6ct"]
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_qrpvp"]
-[ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="4_wd0pd"]
 [ext_resource type="PackedScene" uid="uid://dh4e8hp0r1syw" path="res://src/objects/npcs/npc1/npc_1.tscn" id="5_hp4mx"]
-[ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="5_odb1k"]
-[ext_resource type="Texture2D" uid="uid://bs66ycdlnofne" path="res://assets/characters/npcs/npc1/npc1_1.png" id="6_s3hxo"]
-
-[sub_resource type="Resource" id="Resource_pk6ct"]
-script = ExtResource("5_odb1k")
-speaker_name = "Minino"
-speaker_img = ExtResource("6_s3hxo")
-speaker_img_HFrames = 2
-text = "dialogue_temp_1"
-speaker_on_right = false
-metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12j5o"]
 size = Vector2(55, 46)
@@ -37,8 +25,6 @@ tile_map_data = PackedByteArray("AAA5ABUAAAAMAA8AAAD+////AAAMAA8AAAD+/wAAAAAMAA8
 [node name="DialogueArea2D" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("3_pk6ct")]
 position = Vector2(626, 383)
 activate_instant = true
-trava_o_player = true
-dialogue = Array[ExtResource("4_wd0pd")]([SubResource("Resource_pk6ct")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogues/DialogueArea2D" index="0" unique_id=478734627]
 position = Vector2(1, -6)
