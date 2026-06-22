@@ -7,11 +7,17 @@ MENU_OPTIONS,Ajustes,Options
 MENU_CREDITS,Créditos,Credits
 MENU_EXIT,Sair,Exit
 ,,
-OM_GRAPHICS, Gráfico, Display
+OM_GRAPHICS,Gráfico,Display
 OM_TITLE,Ajustes,Options
 OM_FULL_SCREEN,Tela Cheia,Fullscreen
+OM_WINDOWED,Janela,Windowed resolution
+OM_EFFECTS,Efeitos,Effects
+OM_VIGNETTE,Vinheta,Vignette
+OM_GRAIN,Granulado,Grain
+OM_AC,Aberração Cromática,Cromatic Aberration
 OM_MOVEMENT,Movimento:,Movement:
 OM_INTERACTION,Interatividade:,Interaction:
 OM_INTERACTION2,"  E, Espaço, Enter","  E, Space, Enter"
+OM_SOUND,Volumes,Sounds
 OM_VOLUME,Volume,Volume
 OM_CLOSE,Fechar,Close

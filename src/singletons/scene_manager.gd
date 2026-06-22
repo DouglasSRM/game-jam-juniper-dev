@@ -111,11 +111,11 @@ func set_dark_effect():
 	(dark_effect.material as ShaderMaterial).set_shader_parameter("radius", dark_effect_value)
 	dark_effect_value -= 0.1
 
-func set_vignette() -> void:
-	vignette.visible = true
+func set_vignette(value: bool) -> void:
+	vignette.visible = value
 
-func set_filmgrain() -> void:
-	film_grain.visible = true
+func set_filmgrain(value: bool) -> void:
+	film_grain.visible = value
 
-func set_ac() -> void:
-	ca.visible = true
+func set_ac(value: bool) -> void:
+	ca.visible = value

@@ -98,18 +98,29 @@ theme_override_colors/font_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 42
 text = "OM_GRAPHICS"
+horizontal_alignment = 3
 
 [node name="fullscreen_cb" type="CheckButton" parent="InnerSquare/VContainer" unique_id=1593495282]
 layout_mode = 2
 offset_transform_enabled = true
+offset_transform_position = Vector2(-7.2, 0)
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 16
 text = "OM_FULL_SCREEN"
 text_overrun_behavior = 2
 autowrap_trim_flags = 192
 
+[node name="lbl_resolution" type="Label" parent="InnerSquare/VContainer" unique_id=1621286611]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 16
+text = "OM_WINDOWED"
+
 [node name="Resolution" type="OptionButton" parent="InnerSquare/VContainer" unique_id=592898710]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 16
 item_count = 5
 popup/item_0/text = "1280x720"
 popup/item_0/id = 0
@@ -121,6 +132,47 @@ popup/item_3/text = "2560x1440"
 popup/item_3/id = 3
 popup/item_4/text = "3840x2160"
 popup/item_4/id = 4
+
+[node name="Effects" type="Label" parent="InnerSquare/VContainer" unique_id=509358122]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 42
+text = "OM_EFFECTS"
+horizontal_alignment = 3
+
+[node name="vignette_switch" type="CheckButton" parent="InnerSquare/VContainer" unique_id=1527797578]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-7.2, 0)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "OM_VIGNETTE"
+text_overrun_behavior = 2
+autowrap_trim_flags = 192
+
+[node name="grain_switch" type="CheckButton" parent="InnerSquare/VContainer" unique_id=2029986285]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-7.2, 0)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "OM_GRAIN"
+text_overrun_behavior = 2
+autowrap_trim_flags = 192
+
+[node name="ac_switch" type="CheckButton" parent="InnerSquare/VContainer" unique_id=929774882]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-7.2, 0)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "OM_AC"
+text_overrun_behavior = 2
+autowrap_trim_flags = 192
 
 [node name="lbl_movement" type="Label" parent="InnerSquare/VContainer" unique_id=1626061894]
 visible = false
@@ -155,10 +207,18 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
 theme_override_font_sizes/font_size = 12
 
+[node name="Sounds" type="Label" parent="InnerSquare/VContainer" unique_id=1144902407]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.20784314, 0.3019608, 1)
+theme_override_fonts/font = ExtResource("2_tqtwh")
+theme_override_font_sizes/font_size = 42
+text = "OM_SOUND"
+horizontal_alignment = 3
+
 [node name="lbl_volume" type="Label" parent="InnerSquare/VContainer" unique_id=937749757]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "OM_VOLUME"
 
 [node name="Soundtrack" type="HSlider" parent="InnerSquare/VContainer" unique_id=2052620939]
@@ -202,5 +262,8 @@ flat = true
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="toggled" from="InnerSquare/VContainer/fullscreen_cb" to="." method="_on_fullscreen_cb_toggled"]
 [connection signal="item_selected" from="InnerSquare/VContainer/Resolution" to="." method="_on_resolution_item_selected"]
+[connection signal="toggled" from="InnerSquare/VContainer/vignette_switch" to="." method="_on_vignette_switch_toggled"]
+[connection signal="toggled" from="InnerSquare/VContainer/grain_switch" to="." method="_on_grain_switch_toggled"]
+[connection signal="toggled" from="InnerSquare/VContainer/ac_switch" to="." method="_on_ac_switch_toggled"]
 [connection signal="item_selected" from="InnerSquare/VContainer/Language" to="." method="_on_item_list_item_selected"]
 [connection signal="pressed" from="close_btn" to="." method="_on_close_btn_pressed"]

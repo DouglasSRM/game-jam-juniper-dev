@@ -68,3 +68,12 @@ func sync_resolution_button() -> void:
 			if RESOLUTIONS[key] == current_size:
 				resolution.select(key)
 				break
+
+func _on_ac_switch_toggled(toggled_on: bool) -> void:
+	SceneManager.set_ac(toggled_on)
+
+func _on_grain_switch_toggled(toggled_on: bool) -> void:
+	SceneManager.set_filmgrain(toggled_on)
+
+func _on_vignette_switch_toggled(toggled_on: bool) -> void:
+	SceneManager.set_vignette(toggled_on)
