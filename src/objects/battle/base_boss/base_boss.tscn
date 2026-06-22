@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://xcx7r21ircnt"]
+
+[ext_resource type="Script" uid="uid://lq0yrdeikhfl" path="res://src/objects/battle/base_boss/base_boss.gd" id="1_w7vfi"]
+[ext_resource type="Texture2D" uid="uid://f7tf52f4rbl1" path="res://assets/bosses/template.png" id="1_w253h"]
+
+[sub_resource type="Animation" id="Animation_omt2a"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ogj5a"]
+resource_name = "attack"
+length = 4.0
+step = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4qfeo"]
+_data = {
+&"RESET": SubResource("Animation_omt2a"),
+&"attack": SubResource("Animation_ogj5a")
+}
+
+[node name="BaseBoss" type="Node2D" unique_id=867154428]
+script = ExtResource("1_w7vfi")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=685350226]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_w253h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=198492064]
+libraries/ = SubResource("AnimationLibrary_4qfeo")
+
+[node name="Attacks" type="Node2D" parent="." unique_id=888676108]

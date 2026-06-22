@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d8b3rcx0xiur"]
+
+[ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_vtgef"]
+[ext_resource type="Script" uid="uid://27nvt4j0hogg" path="res://src/objects/attacks/attack_yoyo/attack_yoyo.gd" id="2_cb5fn"]
+[ext_resource type="Texture2D" uid="uid://dkjdhgkdoqbwn" path="res://assets/attacks/attack_yoyo.png" id="3_kdnfy"]
+
+[sub_resource type="Animation" id="Animation_kdnfy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ds2n2"]
+resource_name = "attack"
+length = 4.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hyjl2"]
+_data = {
+&"RESET": SubResource("Animation_kdnfy"),
+&"attack": SubResource("Animation_ds2n2")
+}
+
+[node name="AttackYoyo" unique_id=1305917817 instance=ExtResource("1_vtgef")]
+visible = true
+script = ExtResource("2_cb5fn")
+
+[node name="Sprite" parent="." index="0" unique_id=451462687]
+visible = true
+scale = Vector2(4, 4)
+texture = ExtResource("3_kdnfy")
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
+libraries/ = SubResource("AnimationLibrary_hyjl2")

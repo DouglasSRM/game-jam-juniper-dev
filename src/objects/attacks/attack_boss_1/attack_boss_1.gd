@@ -1,0 +1,16 @@
+class_name AttackBoss1 extends BaseAttack
+
+func _ready() -> void:
+	super()
+	damage = 500
+	step = 3
+	pre_step_duration = 0
+	step_duration = 1
+
+func run_animation() -> void:
+	sprite.visible = true
+	animation_player.play("attack")
+	await animation_player.animation_finished
+	
+	attack_finished.emit()
+	sprite.visible = false

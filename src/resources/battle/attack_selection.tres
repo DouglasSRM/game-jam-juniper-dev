@@ -23,6 +23,6 @@ metadata/_custom_type_script = "uid://cnynyx05od68"
 
 [resource]
 script = ExtResource("2_cmh1u")
-choice_text = Array[String](["Attack 1", "Attack 2", "Go Back"])
+choice_text = Array[String](["Yoyo", "Attack 2", "Go Back"])
 choice_function_call = Array[ExtResource("1_rmcid")]([SubResource("Resource_iig4f"), SubResource("Resource_qfl1a"), SubResource("Resource_edha8")])
 metadata/_custom_type_script = "uid://cdjasv8np5k7m"
