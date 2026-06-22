@@ -2,7 +2,7 @@ class_name AttackBoss1 extends BaseAttack
 
 func _ready() -> void:
 	super()
-	damage = 500
+	damage = 3
 	step = 3
 	pre_step_duration = 0
 	step_duration = 1

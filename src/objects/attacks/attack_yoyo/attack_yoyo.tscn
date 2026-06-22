@@ -22,7 +22,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_ds2n2"]
 resource_name = "attack"
 length = 4.0
-step = 0.5
+step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -30,10 +30,10 @@ tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.75, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 2, 4, 5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hyjl2"]
@@ -48,9 +48,8 @@ script = ExtResource("2_cb5fn")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
 visible = true
-scale = Vector2(4, 4)
 texture = ExtResource("3_kdnfy")
-hframes = 4
+hframes = 6
 frame = 1
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]

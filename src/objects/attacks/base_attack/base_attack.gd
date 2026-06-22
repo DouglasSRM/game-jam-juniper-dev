@@ -5,8 +5,8 @@ class_name BaseAttack extends Node2D
 
 signal attack_finished
 
-var pre_step_duration: int = 0
-var step_duration: int = 0
+var pre_step_duration: float = 0
+var step_duration: float = 0
 var step: int = 0
 
 var damage: int = 0

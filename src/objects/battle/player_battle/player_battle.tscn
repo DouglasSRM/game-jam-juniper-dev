@@ -48,7 +48,7 @@ script = ExtResource("1_lit63")
 [node name="Attacks" type="Node2D" parent="." unique_id=1356136321]
 
 [node name="AttackYoyo" parent="Attacks" unique_id=1305917817 instance=ExtResource("2_lo2qk")]
-position = Vector2(-130, -265)
+position = Vector2(9, -265)
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=645139187]
 scale = Vector2(0.25, 0.25)
