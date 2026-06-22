@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueText" format=3 uid="uid://croidva5sfpge"]
+
+[ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="1_viev0"]
+[ext_resource type="Texture2D" uid="uid://bs66ycdlnofne" path="res://assets/characters/npcs/npc1/npc1_1.png" id="2_gxg5a"]
+
+[resource]
+script = ExtResource("1_viev0")
+speaker_name = "minino"
+speaker_img = ExtResource("2_gxg5a")
+speaker_img_HFrames = 2
+text = "dialogue_temp_1"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"

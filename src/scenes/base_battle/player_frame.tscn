@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dsbvolwejgyty"]
+
+[ext_resource type="Texture2D" uid="uid://bs66ycdlnofne" path="res://assets/characters/npcs/npc1/npc1_1.png" id="1_3a67r"]
+[ext_resource type="Script" uid="uid://cyh3fxxayor7b" path="res://src/scenes/base_battle/player_frame.gd" id="1_rlpe7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12j5o"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="Animation" id="Animation_rlpe7"]
+resource_name = "new_animation"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.04, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_et7jy"]
+_data = {
+&"falano": SubResource("Animation_rlpe7")
+}
+
+[node name="PlayerFrame" type="Node2D" unique_id=1392328580]
+script = ExtResource("1_rlpe7")
+
+[node name="Panel" type="Panel" parent="." unique_id=978551826]
+offset_right = 225.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_12j5o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=1586212254]
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("1_3a67r")
+offset = Vector2(360, 500)
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=492278186]
+libraries/ = SubResource("AnimationLibrary_et7jy")
+autoplay = &"falano"

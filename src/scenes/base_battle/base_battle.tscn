@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cqh8al5d54qgk"]
+
+[ext_resource type="Script" uid="uid://deqg8i4fcjusp" path="res://src/scenes/base_battle/base_battle.gd" id="1_v7l58"]
+[ext_resource type="Texture2D" uid="uid://f7tf52f4rbl1" path="res://assets/bosses/template.png" id="2_tpxyl"]
+[ext_resource type="PackedScene" uid="uid://cqkyvd2fk08d3" path="res://src/scenes/base_battle/option_box/option_component/option_component.tscn" id="2_v7l58"]
+[ext_resource type="Script" uid="uid://dos3kn2cyk0a6" path="res://src/scenes/base_battle/option_box/resources/option_export_resource.gd" id="4_2okdr"]
+[ext_resource type="Resource" uid="uid://cuumxsayh7120" path="res://src/resources/battle/action_selection.tres" id="5_iig4f"]
+[ext_resource type="Resource" uid="uid://cwbb5xylvu8m4" path="res://src/resources/battle/attack_selection.tres" id="6_qfl1a"]
+[ext_resource type="PackedScene" uid="uid://dsbvolwejgyty" path="res://src/scenes/base_battle/player_frame.tscn" id="7_qfl1a"]
+[ext_resource type="PackedScene" uid="uid://cefyirpoqcuvk" path="res://src/objects/battle/health_bar/health_bar.tscn" id="8_iig4f"]
+
+[node name="BaseBattle" type="Node2D" unique_id=1484066849]
+script = ExtResource("1_v7l58")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522995467]
+position = Vector2(959, 278)
+texture = ExtResource("2_tpxyl")
+
+[node name="Panel" type="Panel" parent="." unique_id=416664167]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="MenuComponents" type="Node2D" parent="." unique_id=123677067]
+
+[node name="ActionSelection" parent="MenuComponents" unique_id=240387471 instance=ExtResource("2_v7l58")]
+override_option_position = true
+override_position = Vector2(500, 1050)
+override_option_size = true
+override_size = Vector2(1800, 75)
+options = Array[ExtResource("4_2okdr")]([ExtResource("5_iig4f")])
+
+[node name="AttackSelection" parent="MenuComponents" unique_id=1214399379 instance=ExtResource("2_v7l58")]
+override_option_position = true
+override_position = Vector2(500, 500)
+override_option_size = true
+override_size = Vector2(320, 500)
+options = Array[ExtResource("4_2okdr")]([ExtResource("6_qfl1a")])
+orientation = 1
+
+[node name="PlayerFrame" parent="." unique_id=1392328580 instance=ExtResource("7_qfl1a")]
+position = Vector2(1603, 607)
+
+[node name="HealthBarBoss" parent="." unique_id=755916960 instance=ExtResource("8_iig4f")]
+position = Vector2(58, 29)
+
+[node name="HealthBarPlayer" parent="." unique_id=372692253 instance=ExtResource("8_iig4f")]
+position = Vector2(1605, 552)
+
+[node name="ProgressBar" parent="HealthBarPlayer" index="0" unique_id=1241638578]
+offset_right = 221.0
+
+[connection signal="option_finished" from="MenuComponents/ActionSelection" to="." method="_on_option_component_option_finished"]
+
+[editable path="HealthBarPlayer"]

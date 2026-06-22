@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ms8dfbjptulw"]
+
+[ext_resource type="Script" uid="uid://bs50mofbvitxl" path="res://src/objects/battle/player_battle/player_battle.gd" id="1_lit63"]
+[ext_resource type="PackedScene" uid="uid://d8b3rcx0xiur" path="res://src/objects/attacks/attack_yoyo/attack_yoyo.tscn" id="2_lo2qk"]
+[ext_resource type="Texture2D" uid="uid://wbr5ama6f82m" path="res://assets/characters/player/player_battle.png" id="3_v8jab"]
+
+[sub_resource type="Animation" id="Animation_v8jab"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_c470t"]
+resource_name = "idle"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f15hq"]
+_data = {
+&"RESET": SubResource("Animation_v8jab"),
+&"idle": SubResource("Animation_c470t")
+}
+
+[node name="PlayerBattle" type="Node2D" unique_id=2102725843]
+script = ExtResource("1_lit63")
+
+[node name="Attacks" type="Node2D" parent="." unique_id=1356136321]
+
+[node name="AttackYoyo" parent="Attacks" unique_id=1305917817 instance=ExtResource("2_lo2qk")]
+position = Vector2(9, -265)
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=645139187]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_v8jab")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=433044189]
+libraries/ = SubResource("AnimationLibrary_f15hq")
+autoplay = &"idle"

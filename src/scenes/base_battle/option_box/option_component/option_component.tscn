@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqkyvd2fk08d3"]
+
+[ext_resource type="Script" uid="uid://c83bd6xe71gys" path="res://src/scenes/base_battle/option_box/option_component/option_component.gd" id="1_1boq4"]
+
+[node name="OptionComponent" type="Node2D" unique_id=240387471]
+script = ExtResource("1_1boq4")

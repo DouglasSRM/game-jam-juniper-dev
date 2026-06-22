@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://clvwiqheagnma"]
+
+[ext_resource type="PackedScene" uid="uid://xcx7r21ircnt" path="res://src/objects/battle/base_boss/base_boss.tscn" id="1_0ustq"]
+[ext_resource type="Script" uid="uid://bieuvcui11iff" path="res://src/objects/battle/boss_1/boss_1.gd" id="2_wwwrj"]
+[ext_resource type="PackedScene" uid="uid://r7l7708k2btc" path="res://src/objects/attacks/attack_boss_1/attack_boss_1.tscn" id="3_vc3fp"]
+
+[node name="Boss1" unique_id=867154428 instance=ExtResource("1_0ustq")]
+script = ExtResource("2_wwwrj")
+max_health = 30
+
+[node name="AttackBoss1" parent="Attacks" parent_id_path=PackedInt32Array(888676108) index="0" unique_id=1305917817 instance=ExtResource("3_vc3fp")]
+position = Vector2(-1, 323)

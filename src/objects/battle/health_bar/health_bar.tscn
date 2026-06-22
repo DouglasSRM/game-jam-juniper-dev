@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cefyirpoqcuvk"]
+
+[ext_resource type="Script" uid="uid://bh2epn2h0eojl" path="res://src/objects/battle/health_bar/health_bar.gd" id="1_rqf3d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tpssm"]
+bg_color = Color(0.20181596, 7.069204e-08, 5.4147094e-08, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bc4qy"]
+bg_color = Color(0.44313726, 0.7607843, 0.28235295, 1)
+
+[node name="HealthBar" type="Node2D" unique_id=755916960]
+script = ExtResource("1_rqf3d")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1241638578]
+offset_right = 1806.0
+offset_bottom = 34.0
+theme_override_styles/background = SubResource("StyleBoxFlat_tpssm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bc4qy")
+value = 50.0
+show_percentage = false
