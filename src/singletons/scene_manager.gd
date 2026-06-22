@@ -12,6 +12,9 @@ var scene_dir_path = "res://src/scenes/"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var dark_effect: ColorRect = $dark_effect
 @onready var circle: ColorRect = $circle
+@onready var vignette: ColorRect = $vignette
+@onready var film_grain: ColorRect  = $film_grain
+@onready var ca: ColorRect = $chromatic_aberration
 
 var dark_effect_value: float = 1.2
 
@@ -21,7 +24,7 @@ func push_scene(scene: String):
 	if current:
 		scene_stack.push_back(current)
 		get_tree().root.remove_child(current)
-	
+
 	var new_scene = load(full_path).instantiate()
 	get_tree().root.add_child(new_scene)
 	get_tree().current_scene = new_scene
@@ -29,11 +32,11 @@ func push_scene(scene: String):
 func pop_scene():
 	if scene_stack.size() == 0:
 		return
-	
+
 	var current = get_tree().current_scene
 	if current:
 		current.queue_free()
-	
+
 	var last = scene_stack.pop_back()
 	get_tree().root.add_child(last)
 	get_tree().current_scene = last
@@ -59,14 +62,14 @@ func change_scene(from, to_scene_name: String, transicao: bool = true, detailed:
 		full_path = scene_dir_path + to_scene_name +".tscn"
 	else:
 		full_path = scene_dir_path + to_scene_name +"/"+to_scene_name+".tscn"
-	
+
 	#if from is BaseScene:
 		#player = from.player
 		#player.get_parent().remove_child(player)
-	
+
 	if transicao:
 		await fade_in()
-	
+
 	from.get_tree().call_deferred("change_scene_to_file", full_path)
 	if transicao:
 		await fade_out()
@@ -75,15 +78,15 @@ func change_scene_circle(from, to_scene_name: String):
 	circle.visible = true
 	(circle.material as ShaderMaterial).set_shader_parameter("pos", Vector2(0.12, 0.4))
 	animation_player.play("circle_trans_in")
-	
+
 	await SceneManager.animation_player.animation_finished
-	
+
 	change_scene(from, to_scene_name, false, true)
 	(circle.material as ShaderMaterial).set_shader_parameter("pos", Vector2(0.5, 0.5))
 	animation_player.play("circle_trans_out_2")
-	
+
 	await SceneManager.animation_player.animation_finished
-	
+
 	circle.visible = false
 
 func change_scene_weep(from, to_scene_name: String):
@@ -107,3 +110,12 @@ func set_dark_effect():
 	dark_effect.visible = true
 	(dark_effect.material as ShaderMaterial).set_shader_parameter("radius", dark_effect_value)
 	dark_effect_value -= 0.1
+
+func set_vignette(value: bool) -> void:
+	vignette.visible = value
+
+func set_filmgrain(value: bool) -> void:
+	film_grain.visible = value
+
+func set_ac(value: bool) -> void:
+	ca.visible = value

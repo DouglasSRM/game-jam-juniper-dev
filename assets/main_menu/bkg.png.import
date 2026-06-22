@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl4ttmrokf3ef"
-path="res://.godot/imported/capa jogo.png-a29926db3d933fac21c5fa154e66471d.ctex"
+uid="uid://cek51o2u1f1q3"
+path="res://.godot/imported/bkg.png-2879ac2d1f4f50a51792df74cb25c83d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main_menu/capa jogo.png"
-dest_files=["res://.godot/imported/capa jogo.png-a29926db3d933fac21c5fa154e66471d.ctex"]
+source_file="res://assets/main_menu/bkg.png"
+dest_files=["res://.godot/imported/bkg.png-2879ac2d1f4f50a51792df74cb25c83d.ctex"]
 
 [params]
 
