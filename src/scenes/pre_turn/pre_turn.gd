@@ -3,27 +3,29 @@ extends Control
 @onready var circle: Panel = $Panel/Circle
 @onready var bottle: Panel = $Panel/Bottle
 @onready var spin_btn: Button = $Panel/Spin
-@onready var WeaponSelector: Panel = $Panel/WeaponSelector
-@onready var WeaponSprite: Panel = $Panel/WeaponSelector/WeaponSprite
-@onready var WeaponName: Panel = $Panel/WeaponSelector/WeaponName
+@onready var weapon_selector: Panel = $Panel/WeaponSelector
+@onready var weapon_sprite: TextureRect = $Panel/WeaponSelector/WeaponSprite
+@onready var weapon_name: Label = $Panel/WeaponSelector/WeaponName
 
 const WEAPONS: Dictionary = {
-	1: "Purple",
-	2: "Blue",
-	3: "Green",
-	4: "Orange"
+	1: {"name": "Purple", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
+	2: {"name": "Blue", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
+	3: {"name": "Green", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
+	4: {"name": "Orange", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"}
 }
 var selected_weapon: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-
+	weapon_selector.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func spin_bottle() -> void:
+	spin_btn.disabled = true
+	weapon_selector.visible = false
+
 	var tween := create_tween()
 
 	var complete_spins := randf_range(3.0, 8.0) * TAU
@@ -37,12 +39,21 @@ func spin_bottle() -> void:
 
 	await tween.finished
 	var quadrant_result := find_quadrand()
-
+	show_weapon(quadrant_result)
 	spin_btn.disabled = false
 
-	selected_weapon = WEAPONS[quadrant_result]
+	# selected_weapon = WEAPONS[quadrant_result]
 	print(selected_weapon)
 	print(quadrant_result)
+
+func show_weapon(quadrant: int) -> void:
+	var weapon_data = WEAPONS[quadrant]
+	weapon_name.text = weapon_data["name"]
+
+	var loaded_texture = load(weapon_data["icon_path"])
+	weapon_sprite.texture = loaded_texture
+	weapon_selector.visible = true
+
 
 # TODO: when hits zero, buff the weapn
 func find_quadrand() -> int:
