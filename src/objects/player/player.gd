@@ -1,6 +1,6 @@
 class_name Player extends BaseCharacter
 
-@export var speed: int = 150
+var speed: int = 200
 @onready var animations: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 

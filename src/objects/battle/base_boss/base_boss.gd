@@ -6,12 +6,12 @@ class_name BaseBoss extends Entity
 func attack() -> void:
 	pass
 
-func take_damage(value: int) -> void:
+func take_damage(value: float) -> void:
 	super(value)
 	
 func _ready() -> void:
 	super()
 	#attacks.visible = false
 
-func set_health(value: int) -> void:
+func set_health(value: float) -> void:
 	super(value)

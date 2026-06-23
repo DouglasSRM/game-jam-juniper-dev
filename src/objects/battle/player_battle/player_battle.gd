@@ -17,5 +17,5 @@ func pause_animation() -> void:
 func resume_animation() -> void:
 	animation_player.play("idle")
 
-func set_health(value: int) -> void:
+func set_health(value: float) -> void:
 	super(value)

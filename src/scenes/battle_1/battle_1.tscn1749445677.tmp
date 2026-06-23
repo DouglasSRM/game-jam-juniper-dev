@@ -10,11 +10,11 @@ script = ExtResource("2_2v75w")
 
 [node name="Boss" parent="." index="0" unique_id=867154428 instance=ExtResource("3_ak64a")]
 position = Vector2(958, 267)
-max_health = 30.0
+max_health = 0.0
 
 [node name="PlayerBattle" parent="." index="1" unique_id=2102725843 instance=ExtResource("4_bkyu7")]
 position = Vector2(969, 735)
-max_health = 10.0
+max_health = null
 
 [node name="Sprite2D" parent="." index="2" unique_id=1522995467]
 visible = false
