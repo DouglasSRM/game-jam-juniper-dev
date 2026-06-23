@@ -147,6 +147,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="WeaponSprite" type="TextureRect" parent="Panel/WeaponSelector" unique_id=1876521518]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -159,6 +160,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch_mode = 2
 
 [node name="WeaponName" type="Label" parent="Panel/WeaponSelector" unique_id=612262191]
 layout_mode = 1

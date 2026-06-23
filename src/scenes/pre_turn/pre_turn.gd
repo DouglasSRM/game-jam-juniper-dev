@@ -19,6 +19,7 @@ var selected_weapon: String = ""
 func _ready() -> void:
 	weapon_selector.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	pass
 
