@@ -18,6 +18,7 @@ var selected_weapon: String = ""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	weapon_selector.visible = false
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _process(delta: float) -> void:
@@ -43,9 +44,8 @@ func spin_bottle() -> void:
 	show_weapon(quadrant_result)
 	spin_btn.disabled = false
 
-	# selected_weapon = WEAPONS[quadrant_result]
-	print(selected_weapon)
-	print(quadrant_result)
+	# print(selected_weapon)
+	# print(quadrant_result)
 
 func show_weapon(quadrant: int) -> void:
 	var weapon_data = WEAPONS[quadrant]
@@ -53,8 +53,21 @@ func show_weapon(quadrant: int) -> void:
 
 	var loaded_texture = load(weapon_data["icon_path"])
 	weapon_sprite.texture = loaded_texture
+
+	weapon_selector.modulate.a = 0.0
+	weapon_selector.scale = Vector2(0.5, 0.5)
 	weapon_selector.visible = true
 
+	var tween := create_tween()
+	tween.set_parallel(true)
+
+	tween.tween_property(weapon_selector, "modulate:a", 1., .4)
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
+
+	tween.tween_property(weapon_selector, "scale", Vector2(1., 1.), .2)
+	tween.set_trans(Tween.TRANS_BACK)
+	tween.set_ease(Tween.EASE_OUT)
 
 # TODO: when hits zero, buff the weapn
 func find_quadrand() -> int:
