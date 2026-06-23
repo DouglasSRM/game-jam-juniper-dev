@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cugv6mourvsko" path="res://src/singletons/scene_manager.gd" id="1_6xeoq"]
 [ext_resource type="Shader" uid="uid://bqmri57k5jl58" path="res://src/post_processing_effects/horizontal_weep_transition.gdshader" id="2_1hwvu"]
-[ext_resource type="Texture2D" uid="uid://bo8a5yatmljyf" path="res://assets/main_menu/option_menu.png" id="3_1hwvu"]
+[ext_resource type="Texture2D" uid="uid://sv477sfcu670" path="res://assets/main_menu/option_menu.png" id="3_1hwvu"]
 [ext_resource type="Shader" uid="uid://1ayvxryu4ig2" path="res://src/post_processing_effects/escuro.gdshader" id="4_k57hb"]
 [ext_resource type="Shader" uid="uid://d2y7766vs02w0" path="res://src/post_processing_effects/circle_transition.gdshader" id="5_5djx3"]
 [ext_resource type="Shader" uid="uid://df3s4d4veed8l" path="res://src/post_processing_effects/vignette.gdshader" id="6_tvm3g"]
