@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://4eml3ebbily8"]
 
+[ext_resource type="Script" uid="uid://d1o4qw6f2dn13" path="res://src/objects/weapons/wp_1/weapon_1.gd" id="1_3nqeo"]
+
 [node name="Weapon1" type="Node2D" unique_id=259255228]
+script = ExtResource("1_3nqeo")
 
 [node name="wp_sprite" type="Sprite2D" parent="." unique_id=1321961179]

@@ -8,12 +8,32 @@ extends Control
 @onready var weapon_name: Label = $Panel/WeaponSelector/WeaponName
 
 const WEAPONS: Dictionary = {
-	1: {"name": "Purple", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
-	2: {"name": "Blue", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
-	3: {"name": "Green", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
-	4: {"name": "Orange", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"}
+	1: {
+		"name": "Purple - Magick Stick",
+		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"scene_path": "res://src/objects/weapons/wp_1/Weapon_1.tscn",
+	},
+	2: {
+		"name": "Blue - Magin YOYO",
+		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"scene_path": "res://src/objects/weapons/wp_2/Weapon_2.tscn",
+	},
+	3: {
+		"name": "Green - Magic PIAO",
+		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"scene_path": "res://src/objects/weapons/wp_3/Weapon_3.tscn",
+	},
+	4: {
+		"name": "Orange - Magic pussy",
+		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"scene_path": "res://src/objects/weapons/wp_4/Weapon_4.tscn",
+	},
 }
-var selected_weapon: String = ""
+
+# Old shit - delete later
+# 	2: {"name": "Blue", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
+# 	3: {"name": "Green", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"},
+# 	4: {"name": "Orange", "icon_path": "res://assets/ui/pre_turn/weapon_1.png"}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,8 +64,7 @@ func spin_bottle() -> void:
 	show_weapon(quadrant_result)
 	spin_btn.disabled = false
 
-	# print(selected_weapon)
-	# print(quadrant_result)
+	print(quadrant_result)
 
 func show_weapon(quadrant: int) -> void:
 	var weapon_data = WEAPONS[quadrant]
@@ -54,9 +73,17 @@ func show_weapon(quadrant: int) -> void:
 	var loaded_texture = load(weapon_data["icon_path"])
 	weapon_sprite.texture = loaded_texture
 
+	var weapon_scene = load(weapon_data["scene_path"])
+	Global.current_weapon = weapon_scene
+
 	weapon_selector.modulate.a = 0.0
 	weapon_selector.scale = Vector2(0.5, 0.5)
 	weapon_selector.visible = true
+
+	# Show shit to me
+	print("wp_name: ", weapon_name.text)
+	print("wp_scene: ", weapon_scene)
+
 
 	var tween := create_tween()
 	tween.set_parallel(true)
