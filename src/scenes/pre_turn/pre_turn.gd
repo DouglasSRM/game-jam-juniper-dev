@@ -3,6 +3,9 @@ extends Control
 @onready var circle: Panel = $Panel/Circle
 @onready var bottle: Panel = $Panel/Bottle
 @onready var spin_btn: Button = $Panel/Spin
+@onready var WeaponSelector: Panel = $Panel/WeaponSelector
+@onready var WeaponSprite: Panel = $Panel/WeaponSelector/WeaponSprite
+@onready var WeaponName: Panel = $Panel/WeaponSelector/WeaponName
 
 const WEAPONS: Dictionary = {
 	1: "Purple",

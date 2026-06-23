@@ -10,6 +10,8 @@ texture = ExtResource("1_1wtwl")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpm7a"]
 texture = ExtResource("3_wqqrw")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqqrw"]
+
 [node name="PreTurn" type="Control" unique_id=470332190]
 layout_mode = 3
 anchors_preset = 15
@@ -131,5 +133,48 @@ offset_right = 47.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Spin to win"
+
+[node name="WeaponSelector" type="Panel" parent="Panel" unique_id=1831174508]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WeaponSprite" type="Panel" parent="Panel/WeaponSelector" unique_id=1756951111]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wqqrw")
+
+[node name="WeaponName" type="Label" parent="Panel/WeaponSelector" unique_id=612262191]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "WEAPON_NAME"
 
 [connection signal="pressed" from="Panel/Spin" to="." method="_on_spin_pressed"]
