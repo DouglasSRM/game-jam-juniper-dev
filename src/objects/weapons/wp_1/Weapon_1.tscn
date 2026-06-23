@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://4eml3ebbily8"]
+
+[node name="Weapon1" type="Node2D" unique_id=259255228]
+
+[node name="wp_sprite" type="Sprite2D" parent="." unique_id=1321961179]
