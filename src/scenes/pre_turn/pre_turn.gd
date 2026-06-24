@@ -83,23 +83,15 @@ func show_weapon(quadrant: int) -> void:
 	print("wp_name: ", weapon_name.text)
 	print("wp_scene: ", weapon_scene)
 
+	var weapon_selector_animate = scale_fade_transition(weapon_selector)
+	await weapon_selector_animate.finished
+	var weapon_name_animate = scale_fade_transition(weapon_name)
+	await  weapon_name_animate.finished
 
-	var tween := create_tween()
-	tween.set_parallel(true)
-
-	tween.tween_property(weapon_selector, "modulate:a", 1., .4)
-	tween.set_trans(Tween.TRANS_SINE)
-	tween.set_ease(Tween.EASE_OUT)
-
-	tween.tween_property(weapon_selector, "scale", Vector2(1., 1.), .2)
-	tween.set_trans(Tween.TRANS_BACK)
-	tween.set_ease(Tween.EASE_OUT)
-
-	await tween.finished
 	show_battle_btn()
 
 # (element, property, element_factor, ms)
-func scale_fade_transition(element) -> void:
+func scale_fade_transition(element) -> Tween:
 	var tween := create_tween()
 	tween.set_parallel(true)
 
@@ -111,21 +103,15 @@ func scale_fade_transition(element) -> void:
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.set_ease(Tween.EASE_OUT)
 
+	return tween
+
 func show_battle_btn() -> void:
 	battle_btn.modulate.a = 0.0
 	battle_btn.scale = Vector2(0.5, 0.5)
 	battle_btn.visible = true
 
-	var tween := create_tween()
-	tween.set_parallel(true)
-
-	tween.tween_property(battle_btn, "modulate:a", 1., .4)
-	tween.set_trans(Tween.TRANS_SINE)
-	tween.set_ease(Tween.EASE_OUT)
-
-	tween.tween_property(battle_btn, "scale", Vector2(1., 1.), .2)
-	tween.set_trans(Tween.TRANS_BACK)
-	tween.set_ease(Tween.EASE_OUT)
+	var battle_btn_animate = scale_fade_transition(battle_btn)
+	await battle_btn_animate.finished
 
 # TODO: when hits zero, buff the weapn
 func find_quadrand() -> int:
@@ -136,8 +122,6 @@ func find_quadrand() -> int:
 	elif new_degrees >= 90 and new_degrees < 180: return 2 # Blue: inferior direito
 	elif new_degrees >= 180 and new_degrees < 270: return 3 # Green: inferior esquerdo
 	else: return 4 # Orange: superior esquerdo
-
-# On pressed button, spin_bottle
 
 func _on_spin_pressed() -> void:
 	spin_bottle()
