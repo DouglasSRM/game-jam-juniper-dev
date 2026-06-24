@@ -5,11 +5,13 @@ class_name BaseAttack extends Node2D
 
 signal attack_finished
 
+var multiplier: float = 1
+
 var pre_step_duration: float = 0
 var step_duration: float = 0
 var step: int = 0
 
-var damage: int = 0
+var damage: float = 0.
 
 var target: Entity
 
@@ -23,12 +25,17 @@ func run_animation() -> void:
 func execute() -> void:
 	run_animation()
 	
+	var effective_damage = damage * multiplier
+	
 	await Utils.sleep(pre_step_duration)
-	var step_damage = damage / step
+	var step_damage = effective_damage / step
+	
+	if effective_damage <= 0:
+		return
 	
 	for i in range(1, step+1):
 		if i == step:
-			var difference = damage - (step_damage * step)
+			var difference = effective_damage - (step_damage * step)
 			step_damage += difference
 		target.take_damage(step_damage)
 		await Utils.sleep(step_duration)

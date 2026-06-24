@@ -12,6 +12,8 @@ enum Turn {
 @onready var health_bar_boss: HealthBar = $HealthBarBoss
 @onready var health_bar_player: HealthBar = $HealthBarPlayer
 
+@onready var strength_meter: StrengthMeter = $StrengthMeter
+
 var active_turn: Turn = Turn.PLAYER
 
 signal attack_finished

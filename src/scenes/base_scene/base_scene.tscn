@@ -11,7 +11,6 @@ script = ExtResource("1_mll7d")
 
 [node name="Player" parent="." unique_id=1008942108 instance=ExtResource("1_ntg1r")]
 position = Vector2(96, 160)
-speed = 100
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=189077090]
 

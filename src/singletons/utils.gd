@@ -2,6 +2,11 @@ extends Node
 
 # classe global para funções utilitárias que podem ser reutilizadas em diversos momentos do jogo
 
+func in_range(value_1, value_2, value_in) -> bool:
+	if value_2 < value_1:
+		return value_in >= value_1 or value_in <= value_2
+	return value_in >= value_1 and value_in <= value_2
+
 func sleep(time: float):
 	if time:
 		await get_tree().create_timer(time, false).timeout

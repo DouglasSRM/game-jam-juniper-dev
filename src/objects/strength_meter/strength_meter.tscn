@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c17lgfwyojub5"]
+
+[ext_resource type="Script" uid="uid://bsqbewv84vbr7" path="res://src/objects/strength_meter/strength_meter.gd" id="1_ka8bj"]
+[ext_resource type="Texture2D" uid="uid://44pb44psn3w8" path="res://assets/strength_meter/multiplicator.png" id="2_e6b8b"]
+[ext_resource type="Texture2D" uid="uid://bwhac8yep4x8i" path="res://assets/strength_meter/result.png" id="3_owvfu"]
+
+[node name="StrengthMeter" type="Node2D" unique_id=1139552940]
+script = ExtResource("1_ka8bj")
+
+[node name="SpriteMultiplicator" type="Sprite2D" parent="." unique_id=683412398]
+position = Vector2(161, -249)
+texture = ExtResource("2_e6b8b")
+hframes = 5
+
+[node name="SpriteResult" type="Sprite2D" parent="." unique_id=510971173]
+position = Vector2(0, -233)
+texture = ExtResource("3_owvfu")
+vframes = 3

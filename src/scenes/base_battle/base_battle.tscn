@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://cqh8al5d54qgk"]
 
 [ext_resource type="Script" uid="uid://deqg8i4fcjusp" path="res://src/scenes/base_battle/base_battle.gd" id="1_v7l58"]
-[ext_resource type="Texture2D" uid="uid://f7tf52f4rbl1" path="res://assets/bosses/template.png" id="2_tpxyl"]
+[ext_resource type="Texture2D" uid="uid://c8rurv0ap6lru" path="res://assets/bosses/template.png" id="2_tpxyl"]
 [ext_resource type="PackedScene" uid="uid://cqkyvd2fk08d3" path="res://src/scenes/base_battle/option_box/option_component/option_component.tscn" id="2_v7l58"]
 [ext_resource type="Script" uid="uid://dos3kn2cyk0a6" path="res://src/scenes/base_battle/option_box/resources/option_export_resource.gd" id="4_2okdr"]
 [ext_resource type="Resource" uid="uid://cuumxsayh7120" path="res://src/resources/battle/action_selection.tres" id="5_iig4f"]
 [ext_resource type="Resource" uid="uid://cwbb5xylvu8m4" path="res://src/resources/battle/attack_selection.tres" id="6_qfl1a"]
 [ext_resource type="PackedScene" uid="uid://dsbvolwejgyty" path="res://src/scenes/base_battle/player_frame.tscn" id="7_qfl1a"]
 [ext_resource type="PackedScene" uid="uid://cefyirpoqcuvk" path="res://src/objects/battle/health_bar/health_bar.tscn" id="8_iig4f"]
+[ext_resource type="PackedScene" uid="uid://c17lgfwyojub5" path="res://src/objects/strength_meter/strength_meter.tscn" id="9_cfidb"]
 
 [node name="BaseBattle" type="Node2D" unique_id=1484066849]
 script = ExtResource("1_v7l58")
@@ -49,6 +50,9 @@ position = Vector2(1605, 552)
 
 [node name="ProgressBar" parent="HealthBarPlayer" index="0" unique_id=1241638578]
 offset_right = 221.0
+
+[node name="StrengthMeter" parent="." unique_id=1139552940 instance=ExtResource("9_cfidb")]
+position = Vector2(949, 829)
 
 [connection signal="option_finished" from="MenuComponents/ActionSelection" to="." method="_on_option_component_option_finished"]
 
