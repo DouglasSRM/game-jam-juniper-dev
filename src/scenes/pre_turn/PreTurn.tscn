@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://bh8v7wlysu0s7"]
+
+[ext_resource type="Texture2D" uid="uid://b86l5i31lh2cu" path="res://assets/ui/pre_turn/circle_placehorder.png" id="1_1wtwl"]
+[ext_resource type="Script" uid="uid://rhcr6u83hi5h" path="res://src/scenes/pre_turn/pre_turn.gd" id="1_tpm7a"]
+[ext_resource type="Texture2D" uid="uid://cjopede0ljwcv" path="res://assets/ui/pre_turn/bottle_placeholder.png" id="3_wqqrw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvw3h"]
+texture = ExtResource("1_1wtwl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpm7a"]
+texture = ExtResource("3_wqqrw")
+
+[node name="PreTurn" type="Control" unique_id=470332190]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tpm7a")
+
+[node name="Panel" type="Panel" parent="." unique_id=121461464]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -622.5
+offset_top = -341.5
+offset_right = 622.5
+offset_bottom = 341.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Circle" type="Panel" parent="Panel" unique_id=1550236890]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -250.0
+offset_right = 251.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dvw3h")
+
+[node name="Bottle" type="Panel" parent="Panel" unique_id=583285682]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tpm7a")
+
+[node name="WP1" type="Label" parent="Panel" unique_id=292666070]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -86.5
+offset_top = 80.0
+offset_right = 86.5
+offset_bottom = 103.000015
+grow_horizontal = 2
+text = "Weapon 1 Placeholder"
+
+[node name="WP2" type="Label" parent="Panel" unique_id=1071162311]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -11.5
+offset_right = 253.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Weapon 2 Placeholder"
+
+[node name="WP3" type="Label" parent="Panel" unique_id=988002620]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.5
+offset_top = -103.0
+offset_right = 86.5
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Weapon 3 Placeholder"
+
+[node name="WP4" type="Label" parent="Panel" unique_id=550510419]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -11.5
+offset_right = -80.0
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Weapon 4 Placeholder"
+
+[node name="Spin" type="Button" parent="Panel" unique_id=1637704212]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -31.0
+offset_right = 47.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Spin to win"
+
+[node name="WeaponSelector" type="Panel" parent="Panel" unique_id=1831174508]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -100.0
+offset_right = 98.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+
+[node name="WeaponSprite" type="TextureRect" parent="Panel/WeaponSelector" unique_id=1876521518]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 2
+
+[node name="WeaponName" type="Label" parent="Panel/WeaponSelector" unique_id=612262191]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "WEAPON_NAME"
+
+[connection signal="pressed" from="Panel/Spin" to="." method="_on_spin_pressed"]
