@@ -1,20 +1,14 @@
 [gd_scene format=3 uid="uid://xcx7r21ircnt"]
 
 [ext_resource type="Script" uid="uid://lq0yrdeikhfl" path="res://src/objects/battle/base_boss/base_boss.gd" id="1_w7vfi"]
-[ext_resource type="Texture2D" uid="uid://f7tf52f4rbl1" path="res://assets/bosses/template.png" id="1_w253h"]
+[ext_resource type="Texture2D" uid="uid://c8rurv0ap6lru" path="res://assets/bosses/template.png" id="1_w253h"]
 
 [sub_resource type="Animation" id="Animation_omt2a"]
 length = 0.001
 
-[sub_resource type="Animation" id="Animation_ogj5a"]
-resource_name = "attack"
-length = 4.0
-step = 0.5
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4qfeo"]
 _data = {
-&"RESET": SubResource("Animation_omt2a"),
-&"attack": SubResource("Animation_ogj5a")
+&"RESET": SubResource("Animation_omt2a")
 }
 
 [node name="BaseBoss" type="Node2D" unique_id=867154428]

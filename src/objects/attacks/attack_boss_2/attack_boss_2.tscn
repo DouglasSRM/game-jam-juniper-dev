@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://btvtfiili5imu"]
+
+[ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_svi6f"]
+[ext_resource type="Script" uid="uid://hq2leacfbbp3" path="res://src/objects/attacks/attack_boss_2/attack_boss_2.gd" id="2_jte7h"]
+[ext_resource type="Texture2D" uid="uid://do1s7v40vye25" path="res://assets/attacks/attack_boss_2.png" id="3_xp7nd"]
+
+[sub_resource type="Animation" id="Animation_xp7nd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_abs71"]
+resource_name = "attack"
+length = 4.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 3, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wx83a"]
+_data = {
+&"RESET": SubResource("Animation_xp7nd"),
+&"attack": SubResource("Animation_abs71")
+}
+
+[node name="AttackBoss2" unique_id=1305917817 instance=ExtResource("1_svi6f")]
+visible = true
+script = ExtResource("2_jte7h")
+
+[node name="Sprite" parent="." index="0" unique_id=451462687]
+visible = true
+scale = Vector2(2, 2)
+texture = ExtResource("3_xp7nd")
+hframes = 4
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
+libraries/ = SubResource("AnimationLibrary_wx83a")

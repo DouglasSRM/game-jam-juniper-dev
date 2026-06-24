@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cbpoar7heduhg"]
+
+[ext_resource type="PackedScene" uid="uid://cqh8al5d54qgk" path="res://src/scenes/base_battle/base_battle.tscn" id="1_c2a22"]
+[ext_resource type="Script" uid="uid://dgvssy7bfu1td" path="res://src/scenes/battle_3/battle_3.gd" id="2_7l2rw"]
+[ext_resource type="PackedScene" uid="uid://xfyl7b20qaru" path="res://src/objects/battle/boss_3/boss_3.tscn" id="3_do80o"]
+[ext_resource type="PackedScene" uid="uid://ms8dfbjptulw" path="res://src/objects/battle/player_battle/player_battle.tscn" id="4_sttp2"]
+
+[node name="Battle3" unique_id=1484066849 instance=ExtResource("1_c2a22")]
+script = ExtResource("2_7l2rw")
+
+[node name="Boss" parent="." index="0" unique_id=867154428 instance=ExtResource("3_do80o")]
+position = Vector2(967, 288)
+max_health = 10.0
+
+[node name="PlayerBattle" parent="." index="1" unique_id=2102725843 instance=ExtResource("4_sttp2")]
+position = Vector2(949, 711)
+
+[node name="Sprite2D" parent="." index="2" unique_id=1522995467]
+visible = false
+
+[connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]
+[connection signal="is_dead" from="PlayerBattle" to="." method="_on_player_battle_is_dead"]
+
+[editable path="HealthBarPlayer"]

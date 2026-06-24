@@ -1,6 +1,6 @@
-class_name Battle1 extends BaseBattle
+class_name Battle3 extends BaseBattle
 
-@onready var boss: Boss1 = $Boss
+@onready var boss: Boss3 = $Boss
 @onready var player_battle: PlayerBattle = $PlayerBattle
 
 func _ready() -> void:
@@ -34,7 +34,7 @@ func attack_1() -> void:
 func start_boss_turn() -> void:
 	await super()
 	for attack in boss.attacks_array:
-		if attack is AttackBoss1:
+		if attack is AttackBoss3:
 			await run_attack(attack, player_battle)
 			
 			break
@@ -49,8 +49,8 @@ func run_attack(attack: BaseAttack, target: Entity) -> void:
 
 func _on_boss_is_dead() -> void:
 	await attack_finished
-	SceneManager.change_scene(self, 'dungeon_floor_1')
+	SceneManager.change_scene(self, 'dungeon_floor_3')
 
 func _on_player_battle_is_dead() -> void:
 	await attack_finished
-	SceneManager.change_scene(self, 'dungeon_entrance')
+	SceneManager.change_scene(self, 'hub_2')

@@ -99,13 +99,14 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yogsp"]
-size = Vector2(22, 10.5)
+size = Vector2(110, 50.25)
 
 [node name="BaseCharacter" type="CharacterBody2D" unique_id=1222905426]
 z_index = 1
 script = ExtResource("1_yogsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=23594111]
+scale = Vector2(6, 6)
 offset = Vector2(0, -16)
 hframes = 4
 vframes = 4
@@ -114,5 +115,5 @@ vframes = 4
 libraries/ = SubResource("AnimationLibrary_vtukt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976558708]
-position = Vector2(0, -6)
+position = Vector2(0, -25.875)
 shape = SubResource("RectangleShape2D_yogsp")

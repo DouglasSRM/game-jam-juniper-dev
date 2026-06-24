@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dh4e8hp0r1syw"]
 
 [ext_resource type="PackedScene" uid="uid://btwtjqlno0g88" path="res://src/objects/base_character/base_character.tscn" id="1_a0wbo"]
-[ext_resource type="Texture2D" uid="uid://bjng6ic6x6k0h" path="res://assets/characters/player/player_spritesheet.png" id="2_083k5"]
+[ext_resource type="Texture2D" uid="uid://ctgwvd6kdc1u" path="res://assets/characters/player/player_spritesheet.png" id="2_083k5"]
 
 [node name="Npc1" unique_id=1222905426 instance=ExtResource("1_a0wbo")]
 

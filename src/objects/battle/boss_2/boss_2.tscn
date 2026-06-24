@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bpxe5aouv1wed"]
+
+[ext_resource type="PackedScene" uid="uid://xcx7r21ircnt" path="res://src/objects/battle/base_boss/base_boss.tscn" id="1_adldd"]
+[ext_resource type="Script" uid="uid://b1kh3qoqtqyxu" path="res://src/objects/battle/boss_2/boss_2.gd" id="2_rjl2l"]
+[ext_resource type="Texture2D" uid="uid://blrkddd2q513d" path="res://assets/bosses/boss_2.png" id="3_hih5n"]
+[ext_resource type="PackedScene" uid="uid://btvtfiili5imu" path="res://src/objects/attacks/attack_boss_2/attack_boss_2.tscn" id="4_t3v86"]
+
+[node name="Boss2" unique_id=867154428 instance=ExtResource("1_adldd")]
+script = ExtResource("2_rjl2l")
+max_health = 40.0
+
+[node name="Sprite" parent="." index="0" unique_id=685350226]
+texture = ExtResource("3_hih5n")
+
+[node name="AttackBoss2" parent="Attacks" parent_id_path=PackedInt32Array(888676108) index="0" unique_id=1305917817 instance=ExtResource("4_t3v86")]
+position = Vector2(0, 268)
