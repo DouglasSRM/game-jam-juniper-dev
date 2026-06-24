@@ -14,19 +14,26 @@ func start_fight() -> void:
 func attack_1() -> void:
 	player_battle.pause_animation()
 	player_frame.pause_animation()
-	
+
 	strength_meter.activate()
-	
+
 	var multiplier: float = await strength_meter.return_multiplier
-	
+
 	strength_meter.hide()
-	
-	for attack in player_battle.attacks:
-		if attack is AttackYoyo:
-			attack.multiplier = multiplier
-			await run_attack(attack, boss)
-			
-			break
+
+	if player_battle.attacks.size() > 0:
+		var current_attack = player_battle.attacks[0]
+
+		current_attack.multiplier = multiplier
+		await  run_attack(current_attack, boss)
+
+	# N removi sua funcao antiga, pq eu n sei se vc vai concordar comigo, ent vo dexa aqui por enquanto
+	# for attack in player_battle.attacks:
+	# 	if attack is AttackYoyo:
+	# 		attack.multiplier = multiplier
+	# 		await run_attack(attack, boss)
+	#
+	#		break
 	player_battle.resume_animation()
 	player_frame.resume_animation()
 	change_turn()
@@ -36,14 +43,14 @@ func start_boss_turn() -> void:
 	for attack in boss.attacks_array:
 		if attack is AttackBoss1:
 			await run_attack(attack, player_battle)
-			
+
 			break
 	change_turn()
 
 func run_attack(attack: BaseAttack, target: Entity) -> void:
 	attack.target = target
 	attack.execute()
-	
+
 	await attack.attack_finished
 	attack_finished.emit()
 

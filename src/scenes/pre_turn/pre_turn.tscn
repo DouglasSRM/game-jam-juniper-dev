@@ -4,8 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://l4iadwbn3geu" path="res://assets/ui/pre_turn/roullette.png" id="2_wqqrw"]
 [ext_resource type="Texture2D" uid="uid://c2ervch735yav" path="res://assets/ui/pre_turn/bottle.png" id="3_5kjso"]
 [ext_resource type="Texture2D" uid="uid://dme4tu1wabw55" path="res://assets/ui/pre_turn/frame.png" id="4_5kjso"]
-[ext_resource type="Texture2D" uid="uid://cmjixa4w152pb" path="res://assets/ui/pre_turn/button.png" id="4_k1n4y"]
-[ext_resource type="Texture2D" uid="uid://dhmawm3q4nbb8" path="res://assets/ui/pre_turn/button_pressed.png" id="5_kibd6"]
+[ext_resource type="Texture2D" uid="uid://bsyx1tkqublrp" path="res://assets/ui/pre_turn/buttons/summon/summon.png" id="4_t4cjr"]
+[ext_resource type="Texture2D" uid="uid://ckjsy37knwx3k" path="res://assets/ui/pre_turn/buttons/summon/summon_pressed.png" id="5_aay7f"]
+[ext_resource type="Texture2D" uid="uid://b64y7ogu48qjm" path="res://assets/ui/pre_turn/buttons/summon/summon_disabled.png" id="6_82xik"]
+[ext_resource type="Texture2D" uid="uid://drc3g2ew01dh8" path="res://assets/ui/pre_turn/buttons/fight/fight.png" id="6_aay7f"]
+[ext_resource type="Texture2D" uid="uid://cdgahtl1k52c6" path="res://assets/ui/pre_turn/buttons/fight/fight_pressed.png" id="7_82xik"]
+[ext_resource type="FontFile" uid="uid://3mpujxnlxp4g" path="res://fonts/antiquity-print.ttf" id="10_axl8j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqqrw"]
 bg_color = Color(0, 0, 0, 0)
@@ -136,10 +140,27 @@ anchor_bottom = 1.0
 offset_left = -141.0
 offset_top = -137.5
 offset_right = 141.0
+offset_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 0
-texture_normal = ExtResource("4_k1n4y")
-texture_pressed = ExtResource("5_kibd6")
+texture_normal = ExtResource("4_t4cjr")
+texture_pressed = ExtResource("5_aay7f")
+texture_disabled = ExtResource("6_82xik")
+stretch_mode = 5
+
+[node name="Battle" type="TextureButton" parent="Panel" unique_id=1015003776]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -141.0
+offset_right = 141.0
+offset_bottom = 138.0
+grow_horizontal = 2
+pivot_offset = Vector2(141, 69)
+texture_normal = ExtResource("6_aay7f")
+texture_pressed = ExtResource("7_82xik")
 stretch_mode = 5
 
 [node name="WeaponSelector" type="TextureRect" parent="Panel" unique_id=620723091]
@@ -184,11 +205,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -62.0
-offset_top = -23.0
-offset_right = 62.0
+offset_left = -187.0
+offset_top = -29.0
+offset_right = 187.0
+offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(0.9411765, 0.70980394, 0.25490198, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("10_axl8j")
+theme_override_font_sizes/font_size = 32
 text = "WEAPON_NAME"
 horizontal_alignment = 1
 
@@ -209,3 +236,4 @@ grow_vertical = 2
 pivot_offset = Vector2(100, 100)
 
 [connection signal="pressed" from="Panel/Spin" to="." method="_on_spin_pressed"]
+[connection signal="pressed" from="Panel/Battle" to="." method="_on_battle_pressed"]
