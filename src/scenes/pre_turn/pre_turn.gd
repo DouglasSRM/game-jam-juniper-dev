@@ -1,31 +1,31 @@
 extends Control
 
-@onready var circle: Panel = $Panel/Circle
-@onready var bottle: Panel = $Panel/Bottle
-@onready var spin_btn: Button = $Panel/Spin
-@onready var weapon_selector: Panel = $Panel/WeaponSelector
+@onready var circle: TextureRect = $Panel/Circle
+@onready var bottle: TextureRect = $Panel/Bottle
+@onready var spin_btn: TextureButton = $Panel/Spin
+@onready var weapon_selector: TextureRect = $Panel/WeaponSelector
 @onready var weapon_sprite: TextureRect = $Panel/WeaponSelector/WeaponSprite
 @onready var weapon_name: Label = $Panel/WeaponSelector/WeaponName
 
 const WEAPONS: Dictionary = {
 	1: {
-		"name": "Purple - Magick Stick",
-		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"name": "Kusarigama",
+		"icon_path": "res://assets/ui/pre_turn/weapons/kusarigama.png",
 		"scene_path": "res://src/objects/weapons/wp_1/weapon_1.tscn",
 	},
 	2: {
-		"name": "Blue - Magin YOYO",
-		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"name": "Chakram",
+		"icon_path": "res://assets/ui/pre_turn/weapons/chakram.png",
 		"scene_path": "res://src/objects/weapons/wp_2/weapon_2.tscn",
 	},
 	3: {
-		"name": "Green - Magic PIAO",
-		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"name": "Flail",
+		"icon_path": "res://assets/ui/pre_turn/weapons/flail.png",
 		"scene_path": "res://src/objects/weapons/wp_3/weapon_3.tscn",
 	},
 	4: {
-		"name": "Orange - Magic pussy",
-		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
+		"name": "Yoyo",
+		"icon_path": "res://assets/ui/pre_turn/weapons/yoyo.png",
 		"scene_path": "res://src/objects/weapons/wp_4/weapon_4.tscn",
 	},
 }
@@ -106,6 +106,7 @@ func find_quadrand() -> int:
 	elif new_degrees >= 180 and new_degrees < 270: return 3 # Green: inferior esquerdo
 	else: return 4 # Orange: superior esquerdo
 
+# On pressed button, spin_bottle
 
 func _on_spin_pressed() -> void:
 	spin_bottle()
