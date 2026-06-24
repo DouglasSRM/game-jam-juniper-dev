@@ -11,22 +11,22 @@ const WEAPONS: Dictionary = {
 	1: {
 		"name": "Purple - Magick Stick",
 		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
-		"scene_path": "res://src/objects/weapons/wp_1/Weapon_1.tscn",
+		"scene_path": "res://src/objects/weapons/wp_1/weapon_1.tscn",
 	},
 	2: {
 		"name": "Blue - Magin YOYO",
 		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
-		"scene_path": "res://src/objects/weapons/wp_2/Weapon_2.tscn",
+		"scene_path": "res://src/objects/weapons/wp_2/weapon_2.tscn",
 	},
 	3: {
 		"name": "Green - Magic PIAO",
 		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
-		"scene_path": "res://src/objects/weapons/wp_3/Weapon_3.tscn",
+		"scene_path": "res://src/objects/weapons/wp_3/weapon_3.tscn",
 	},
 	4: {
 		"name": "Orange - Magic pussy",
 		"icon_path": "res://assets/ui/pre_turn/weapon_1.png",
-		"scene_path": "res://src/objects/weapons/wp_4/Weapon_4.tscn",
+		"scene_path": "res://src/objects/weapons/wp_4/weapon_4.tscn",
 	},
 }
 
