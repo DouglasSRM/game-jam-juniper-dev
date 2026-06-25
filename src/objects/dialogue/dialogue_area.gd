@@ -10,7 +10,7 @@ const dialogue_system_preload = preload("res://src/objects/dialogue/dialogue_sys
 @export var dialogue: Array[DE]
 
 var dialogue_top_pos: Vector2 = Vector2(240, 48)
-var dialogue_bottom_pos: Vector2 = Vector2(550, 430)
+var dialogue_bottom_pos: Vector2 = Vector2(960, 800)
 
 
 var player_body_in: bool = false
