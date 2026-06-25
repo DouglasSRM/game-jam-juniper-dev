@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cp81xg7xtdmj3"]
 
 [ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_0vn36"]
-[ext_resource type="Script" uid="uid://b20a184b1rmt3" path="res://src/objects/attacks/attack_kusarigama/attack_kusarigama.gd" id="2_u8su6"]
+[ext_resource type="Script" uid="uid://b20a184b1rmt3" path="res://src/objects/attacks/weapons_attacks/01_kurisagama/attack_1/attack_kusarigama_1.gd" id="2_u8su6"]
 [ext_resource type="Texture2D" uid="uid://c06h80wgtcxbu" path="res://assets/attacks/attack_yoyo.png" id="3_cqe8q"]
 
 [sub_resource type="Animation" id="Animation_cqe8q"]
@@ -42,12 +42,10 @@ _data = {
 &"attack": SubResource("Animation_eov8y")
 }
 
-[node name="AttackKusarigama" unique_id=1305917817 instance=ExtResource("1_0vn36")]
-visible = true
+[node name="AttackKusarigama1" unique_id=1305917817 instance=ExtResource("1_0vn36")]
 script = ExtResource("2_u8su6")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
-visible = true
 texture = ExtResource("3_cqe8q")
 hframes = 6
 

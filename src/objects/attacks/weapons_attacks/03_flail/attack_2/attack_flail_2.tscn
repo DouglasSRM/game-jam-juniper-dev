@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://42r4xoxptpdd"]
+
+[ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_8stnt"]
+[ext_resource type="Script" uid="uid://cbodi0s0vrny2" path="res://src/objects/attacks/weapons_attacks/03_flail/attack_2/attack_flail_2.gd" id="2_2efmr"]
+[ext_resource type="Texture2D" uid="uid://c06h80wgtcxbu" path="res://assets/attacks/attack_yoyo.png" id="3_al84m"]
+
+[sub_resource type="Animation" id="Animation_al84m"]
+resource_name = "attack"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sl2vg"]
+_data = {
+&"attack": SubResource("Animation_al84m")
+}
+
+[node name="AttackFlail2" unique_id=1305917817 instance=ExtResource("1_8stnt")]
+script = ExtResource("2_2efmr")
+
+[node name="Sprite" parent="." index="0" unique_id=451462687]
+texture = ExtResource("3_al84m")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
+libraries/ = SubResource("AnimationLibrary_sl2vg")

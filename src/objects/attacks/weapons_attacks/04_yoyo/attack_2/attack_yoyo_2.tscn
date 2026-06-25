@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://tcmthfrmq6bh"]
+
+[ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_t1eih"]
+[ext_resource type="Script" uid="uid://wpk780l6xmix" path="res://src/objects/attacks/weapons_attacks/04_yoyo/attack_2/attack_yoyo_2.gd" id="2_obbcy"]
+[ext_resource type="Texture2D" uid="uid://c06h80wgtcxbu" path="res://assets/attacks/attack_yoyo.png" id="3_3h3lm"]
+
+[sub_resource type="Animation" id="Animation_3h3lm"]
+resource_name = "attack"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t4b02"]
+_data = {
+&"attack": SubResource("Animation_3h3lm")
+}
+
+[node name="AttackYoyo1" unique_id=1305917817 instance=ExtResource("1_t1eih")]
+script = ExtResource("2_obbcy")
+
+[node name="Sprite" parent="." index="0" unique_id=451462687]
+texture = ExtResource("3_3h3lm")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
+libraries/ = SubResource("AnimationLibrary_t4b02")

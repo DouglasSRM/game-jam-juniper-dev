@@ -1,6 +1,6 @@
 class_name PlayerBattle extends Entity
 
-@onready var attack_yoyo: AttackYoyo = $Attacks/AttackYoyo # N vo comenta pra n dar pau (n olhei ateh onde isso vai), mas n vamos mais usar
+# @onready var attack_yoyo: AttackYoyo = $Attacks/AttackYoyo # N vo comenta pra n dar pau (n olhei ateh onde isso vai), mas n vamos mais usar
 @onready var attacks_node: Node2D = $Attacks
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
