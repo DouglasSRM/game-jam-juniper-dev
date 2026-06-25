@@ -6,6 +6,7 @@ extends Control
 @onready var weapon_selector: TextureRect = $Panel/WeaponSelector
 @onready var weapon_sprite: TextureRect = $Panel/WeaponSelector/WeaponSprite
 @onready var weapon_name: Label = $Panel/WeaponSelector/WeaponName
+@onready var battle_btn: TextureButton = $Panel/Battle
 
 const WEAPONS: Dictionary = {
 	1: {
@@ -38,9 +39,9 @@ const WEAPONS: Dictionary = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	weapon_selector.visible = false
+	battle_btn.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
 func _process(delta: float) -> void:
 	pass
 
@@ -62,8 +63,6 @@ func spin_bottle() -> void:
 	await tween.finished
 	var quadrant_result := find_quadrand()
 	show_weapon(quadrant_result)
-	spin_btn.disabled = false
-
 	print(quadrant_result)
 
 func show_weapon(quadrant: int) -> void:
@@ -84,17 +83,35 @@ func show_weapon(quadrant: int) -> void:
 	print("wp_name: ", weapon_name.text)
 	print("wp_scene: ", weapon_scene)
 
+	var weapon_selector_animate = scale_fade_transition(weapon_selector)
+	await weapon_selector_animate.finished
+	var weapon_name_animate = scale_fade_transition(weapon_name)
+	await  weapon_name_animate.finished
 
+	show_battle_btn()
+
+# (element, property, element_factor, ms)
+func scale_fade_transition(element) -> Tween:
 	var tween := create_tween()
 	tween.set_parallel(true)
 
-	tween.tween_property(weapon_selector, "modulate:a", 1., .4)
+	tween.tween_property(element, "modulate:a", 1., .4)
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.set_ease(Tween.EASE_OUT)
 
-	tween.tween_property(weapon_selector, "scale", Vector2(1., 1.), .2)
+	tween.tween_property(element, "scale", Vector2(1., 1.), .2)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.set_ease(Tween.EASE_OUT)
+
+	return tween
+
+func show_battle_btn() -> void:
+	battle_btn.modulate.a = 0.0
+	battle_btn.scale = Vector2(0.5, 0.5)
+	battle_btn.visible = true
+
+	var battle_btn_animate = scale_fade_transition(battle_btn)
+	await battle_btn_animate.finished
 
 # TODO: when hits zero, buff the weapn
 func find_quadrand() -> int:
@@ -106,7 +123,8 @@ func find_quadrand() -> int:
 	elif new_degrees >= 180 and new_degrees < 270: return 3 # Green: inferior esquerdo
 	else: return 4 # Orange: superior esquerdo
 
-# On pressed button, spin_bottle
-
 func _on_spin_pressed() -> void:
 	spin_bottle()
+
+func _on_battle_pressed() -> void:
+	SceneManager.change_scene(self, Global.next_battle_scene)

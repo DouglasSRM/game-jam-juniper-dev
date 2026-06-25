@@ -1,4 +1,6 @@
 class_name Hub1 extends BaseScene
 
 func go_to_next_scene() -> void:
-	SceneManager.change_scene(self, 'battle_2')
+	Global.next_battle_scene = 'battle_2'
+	SceneManager.change_scene(self, 'PreTurn')
+	# SceneManager.change_scene(self, 'battle_2')
