@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bh8v7wlysu0s7"]
 
 [ext_resource type="Script" uid="uid://rhcr6u83hi5h" path="res://src/scenes/pre_turn/pre_turn.gd" id="1_tpm7a"]
+[ext_resource type="Shader" uid="uid://bl66sfo16r5mh" path="res://src/post_processing_effects/grid_scroller.gdshader" id="2_qarha"]
 [ext_resource type="Texture2D" uid="uid://l4iadwbn3geu" path="res://assets/ui/pre_turn/roullette.png" id="2_wqqrw"]
 [ext_resource type="Texture2D" uid="uid://c2ervch735yav" path="res://assets/ui/pre_turn/bottle.png" id="3_5kjso"]
 [ext_resource type="Texture2D" uid="uid://dme4tu1wabw55" path="res://assets/ui/pre_turn/frame.png" id="4_5kjso"]
@@ -10,6 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://drc3g2ew01dh8" path="res://assets/ui/pre_turn/buttons/fight/fight.png" id="6_aay7f"]
 [ext_resource type="Texture2D" uid="uid://cdgahtl1k52c6" path="res://assets/ui/pre_turn/buttons/fight/fight_pressed.png" id="7_82xik"]
 [ext_resource type="FontFile" uid="uid://3mpujxnlxp4g" path="res://fonts/antiquity-print.ttf" id="10_axl8j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dvw3h"]
+shader = ExtResource("2_qarha")
+shader_parameter/bg_color = Color(0.03, 0.03, 0.07, 1)
+shader_parameter/line_color = Color(0.1, 0.1, 0.3, 1)
+shader_parameter/glow_color = Color(0.2, 0.4, 1, 1)
+shader_parameter/grid_size = 0.06
+shader_parameter/line_thickness = 0.002
+shader_parameter/scroll_speed = 0.06
+shader_parameter/motion_strength = 0.007
+shader_parameter/motion_speed1 = 0.03
+shader_parameter/motion_speed2 = 0.015
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqqrw"]
 bg_color = Color(0, 0, 0, 0)
@@ -22,6 +35,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tpm7a")
+
+[node name="GridScrolling" type="ColorRect" parent="." unique_id=529851448]
+material = SubResource("ShaderMaterial_dvw3h")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=121461464]
 layout_mode = 1

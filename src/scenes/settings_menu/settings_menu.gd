@@ -57,7 +57,7 @@ func _on_resolution_item_selected(index: int) -> void:
 
 func center_window(window_size: Vector2i) -> void:
 	var screen_size := DisplayServer.screen_get_size()
-	var center_pos := (screen_size / 1) - (window_size / 1)
+	var center_pos := (screen_size / 2) - (window_size / 2)
 	DisplayServer.window_set_position(center_pos)
 
 func sync_resolution_button() -> void:
@@ -77,3 +77,7 @@ func _on_grain_switch_toggled(toggled_on: bool) -> void:
 
 func _on_vignette_switch_toggled(toggled_on: bool) -> void:
 	SceneManager.set_vignette(toggled_on)
+
+
+func _on_crt_switch_toggled(toggled_on: bool) -> void:
+	SceneManager.set_crt(toggled_on)
