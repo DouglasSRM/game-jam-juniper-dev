@@ -7,6 +7,8 @@ signal attack_finished
 
 var multiplier: float = 1
 
+var attack_name: String = 'Base Attack'
+
 var pre_step_duration: float = 0
 var step_duration: float = 0
 var step: int = 1

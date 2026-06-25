@@ -10,3 +10,8 @@ max_health = 30
 
 [node name="AttackBoss1" parent="Attacks" parent_id_path=PackedInt32Array(888676108) index="0" unique_id=1305917817 instance=ExtResource("3_vc3fp")]
 position = Vector2(-1, 323)
+
+[node name="Sprite" parent="Attacks/AttackBoss1" index="0" unique_id=451462687]
+position = Vector2(0, 1)
+
+[editable path="Attacks/AttackBoss1"]

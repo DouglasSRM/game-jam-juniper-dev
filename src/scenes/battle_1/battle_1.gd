@@ -7,11 +7,17 @@ func _ready() -> void:
 	super()
 	start_fight.call_deferred()
 
+func define_attacks() -> void:
+	for i in range(0, player_battle.attacks.size()):
+		add_attack(player_battle.attacks[i].attack_name)
+	set_go_back()
+
 func start_fight() -> void:
+	define_attacks()
 	health_bar_boss.set_health_component(boss.health_component)
 	health_bar_player.set_health_component(player_battle.health_component)
 
-func attack_1() -> void:
+func attack(index: int) -> void:
 	player_battle.pause_animation()
 	player_frame.pause_animation()
 
@@ -22,18 +28,11 @@ func attack_1() -> void:
 	strength_meter.hide()
 
 	if player_battle.attacks.size() > 0:
-		var current_attack = player_battle.attacks[0]
+		var current_attack = player_battle.attacks[index]
 
 		current_attack.multiplier = multiplier
 		await  run_attack(current_attack, boss)
-
-	# N removi sua funcao antiga, pq eu n sei se vc vai concordar comigo, ent vo dexa aqui por enquanto
-	# for attack in player_battle.attacks:
-	# 	if attack is AttackYoyo:
-	# 		attack.multiplier = multiplier
-	# 		await run_attack(attack, boss)
-	#
-	#		break
+	
 	player_battle.resume_animation()
 	player_frame.resume_animation()
 	change_turn()

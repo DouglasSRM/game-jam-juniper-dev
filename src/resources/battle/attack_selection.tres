@@ -3,26 +3,6 @@
 [ext_resource type="Script" uid="uid://cnynyx05od68" path="res://src/scenes/base_battle/option_box/resources/option_function_resource.gd" id="1_rmcid"]
 [ext_resource type="Script" uid="uid://cdjasv8np5k7m" path="res://src/scenes/base_battle/option_box/resources/option_choice_resource.gd" id="2_cmh1u"]
 
-[sub_resource type="Resource" id="Resource_iig4f"]
-script = ExtResource("1_rmcid")
-target_path = NodePath("../..")
-function_name = "attack_1"
-metadata/_custom_type_script = "uid://cnynyx05od68"
-
-[sub_resource type="Resource" id="Resource_qfl1a"]
-script = ExtResource("1_rmcid")
-target_path = NodePath("../..")
-function_name = "attack_2"
-metadata/_custom_type_script = "uid://cnynyx05od68"
-
-[sub_resource type="Resource" id="Resource_edha8"]
-script = ExtResource("1_rmcid")
-target_path = NodePath("../..")
-function_name = "go_back"
-metadata/_custom_type_script = "uid://cnynyx05od68"
-
 [resource]
 script = ExtResource("2_cmh1u")
-choice_text = Array[String](["Yoyo", "Attack 2", "Go Back"])
-choice_function_call = Array[ExtResource("1_rmcid")]([SubResource("Resource_iig4f"), SubResource("Resource_qfl1a"), SubResource("Resource_edha8")])
 metadata/_custom_type_script = "uid://cdjasv8np5k7m"

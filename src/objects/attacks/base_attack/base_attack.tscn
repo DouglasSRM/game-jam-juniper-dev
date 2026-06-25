@@ -3,13 +3,12 @@
 [ext_resource type="Script" uid="uid://bk1r7tdm6n5nb" path="res://src/objects/attacks/base_attack/base_attack.gd" id="1_jllfs"]
 
 [node name="BaseAttack" type="Node2D" unique_id=1305917817]
-visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = 1
 script = ExtResource("1_jllfs")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=451462687]
-visible = false
+position = Vector2(0, -250)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1776610203]

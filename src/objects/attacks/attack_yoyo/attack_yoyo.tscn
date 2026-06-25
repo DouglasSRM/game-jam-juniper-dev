@@ -33,7 +33,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1, 1.75, 2.5, 3, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 2, 4, 5]
+"values": [5, 4, 2, 3, 2, 1, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hyjl2"]
@@ -43,11 +43,10 @@ _data = {
 }
 
 [node name="AttackYoyo" unique_id=1305917817 instance=ExtResource("1_vtgef")]
-visible = true
 script = ExtResource("2_cb5fn")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
-visible = true
+position = Vector2(0, -500)
 texture = ExtResource("3_kdnfy")
 hframes = 6
 frame = 1

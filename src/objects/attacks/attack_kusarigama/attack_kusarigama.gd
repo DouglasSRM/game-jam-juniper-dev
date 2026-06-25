@@ -1,17 +1,11 @@
 extends BaseAttack
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	super()
-	#var parent_weapon = get_parent() # AQui na real a gente pode setar os danos por atauque
-	#if parent_weapon:
-		#await parent_weapon.ready
-
-		#if parent_weapon is BaseWeapon:
-			#self.damage = parent_weapon.damage
-			#print("BCT DAN: ", self.damage)
-
+	
+	attack_name = 'Kusarigama Foda'
+	
 	damage = 5 
 	step = 3
 	pre_step_duration = 1

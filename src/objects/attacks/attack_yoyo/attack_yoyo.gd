@@ -2,6 +2,9 @@ class_name AttackYoyo extends BaseAttack
 
 func _ready() -> void:
 	super()
+	
+	attack_name = 'Yoyozada na nuca'
+	
 	damage = 5
 	step = 3
 	pre_step_duration = 1

@@ -18,6 +18,25 @@ var active_turn: Turn = Turn.PLAYER
 
 signal attack_finished
 
+
+func add_attack(p_name: String) -> void:
+	var option := OptionFunction.new()
+	option.target_path = ("../.." as NodePath)
+	option.function_name = "attack"
+	
+	var index = (attack_selection.options[0] as OptionChoice).choice_function_call.size()
+	option.function_arguments = ([index] as Array[int])
+	
+	(attack_selection.options[0] as OptionChoice).choice_text.append(p_name)
+	(attack_selection.options[0] as OptionChoice).choice_function_call.append(option)
+
+func set_go_back() -> void:
+	var option := OptionFunction.new()
+	option.target_path = ("../.." as NodePath)
+	option.function_name = "go_back"
+	(attack_selection.options[0] as OptionChoice).choice_text.append("Go Back")
+	(attack_selection.options[0] as OptionChoice).choice_function_call.append(option)
+
 func _ready() -> void:
 	new_turn.call_deferred()
 
@@ -35,6 +54,9 @@ func select_skill() -> void:
 
 func select_item() -> void:
 	activatate_action_selection()
+
+func attack(index: int) -> void:
+	print(index)
 
 func attack_1() -> void:
 	# Implementado na herança

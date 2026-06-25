@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1o4qw6f2dn13" path="res://src/objects/weapons/wp_1/weapon_1.gd" id="1_3nqeo"]
 [ext_resource type="PackedScene" uid="uid://cp81xg7xtdmj3" path="res://src/objects/attacks/attack_kusarigama/attack_kusarigama.tscn" id="2_4pkys"]
+[ext_resource type="PackedScene" uid="uid://d8b3rcx0xiur" path="res://src/objects/attacks/attack_yoyo/attack_yoyo.tscn" id="3_1vitj"]
 
 [node name="Weapon1" type="Node2D" unique_id=259255228]
 script = ExtResource("1_3nqeo")
@@ -9,5 +10,11 @@ script = ExtResource("1_3nqeo")
 [node name="wp_sprite" type="Sprite2D" parent="." unique_id=1321961179]
 
 [node name="AttackKusarigama" parent="." unique_id=1305917817 instance=ExtResource("2_4pkys")]
+
+[node name="Sprite" parent="AttackKusarigama" index="0" unique_id=451462687]
+visible = false
+position = Vector2(0, 0)
+
+[node name="AttackYoyo" parent="." unique_id=1556271051 instance=ExtResource("3_1vitj")]
 
 [editable path="AttackKusarigama"]

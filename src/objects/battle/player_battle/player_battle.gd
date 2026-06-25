@@ -37,4 +37,3 @@ func equip_rolled_weapon() ->void:
 		for child in current_weapon.get_children():
 			if child is BaseAttack:
 				attacks.append(child)
-				break
