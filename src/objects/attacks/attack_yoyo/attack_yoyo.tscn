@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_vtgef"]
 [ext_resource type="Script" uid="uid://27nvt4j0hogg" path="res://src/objects/attacks/attack_yoyo/attack_yoyo.gd" id="2_cb5fn"]
-[ext_resource type="Texture2D" uid="uid://dkjdhgkdoqbwn" path="res://assets/attacks/attack_yoyo.png" id="3_kdnfy"]
+[ext_resource type="Texture2D" uid="uid://c06h80wgtcxbu" path="res://assets/attacks/attack_yoyo.png" id="3_kdnfy"]
 
 [sub_resource type="Animation" id="Animation_kdnfy"]
 length = 0.001

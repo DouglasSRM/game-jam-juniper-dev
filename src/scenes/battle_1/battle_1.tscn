@@ -14,7 +14,6 @@ max_health = 30.0
 
 [node name="PlayerBattle" parent="." index="1" unique_id=2102725843 instance=ExtResource("4_bkyu7")]
 position = Vector2(969, 735)
-max_health = 10.0
 
 [node name="Sprite2D" parent="." index="2" unique_id=1522995467]
 visible = false

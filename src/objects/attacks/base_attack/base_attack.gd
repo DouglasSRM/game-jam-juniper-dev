@@ -9,7 +9,7 @@ var multiplier: float = 1
 
 var pre_step_duration: float = 0
 var step_duration: float = 0
-var step: int = 0
+var step: int = 1
 
 var damage: float = 0.
 
