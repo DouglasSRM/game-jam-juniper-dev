@@ -14,9 +14,10 @@ class_name MainMenu extends Control
 var acc := 0.6
 
 func _ready() -> void:
-	SceneManager.set_vignette(true)
-	SceneManager.set_ac(true)
+	SceneManager.set_vignette(false)
+	SceneManager.set_ac(false)
 	SceneManager.set_filmgrain(true)
+	SceneManager.set_crt(true)
 	settings_menu.visible = false
 	settings_menu.visibility_changed.connect(Callable(self, "opcoes"))
 	main_menu.modulate.a = 0.

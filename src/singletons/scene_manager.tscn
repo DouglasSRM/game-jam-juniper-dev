@@ -8,6 +8,9 @@
 [ext_resource type="Shader" uid="uid://df3s4d4veed8l" path="res://src/post_processing_effects/vignette.gdshader" id="6_tvm3g"]
 [ext_resource type="Shader" uid="uid://culv10avutexm" path="res://src/post_processing_effects/film_grain.gdshader" id="7_t0kbm"]
 [ext_resource type="Shader" uid="uid://clvyb4xq6bwpl" path="res://src/post_processing_effects/chromatic_aberration.gdshader" id="8_xky5x"]
+[ext_resource type="Shader" uid="uid://dkmyinrlcdjjk" path="res://src/post_processing_effects/sine_scroll.gdshader" id="9_7rxsg"]
+[ext_resource type="Shader" uid="uid://bl66sfo16r5mh" path="res://src/post_processing_effects/grid_scroller.gdshader" id="10_nm3ix"]
+[ext_resource type="Shader" uid="uid://dbxe7cxvat10a" path="res://src/post_processing_effects/crt.gdshader" id="11_4rlf2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mbrwa"]
 shader = ExtResource("2_1hwvu")
@@ -188,6 +191,33 @@ shader_parameter/r_displacement = Vector2(1, 0)
 shader_parameter/g_displacement = Vector2(0, 0)
 shader_parameter/b_displacement = Vector2(-1, 0)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xky5x"]
+shader = ExtResource("9_7rxsg")
+shader_parameter/lineas = 120
+shader_parameter/velocidad = 0.5
+shader_parameter/ondulacion = 0.2
+shader_parameter/frecuencia = 5.0
+shader_parameter/color_a = Color(0.1, 0.5, 0.8, 1)
+shader_parameter/color_b = Color(0.1, 0.1, 0.2, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7rxsg"]
+shader = ExtResource("10_nm3ix")
+shader_parameter/bg_color = Color(0.03, 0.03, 0.07, 1)
+shader_parameter/line_color = Color(0.1, 0.1, 0.3, 1)
+shader_parameter/glow_color = Color(0.2, 0.4, 1, 1)
+shader_parameter/grid_size = 0.06
+shader_parameter/line_thickness = 0.002
+shader_parameter/scroll_speed = 0.06
+shader_parameter/motion_strength = 0.007
+shader_parameter/motion_speed1 = 0.03
+shader_parameter/motion_speed2 = 0.015
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dvw3h"]
+shader = ExtResource("11_4rlf2")
+shader_parameter/distortion_amount = 0.0
+shader_parameter/aberration_amount = 0.050000002375
+shader_parameter/vignette_intensity = 0.2000000095
+
 [node name="SceneManager" type="CanvasLayer" unique_id=1913475169]
 process_mode = 3
 script = ExtResource("1_6xeoq")
@@ -245,6 +275,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="film_grain" type="ColorRect" parent="." unique_id=1568114186]
+visible = false
 material = SubResource("ShaderMaterial_tvm3g")
 anchors_preset = 15
 anchor_right = 1.0
@@ -256,6 +287,35 @@ mouse_filter = 2
 [node name="chromatic_aberration" type="ColorRect" parent="." unique_id=828797518]
 visible = false
 material = SubResource("ShaderMaterial_t0kbm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="sine_scroll" type="ColorRect" parent="." unique_id=1900479050]
+visible = false
+material = SubResource("ShaderMaterial_xky5x")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="grid_scroller" type="ColorRect" parent="." unique_id=1877510046]
+visible = false
+material = SubResource("ShaderMaterial_7rxsg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="crt" type="ColorRect" parent="." unique_id=931642769]
+material = SubResource("ShaderMaterial_dvw3h")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
