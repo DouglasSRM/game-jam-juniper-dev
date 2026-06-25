@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://dhyxtv41q47at"]
 
 [ext_resource type="Script" uid="uid://dw8e2hakatsnu" path="res://src/objects/weapons/wp_4/weapon_4.gd" id="1_e62tl"]
+[ext_resource type="PackedScene" uid="uid://dxdjv8jw4lpld" path="res://src/objects/attacks/weapons_attacks/04_yoyo/attack_1/attack_yoyo_1.tscn" id="2_ekciv"]
+[ext_resource type="PackedScene" uid="uid://tcmthfrmq6bh" path="res://src/objects/attacks/weapons_attacks/04_yoyo/attack_2/attack_yoyo_2.tscn" id="3_5l2l0"]
 
 [node name="Weapon4" type="Node2D" unique_id=1038987788]
 script = ExtResource("1_e62tl")
 
 [node name="wp_sprite" type="Sprite2D" parent="." unique_id=582871580]
+
+[node name="AttackYoyo1" parent="." unique_id=1305917817 instance=ExtResource("2_ekciv")]
+
+[node name="AttackYoyo2" parent="." unique_id=218531076 instance=ExtResource("3_5l2l0")]

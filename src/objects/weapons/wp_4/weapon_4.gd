@@ -5,7 +5,7 @@ func _ready() -> void:
 	super()
 	damage = 1
 	stamina_cost = 3
-	wp_name = "Magic Pussy"
+	wp_name = "Yoyo"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://blk1xf8ksu8m6"]
+
+[ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_0egdh"]
+[ext_resource type="Script" uid="uid://q8i22csmris8" path="res://src/objects/attacks/weapons_attacks/02_chakram/attack_2/attack_chakram_2.gd" id="2_c1d8l"]
+[ext_resource type="Texture2D" uid="uid://c06h80wgtcxbu" path="res://assets/attacks/attack_yoyo.png" id="3_1jpiv"]
+
+[sub_resource type="Animation" id="Animation_7envc"]
+resource_name = "attack"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ugqv2"]
+_data = {
+&"attack": SubResource("Animation_7envc")
+}
+
+[node name="AttackChakram2" unique_id=1305917817 instance=ExtResource("1_0egdh")]
+script = ExtResource("2_c1d8l")
+
+[node name="Sprite" parent="." index="0" unique_id=451462687]
+texture = ExtResource("3_1jpiv")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
+libraries/ = SubResource("AnimationLibrary_ugqv2")

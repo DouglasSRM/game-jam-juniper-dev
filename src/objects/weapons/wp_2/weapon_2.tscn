@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://dvdggtcjyhuj2"]
 
 [ext_resource type="Script" uid="uid://dx248ddbsu4xw" path="res://src/objects/weapons/wp_2/weapon_2.gd" id="1_pisqy"]
+[ext_resource type="PackedScene" uid="uid://c3k1qcle77ncy" path="res://src/objects/attacks/weapons_attacks/02_chakram/attack_1/attack_chakram_1.tscn" id="2_hia3c"]
+[ext_resource type="PackedScene" uid="uid://blk1xf8ksu8m6" path="res://src/objects/attacks/weapons_attacks/02_chakram/attack_2/attack_chakram_2.tscn" id="3_3nqlx"]
 
 [node name="Weapon2" type="Node2D" unique_id=1311740687]
 script = ExtResource("1_pisqy")
 
 [node name="wp_sprite" type="Sprite2D" parent="." unique_id=2118512282]
+
+[node name="AttackChakram1" parent="." unique_id=1305917817 instance=ExtResource("2_hia3c")]
+
+[node name="AttackChakram2" parent="." unique_id=1216257476 instance=ExtResource("3_3nqlx")]
