@@ -18,6 +18,9 @@ var player_node: Player
 
 signal dialogue_finished
 
+var speaker_label_left_positon := Vector2(-400., -200.)
+var speaker_label_right_positon := Vector2(-715., -200.)
+
 func _ready() -> void:
 	visible = false
 	button_container.visible = false
@@ -65,11 +68,11 @@ func _process(_delta: float) -> void:
 
 func set_speaker_right() -> void:
 	speaker_parent.get_parent().move_child(speaker_parent, 1)
-	speaker_name_label.position = Vector2(-139, -49)
+	speaker_name_label.position = speaker_label_right_positon
 
 func set_speaker_left() -> void:
 	speaker_parent.get_parent().move_child(speaker_parent, 0)
-	speaker_name_label.position = Vector2(-64, -49)
+	speaker_name_label.position = speaker_label_left_positon
 
 func _function_resource(i: DialogueFunction) -> void:
 	var target_node: Node = get_node(i.target_path)

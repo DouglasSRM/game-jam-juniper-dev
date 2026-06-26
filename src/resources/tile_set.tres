@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cnnrauyadydy0" path="res://assets/tilesets/TilesetFloor.png" id="1_flp0l"]
 [ext_resource type="Texture2D" uid="uid://bhyhc1ho8tjni" path="res://assets/tilesets/TilesetElement.png" id="2_llcxm"]
 [ext_resource type="Texture2D" uid="uid://cv3fmcqviliy1" path="res://assets/tilesets/tilesetdungeonjam.png" id="3_252ht"]
-[ext_resource type="Texture2D" uid="uid://ct5kfm87r43g3" path="res://assets/tilesets/tilesetjam.png" id="4_252ht"]
+[ext_resource type="Texture2D" uid="uid://cix3ja60qkiaq" path="res://assets/tilesets/tilesetjam.png" id="4_252ht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yneea"]
 texture = ExtResource("1_flp0l")
@@ -1416,6 +1416,15 @@ texture = ExtResource("4_252ht")
 10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-31.834991, 29.94648, -32.014854, 14.118912, -35.07245, 9.8022995, -35.07245, -2.0683746, -25.000359, -13.579334, -12.769966, -18.43552, -0.71943665, -19.69453, 15.108139, -18.43552, 27.878098, -13.399475, 35.61203, -5.485691, 38.309906, 3.6871033, 37.77034, 10.162018, 34.712738, 15.377922, 34.712738, 30.845772, 28.95726, 31.565208)
 15:9/0 = 0
 15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.6763268, 4.6763268, -4.856185, 4.4964676, 8, -8, 8)
+12:8/size_in_atlas = Vector2i(2, 2)
+12:8/0 = 0
+12:8/0/texture_origin = Vector2i(-8, 8)
+0:14/size_in_atlas = Vector2i(2, 2)
+0:14/0 = 0
+0:14/0/texture_origin = Vector2i(-8, 8)
+2:12/size_in_atlas = Vector2i(2, 4)
+2:12/0 = 0
+2:12/0/texture_origin = Vector2i(-8, 24)
 
 [resource]
 physics_layer_0/collision_layer = 1

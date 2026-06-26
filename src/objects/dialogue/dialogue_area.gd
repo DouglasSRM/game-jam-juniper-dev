@@ -8,10 +8,12 @@ const dialogue_system_preload = preload("res://src/objects/dialogue/dialogue_sys
 @export var override_dialogue_position: bool
 @export var override_position: Vector2
 @export var dialogue: Array[DE]
+@export var show_key_hint: bool = true
+
+@onready var key_hint: TextureRect = $KeyHint
 
 var dialogue_top_pos: Vector2 = Vector2(240, 48)
 var dialogue_bottom_pos: Vector2 = Vector2(960, 800)
-
 
 var player_body_in: bool = false
 var has_activated_already: bool = false
@@ -22,6 +24,7 @@ var player_node: CharacterBody2D = null
 signal dialogue_finished
 
 func _ready():
+	key_hint.visible = false
 	set_player_reference()
 
 func _process(_delta: float) -> void:
@@ -42,7 +45,9 @@ func set_player_reference():
 	for i in get_tree().get_nodes_in_group("player"):
 		player_node = i
 
-func _activate_dialogue() -> void: 
+func _activate_dialogue() -> void:
+	set_key_hint(false)
+	 
 	if player_node and lock_player:
 		player_node.can_move = false
 	
@@ -64,6 +69,7 @@ func _on_dialogue_finished() -> void:
 	dialogue_finished.emit()
 
 func _on_body_entered(body: Node2D) -> void:
+	set_key_hint(false)
 	if !self.visible:
 		return
 	if only_activate_once and has_activated_already:
@@ -72,10 +78,17 @@ func _on_body_entered(body: Node2D) -> void:
 		player_body_in = true
 		if activate_instant:
 			_activate_dialogue()
+		else:
+			set_key_hint(true)
 
 func _on_body_exited(body: Node2D) -> void:
+	set_key_hint(false)
 	if !self.visible:
 		return
 	
 	if body.is_in_group("player"):
 		player_body_in = false
+
+func set_key_hint(flag: bool) -> void:
+	if show_key_hint:
+		key_hint.visible = flag

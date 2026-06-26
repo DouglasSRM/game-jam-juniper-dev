@@ -4,7 +4,7 @@ extends BaseAttack
 func _ready() -> void:
 	super()
 
-	attack_name = 'Ataque yoyo 2'
+	attack_name = 'Ataque yoyo 1'
 
 	damage = 5
 	step = 3

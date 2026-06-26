@@ -43,11 +43,10 @@ _data = {
 }
 
 [node name="AttackBoss2" unique_id=1305917817 instance=ExtResource("1_svi6f")]
-visible = true
 script = ExtResource("2_jte7h")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
-visible = true
+position = Vector2(0, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("3_xp7nd")
 hframes = 4

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_0vn36"]
 [ext_resource type="Script" uid="uid://b20a184b1rmt3" path="res://src/objects/attacks/weapons_attacks/01_kurisagama/attack_1/attack_kusarigama_1.gd" id="2_u8su6"]
-[ext_resource type="Texture2D" uid="uid://c06h80wgtcxbu" path="res://assets/attacks/attack_yoyo.png" id="3_cqe8q"]
+[ext_resource type="Texture2D" uid="uid://cf7w82v1k4v66" path="res://assets/attacks/attack_kusarigama_1.png" id="3_mdvkw"]
 
 [sub_resource type="Animation" id="Animation_cqe8q"]
 length = 0.001
@@ -46,8 +46,7 @@ _data = {
 script = ExtResource("2_u8su6")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
-texture = ExtResource("3_cqe8q")
-hframes = 6
+texture = ExtResource("3_mdvkw")
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
 libraries/ = SubResource("AnimationLibrary_rqd37")
