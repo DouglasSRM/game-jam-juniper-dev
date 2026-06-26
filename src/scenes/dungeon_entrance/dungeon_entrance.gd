@@ -13,12 +13,12 @@ func update_water() -> void:
 	if (not agua_2.visible) and (not agua_3.visible):
 		agua_2.visible = true
 		return
-	
+
 	if agua_2.visible:
 		agua_2.visible = false
 		agua_3.visible = true
 		return
-	
+
 	if agua_3.visible:
 		agua_3.visible = false
 
