@@ -18,12 +18,13 @@ func go_to_next_scene() -> void:
 
 func tio_vai_embora() -> void:
 	switch_portinhola(true)
-	await tio.walk("up", 250, 1.7)
+	await tio.walk("up", 250, 1.5)
+	tio.stop_walking(0)
 	plimbous.emit()
 
 func porta_abre() -> void:
 	door.visible = true
-	await tio.walk("up", 250, 0.2)
+	#await tio.walk("up", 250, 0.2)
 	tio.position = Vector2(2000, 2000)
 
 func switch_portinhola(open: bool) -> void:

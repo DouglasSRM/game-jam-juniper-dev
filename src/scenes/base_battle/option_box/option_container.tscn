@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://cesaeppwn25kl"]
 
 [ext_resource type="Script" uid="uid://bimahuuwg6jwv" path="res://src/scenes/base_battle/option_box/option_container.gd" id="1_2e7jm"]
-[ext_resource type="FontFile" uid="uid://dk4rc8edrx4rd" path="res://fonts/PixelOperator-Bold.ttf" id="2_t6sbc"]
+[ext_resource type="FontFile" uid="uid://crrkhlfav8p2g" path="res://fonts/PixelOperator-Bold.ttf" id="2_t6sbc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1oxld"]
-bg_color = Color(0.050980393, 0.050980393, 0.050980393, 1)
+bg_color = Color(0.16862746, 0.16862746, 0.27058825, 1)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 6
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.078431375, 0.09411765, 0.18039216, 1)
 expand_margin_left = 6.0
 expand_margin_top = 6.0
 expand_margin_right = 6.0

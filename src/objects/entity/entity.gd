@@ -8,6 +8,10 @@ var health_component: HealthComponent
 
 signal is_dead
 
+func heal(value: float) -> void:
+	var new_health = min(current_health + value, max_health)
+	set_health(new_health)
+
 func take_damage(value: float) -> void:
 	var new_health = current_health - value
 	set_health(new_health)

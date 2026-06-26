@@ -9,6 +9,8 @@ enum Turn {
 
 @onready var action_selection: OptionComponent = $MenuComponents/ActionSelection
 @onready var attack_selection: OptionComponent = $MenuComponents/AttackSelection
+@onready var item_selection: OptionComponent = $MenuComponents/ItemSelection
+
 @onready var health_bar_boss: HealthBar = $HealthBarBoss
 @onready var health_bar_player: HealthBar = $HealthBarPlayer
 
@@ -18,6 +20,22 @@ var active_turn: Turn = Turn.PLAYER
 
 signal attack_finished
 
+func update_items() -> void:
+	(item_selection.options[0] as OptionChoice).choice_text.clear()
+	(item_selection.options[0] as OptionChoice).choice_function_call.clear()
+	set_potions()
+	set_go_back(item_selection)
+
+func use_item() -> void:
+	pass
+
+func set_potions() -> void:
+	for i in range(0, Global.potions_in_inventory):
+		var option := OptionFunction.new()
+		option.target_path = ("../.." as NodePath)
+		option.function_name = "use_item"
+		(item_selection.options[0] as OptionChoice).choice_text.append("Health Potion")
+		(item_selection.options[0] as OptionChoice).choice_function_call.append(option)
 
 func add_attack(p_name: String) -> void:
 	var option := OptionFunction.new()
@@ -30,15 +48,19 @@ func add_attack(p_name: String) -> void:
 	(attack_selection.options[0] as OptionChoice).choice_text.append(p_name)
 	(attack_selection.options[0] as OptionChoice).choice_function_call.append(option)
 
-func set_go_back() -> void:
+
+func set_go_back(menu: OptionComponent) -> void:
 	var option := OptionFunction.new()
 	option.target_path = ("../.." as NodePath)
 	option.function_name = "go_back"
-	(attack_selection.options[0] as OptionChoice).choice_text.append("Go Back")
-	(attack_selection.options[0] as OptionChoice).choice_function_call.append(option)
+	(menu.options[0] as OptionChoice).choice_text.append("Go Back")
+	(menu.options[0] as OptionChoice).choice_function_call.append(option)
+
 
 func _ready() -> void:
+	update_items()
 	new_turn.call_deferred()
+
 
 func start_player_turn() -> void:
 	activatate_action_selection()
@@ -49,11 +71,8 @@ func start_boss_turn() -> void:
 func select_attack() -> void:
 	attack_selection.activate_option_box()
 
-func select_skill() -> void:
-	activatate_action_selection()
-
 func select_item() -> void:
-	activatate_action_selection()
+	item_selection.activate_option_box()
 
 func attack(index: int) -> void:
 	print(index)

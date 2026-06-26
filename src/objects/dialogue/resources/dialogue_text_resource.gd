@@ -6,7 +6,7 @@ class_name DialogueText extends DE
 @export var speaker_img_rest_frame: int = 0
 @export var speaker_img_initial_frame: int = 0
 @export_range(1, 30, 1) var speaker_img_step_frame: int = 1 # steps para mudar de frame (caracteres)
-@export var font_size: int = 42
+@export var font_size: int = 52
 
 @export_multiline var text: String
 @export_range(0.1, 30.0, 0.1) var text_speed: float = 10.0
