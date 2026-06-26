@@ -18,8 +18,8 @@ var player_node: Player
 
 signal dialogue_finished
 
-var speaker_label_left_positon := Vector2(-400., -200.)
-var speaker_label_right_positon := Vector2(-715., -200.)
+var speaker_label_left_positon := Vector2(-400., -250.)
+var speaker_label_right_positon := Vector2(-715., -250.)
 
 func _ready() -> void:
 	visible = false

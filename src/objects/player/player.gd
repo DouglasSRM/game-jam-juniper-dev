@@ -22,7 +22,7 @@ func start_yoyo_animation() -> void:
 		animations.play("yoyo")
 
 func _process(delta: float) -> void:
-	if not is_yoyo and not animations.is_playing():
+	if not is_yoyo and not animations.is_playing() and can_move:
 		timer += delta
 	
 	if timer >= SECONDS_FOR_IDLE_ANIMATION:

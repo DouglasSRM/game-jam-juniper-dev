@@ -25,6 +25,7 @@ func _ready() -> void:
 	door.visible = false
 	black.visible = false
 	black.modulate.a = 0.
+	dialogue_area_uncle.visible = false
 
 func go_to_next_scene() -> void:
 	SceneManager.change_scene(self, 'dungeon_entrance')
@@ -43,6 +44,7 @@ func porta_abre() -> void:
 func switch_portinhola(open: bool) -> void:
 	portinhola_aberta.visible = open
 	portinhola_fechada.visible = not open
+	portinhola_fechada.enabled = not open
 
 func play_bubble_sound() -> void:
 	var audio_player = AudioStreamPlayer.new()
@@ -60,19 +62,25 @@ func accept_quest() -> void:
 	tween_black.tween_property(black, "modulate:a", 1., .5)
 	await tween_black.finished
 
+	# sprites
 	doctor.visible = false
 	georgie.visible = false
 	erie.visible = false
 	lenora.visible = false
+
+	# collisions
 	doctor.collision_shape.disabled = true
-	georgie.collision_shape.disabled = false
-	erie.collision_shape.disabled = false
-	lenora.collision_shape.disabled = false
+	georgie.collision_shape.disabled = true
+	erie.collision_shape.disabled = true
+	lenora.collision_shape.disabled = true
 	
+	# dialogues
 	dialogue_area_doctor.visible = false
 	dialogue_area_old_georgie.visible = false
 	dialogue_area_erie.visible = false
 	dialogue_area_lenora.visible = false
+	
+	dialogue_area_uncle.visible = true
 
 	# New uncle pos: 270.0, 667.0
 	tio.position = Vector2(270., 667.)
