@@ -9,12 +9,6 @@ target_path = NodePath("../..")
 function_name = "select_attack"
 metadata/_custom_type_script = "uid://cnynyx05od68"
 
-[sub_resource type="Resource" id="Resource_7tp58"]
-script = ExtResource("1_1li2o")
-target_path = NodePath("../..")
-function_name = "select_skill"
-metadata/_custom_type_script = "uid://cnynyx05od68"
-
 [sub_resource type="Resource" id="Resource_00gk6"]
 script = ExtResource("1_1li2o")
 target_path = NodePath("../..")
@@ -23,6 +17,6 @@ metadata/_custom_type_script = "uid://cnynyx05od68"
 
 [resource]
 script = ExtResource("2_tq4o5")
-choice_text = Array[String](["Attack", "Skill", "Item"])
-choice_function_call = Array[ExtResource("1_1li2o")]([SubResource("Resource_cfidb"), SubResource("Resource_7tp58"), SubResource("Resource_00gk6")])
+choice_text = Array[String](["Attack", "Item"])
+choice_function_call = Array[ExtResource("1_1li2o")]([SubResource("Resource_cfidb"), SubResource("Resource_00gk6")])
 metadata/_custom_type_script = "uid://cdjasv8np5k7m"

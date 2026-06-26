@@ -10,4 +10,8 @@ var jogo_iniciou: bool = false
 
 var next_battle_scene: String = ""
 
-var current_weapon = null
+var current_weapon: PackedScene = null
+
+var potions_in_inventory: int = 3
+
+var health_to_append: float = 2

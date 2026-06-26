@@ -4,10 +4,31 @@ var speed: int = 300
 @onready var animations: AnimationPlayer = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
+const SECONDS_FOR_IDLE_ANIMATION = 4
+
 var uniforme: bool = false
 var walking: bool = false
 var can_move: bool = true
 var force_walk: bool = false
+
+var is_yoyo: bool = false
+
+var timer: float = 0
+
+func start_yoyo_animation() -> void:
+	animations.play("start_yoyo")
+	await animations.animation_finished
+	if is_yoyo:
+		animations.play("yoyo")
+
+func _process(delta: float) -> void:
+	if not is_yoyo and not animations.is_playing():
+		timer += delta
+	
+	if timer >= SECONDS_FOR_IDLE_ANIMATION:
+		is_yoyo = true
+		timer = 0
+		start_yoyo_animation()
 
 func _on_ready() -> void:
 	animation_player = animations
@@ -42,8 +63,10 @@ func update_animations():
 		direction = "down"
 	
 	if direction != "":
+		is_yoyo = false
 		animations.play("walk_"+direction)
-	else:
+	elif not is_yoyo and animations.is_playing():
+		timer = 0
 		animations.stop()
 
 func _physics_process(_delta: float) -> void:

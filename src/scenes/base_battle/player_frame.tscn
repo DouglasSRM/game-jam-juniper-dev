@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dsbvolwejgyty"]
 
-[ext_resource type="Texture2D" uid="uid://bs66ycdlnofne" path="res://assets/characters/npcs/npc1/npc1_1.png" id="1_3a67r"]
+[ext_resource type="Texture2D" uid="uid://db25ad24qt64f" path="res://assets/characters/npcs/npc1/npc1_1.png" id="1_3a67r"]
 [ext_resource type="Script" uid="uid://cyh3fxxayor7b" path="res://src/scenes/base_battle/player_frame.gd" id="1_rlpe7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12j5o"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.16862746, 0.16862746, 0.27058825, 1)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 6
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.078431375, 0.09411765, 0.18039216, 1)
 expand_margin_left = 6.0
 expand_margin_top = 6.0
 expand_margin_right = 6.0

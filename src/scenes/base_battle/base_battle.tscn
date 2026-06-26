@@ -6,9 +6,15 @@
 [ext_resource type="Script" uid="uid://dos3kn2cyk0a6" path="res://src/scenes/base_battle/option_box/resources/option_export_resource.gd" id="4_2okdr"]
 [ext_resource type="Resource" uid="uid://cuumxsayh7120" path="res://src/resources/battle/action_selection.tres" id="5_iig4f"]
 [ext_resource type="Resource" uid="uid://cwbb5xylvu8m4" path="res://src/resources/battle/attack_selection.tres" id="6_qfl1a"]
+[ext_resource type="Script" uid="uid://cnynyx05od68" path="res://src/scenes/base_battle/option_box/resources/option_function_resource.gd" id="7_00gk6"]
 [ext_resource type="PackedScene" uid="uid://dsbvolwejgyty" path="res://src/scenes/base_battle/player_frame.tscn" id="7_qfl1a"]
+[ext_resource type="Script" uid="uid://cdjasv8np5k7m" path="res://src/scenes/base_battle/option_box/resources/option_choice_resource.gd" id="8_edha8"]
 [ext_resource type="PackedScene" uid="uid://cefyirpoqcuvk" path="res://src/objects/battle/health_bar/health_bar.tscn" id="8_iig4f"]
 [ext_resource type="PackedScene" uid="uid://c17lgfwyojub5" path="res://src/objects/strength_meter/strength_meter.tscn" id="9_cfidb"]
+
+[sub_resource type="Resource" id="Resource_1li2o"]
+script = ExtResource("8_edha8")
+metadata/_custom_type_script = "uid://cdjasv8np5k7m"
 
 [node name="BaseBattle" type="Node2D" unique_id=1484066849]
 script = ExtResource("1_v7l58")
@@ -39,6 +45,14 @@ override_size = Vector2(320, 500)
 options = Array[ExtResource("4_2okdr")]([ExtResource("6_qfl1a")])
 orientation = 1
 
+[node name="ItemSelection" parent="MenuComponents" unique_id=409585288 instance=ExtResource("2_v7l58")]
+override_option_position = true
+override_position = Vector2(500, 500)
+override_option_size = true
+override_size = Vector2(320, 500)
+options = Array[ExtResource("4_2okdr")]([SubResource("Resource_1li2o")])
+orientation = 1
+
 [node name="PlayerFrame" parent="." unique_id=1392328580 instance=ExtResource("7_qfl1a")]
 position = Vector2(1603, 607)
 
@@ -47,6 +61,7 @@ position = Vector2(58, 29)
 
 [node name="HealthBarPlayer" parent="." unique_id=372692253 instance=ExtResource("8_iig4f")]
 position = Vector2(1605, 552)
+color = Color(0.44313726, 0.7607843, 0.28235295, 1)
 
 [node name="ProgressBar" parent="HealthBarPlayer" index="0" unique_id=1241638578]
 offset_right = 221.0

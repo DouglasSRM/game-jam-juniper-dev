@@ -7,10 +7,17 @@ func _ready() -> void:
 	super()
 	start_fight.call_deferred()
 
+func use_item() -> void:
+	Global.potions_in_inventory -= 1
+	player_battle.heal(Global.health_to_append)
+	update_items()
+	
+	change_turn()
+
 func define_attacks() -> void:
 	for i in range(0, player_battle.attacks.size()):
 		add_attack(player_battle.attacks[i].attack_name)
-	set_go_back()
+	set_go_back(attack_selection)
 
 func start_fight() -> void:
 	define_attacks()
