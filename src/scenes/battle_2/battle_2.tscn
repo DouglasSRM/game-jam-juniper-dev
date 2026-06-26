@@ -2,19 +2,26 @@
 
 [ext_resource type="PackedScene" uid="uid://cqh8al5d54qgk" path="res://src/scenes/base_battle/base_battle.tscn" id="1_1qo5t"]
 [ext_resource type="Script" uid="uid://03h3dvb7d226" path="res://src/scenes/battle_2/battle_2.gd" id="2_2x7ed"]
+[ext_resource type="Texture2D" uid="uid://dps3ucqchfjc6" path="res://assets/backgrounds/dungeon/backgrounddungeon2.png" id="3_hnhex"]
 [ext_resource type="PackedScene" uid="uid://bpxe5aouv1wed" path="res://src/objects/battle/boss_2/boss_2.tscn" id="3_husgc"]
 [ext_resource type="PackedScene" uid="uid://ms8dfbjptulw" path="res://src/objects/battle/player_battle/player_battle.tscn" id="4_pal0i"]
 
 [node name="Battle2" unique_id=1484066849 instance=ExtResource("1_1qo5t")]
 script = ExtResource("2_2x7ed")
 
-[node name="Boss" parent="." index="0" unique_id=867154428 instance=ExtResource("3_husgc")]
+[node name="DungeonBkg" type="TextureRect" parent="." index="0" unique_id=1836458500]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_hnhex")
+
+[node name="Boss" parent="." index="1" unique_id=867154428 instance=ExtResource("3_husgc")]
 position = Vector2(965, 324)
 
-[node name="PlayerBattle" parent="." index="1" unique_id=2102725843 instance=ExtResource("4_pal0i")]
+[node name="PlayerBattle" parent="." index="2" unique_id=2102725843 instance=ExtResource("4_pal0i")]
 position = Vector2(948, 657)
 
-[node name="Sprite2D" parent="." index="2" unique_id=1522995467]
+[node name="Sprite2D" parent="." index="3" unique_id=1522995467]
 visible = false
 
 [connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]

@@ -31,12 +31,12 @@ func _process(_delta: float) -> void:
 	if !player_node:
 		set_player_reference()
 		return
-	
+
 	if !activate_instant and player_body_in:
 		if only_activate_once and has_activated_already:
 			set_process(false)
 			return
-		
+
 		if Input.is_action_just_pressed("ui_accept"):
 			_activate_dialogue()
 			player_body_in = false
@@ -47,16 +47,16 @@ func set_player_reference():
 
 func _activate_dialogue() -> void:
 	set_key_hint(false)
-	 
+
 	if player_node and lock_player:
 		player_node.can_move = false
-	
+
 	var new_dialogue: DialogueSystem = dialogue_system_preload.instantiate()
 	if override_dialogue_position:
 		desired_dialogue_pos = override_position
 	else:
 		desired_dialogue_pos = dialogue_bottom_pos
-	
+
 	new_dialogue.global_position = self.desired_dialogue_pos
 	new_dialogue.dialogue        = self.dialogue
 	new_dialogue.lock_player     = self.lock_player
@@ -85,7 +85,7 @@ func _on_body_exited(body: Node2D) -> void:
 	set_key_hint(false)
 	if !self.visible:
 		return
-	
+
 	if body.is_in_group("player"):
 		player_body_in = false
 

@@ -37,3 +37,6 @@ func _process(delta: float) -> void:
 	if timer_water_animation >= 0.5:
 		timer_water_animation -= 0.5
 		update_water()
+
+func start_grandpa_animation() -> void:
+	print("bctina")

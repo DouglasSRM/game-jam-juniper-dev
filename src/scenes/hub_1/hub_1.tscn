@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dlv8oth65oh6x" path="res://src/scenes/hub_1/hub_1.gd" id="2_k1ovh"]
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="3_m7kes"]
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_wducn"]
-[ext_resource type="Texture2D" uid="uid://tuy1k1dpssbd" path="res://assets/characters/npcs/dungeon_npcs/npcsnail.png" id="5_m7kes"]
-[ext_resource type="Texture2D" uid="uid://dw0xlcqjplxa5" path="res://assets/gfx/sparkle.png" id="6_yd4cg"]
+[ext_resource type="Texture2D" uid="uid://cp43ut14e6hlf" path="res://assets/characters/npcs/dungeon_npcs/npcsnail.png" id="5_m7kes"]
+[ext_resource type="Texture2D" uid="uid://cgwcvo73utgii" path="res://assets/gfx/sparkle.png" id="6_yd4cg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wducn"]
 size = Vector2(149.5, 85)

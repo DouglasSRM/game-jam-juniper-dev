@@ -10,18 +10,31 @@
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_a01i5"]
 [ext_resource type="Texture2D" uid="uid://db25ad24qt64f" path="res://assets/characters/npcs/npc1/npc1_1.png" id="7_cr8rw"]
 [ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/objects/dialogue/resources/dialogue_function_resource.gd" id="8_a01i5"]
+[ext_resource type="Script" uid="uid://dvqw2l4htwcuf" path="res://src/objects/dialogue/resources/dialogue_choice_resource.gd" id="9_cr8rw"]
 
 [sub_resource type="Resource" id="Resource_gygia"]
 script = ExtResource("6_a01i5")
-speaker_name = "Uncle"
+speaker_name = "Uncle Reggie"
 speaker_img = ExtResource("7_cr8rw")
 speaker_img_HFrames = 2
 speaker_img_step_frame = 2
-text = "Follow Me bla bla bla bla bla bla bla bla bla bla"
+text = "Ok, now that you finished the cleaning on tavern room, we can talk about what happened early"
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_a01i5"]
+script = ExtResource("6_a01i5")
+speaker_name = "Alex"
+text = "This is not fair, if you haven't [shake rate=20.0 level=5 connected=0]stopped me[/shake], I would beaten his ass up"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_5tpw2"]
+script = ExtResource("6_a01i5")
+speaker_name = "Uncle Reggie"
+text = "[shake rate=20.0 level=5 connected=0]Not in my tavern![/shake] And if you raise your hand to [shake rate=20.0 level=5 connected=0]ANY[/shake  customer again, I would beat your ass"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_eet7p"]
 script = ExtResource("8_a01i5")
 target_path = NodePath("../..")
 function_name = "tio_vai_embora"
@@ -34,7 +47,13 @@ script = ExtResource("6_a01i5")
 speaker_name = "Uncle"
 speaker_img = ExtResource("7_cr8rw")
 speaker_img_HFrames = 2
-text = "PLIMBOUS"
+text = "Common', you have more homework to do"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_i0pll"]
+script = ExtResource("6_a01i5")
+speaker_name = "Alex"
+text = "Oh... I will not clean the toilets again! [shake rate=20.0 level=5 connected=0]Georgie was here today![/shake"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_evdd8"]
@@ -45,7 +64,109 @@ hide_dialogue_box = true
 metadata/_custom_type_script = "uid://bwmccfplhqpda"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61ot5"]
-size = Vector2(291.5, 241.375)
+size = Vector2(249, 287.6875)
+
+[sub_resource type="Resource" id="Resource_hpiy0"]
+script = ExtResource("6_a01i5")
+speaker_name = "Doctor"
+text = "..."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_qodsb"]
+script = ExtResource("6_a01i5")
+speaker_name = "Doctor"
+text = "What do you want, half-pint?"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_ruki8"]
+script = ExtResource("6_a01i5")
+speaker_name = "Doctor"
+text = "... ..."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a01i5"]
+size = Vector2(270, 159.25)
+
+[sub_resource type="Resource" id="Resource_630xs"]
+script = ExtResource("6_a01i5")
+speaker_name = "Georgie"
+text = "Zzzz... ZzzzZZzzz..."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_sgskh"]
+script = ExtResource("8_a01i5")
+target_path = NodePath("../..")
+function_name = "play_bubble_sound"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_1hte2"]
+script = ExtResource("6_a01i5")
+speaker_name = "Georgie"
+text = "[shake rate=20.0 level=5 connected=0]W-what was that?[/shake]"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cr8rw"]
+size = Vector2(222, 178)
+
+[sub_resource type="Resource" id="Resource_sp8bt"]
+script = ExtResource("6_a01i5")
+speaker_name = "Erie"
+text = "Hi Alex! Did you know that my grandpa' is a great fisherman?"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_7pmmj"]
+script = ExtResource("6_a01i5")
+speaker_name = "Erie"
+text = "Oh, did you not? A long time ago he said to me that in his golden ages that he has caught a tigershark with barely hands."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_sy62c"]
+script = ExtResource("6_a01i5")
+speaker_name = "Erie"
+text = "[shake rate=20.0 level=5 connected=0]Haha! He's a great liar[/shake]."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evdd8"]
+size = Vector2(178, 227)
+
+[sub_resource type="Resource" id="Resource_7dg7n"]
+script = ExtResource("6_a01i5")
+speaker_name = "Lenora"
+text = "Hi Alex!"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_7qosw"]
+script = ExtResource("6_a01i5")
+speaker_name = "Lenora"
+text = "It's hard to clean all those tables in the end on pregnancy."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_u6a6h"]
+script = ExtResource("6_a01i5")
+speaker_name = "Lenora"
+text = "I fell that your cousin' does not like all this mess in the tavern."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_a1nw1"]
+script = ExtResource("8_a01i5")
+target_path = NodePath("../..")
+function_name = "accept_quest"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_07dbp"]
+script = ExtResource("8_a01i5")
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_s0xlc"]
+script = ExtResource("9_cr8rw")
+speaker_name = "Lenora"
+text = "Can you help-me, please?"
+choice_text = Array[String](["Yes", "No, I can't"])
+choice_function_call = Array[ExtResource("8_a01i5")]([SubResource("Resource_a1nw1"), SubResource("Resource_07dbp")])
+metadata/_custom_type_script = "uid://dvqw2l4htwcuf"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eet7p"]
+size = Vector2(245, 199)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12j5o"]
 size = Vector2(155, 146)
@@ -88,21 +209,78 @@ scale = Vector2(5, 5)
 tile_map_data = PackedByteArray("AAACAAEAAwAMAAgAAAA=")
 tile_set = ExtResource("3_jqwga")
 
-[node name="DialogueArea" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_vshfe")]
+[node name="DialogueAreaUncle" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_vshfe")]
+visible = false
 position = Vector2(269, 632)
 only_activate_once = true
 lock_player = true
-dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_gygia"), SubResource("Resource_a01i5"), SubResource("Resource_cr8rw"), SubResource("Resource_evdd8")])
+dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_gygia"), SubResource("Resource_a01i5"), SubResource("Resource_5tpw2"), SubResource("Resource_eet7p"), SubResource("Resource_cr8rw"), SubResource("Resource_i0pll"), SubResource("Resource_evdd8")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogues/DialogueArea" index="1" unique_id=537803813]
-position = Vector2(-8, -15)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogues/DialogueAreaUncle" index="1" unique_id=537803813]
+position = Vector2(15.5, 8.15625)
 shape = SubResource("RectangleShape2D_61ot5")
 
-[node name="KeyHint" parent="Dialogues/DialogueArea" index="2" unique_id=1923419492]
-offset_left = 61.0
-offset_top = -148.0
-offset_right = 111.0
-offset_bottom = -98.0
+[node name="KeyHint" parent="Dialogues/DialogueAreaUncle" index="2" unique_id=1923419492]
+offset_left = 85.0
+offset_top = -200.0
+offset_right = 135.0
+offset_bottom = -150.0
+
+[node name="DialogueAreaDoctor" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="1" unique_id=956657140 instance=ExtResource("4_vshfe")]
+position = Vector2(1266, 899)
+dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_hpiy0"), SubResource("Resource_qodsb"), SubResource("Resource_ruki8")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaDoctor" index="0" unique_id=742883100]
+position = Vector2(18, 41.375)
+shape = SubResource("RectangleShape2D_a01i5")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaDoctor" index="1" unique_id=1923419492]
+offset_left = -107.0
+offset_top = -154.0
+offset_right = -57.0
+offset_bottom = -104.0
+
+[node name="DialogueAreaOldGeorgie" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="2" unique_id=482591157 instance=ExtResource("4_vshfe")]
+position = Vector2(1648, 542)
+dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_630xs"), SubResource("Resource_sgskh"), SubResource("Resource_1hte2")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaOldGeorgie" index="0" unique_id=742883100]
+position = Vector2(-14, 46)
+shape = SubResource("RectangleShape2D_cr8rw")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaOldGeorgie" index="1" unique_id=1923419492]
+offset_left = -93.0
+offset_top = -217.0
+offset_right = -43.0
+offset_bottom = -167.0
+
+[node name="DialogueAreaErie" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="3" unique_id=601839262 instance=ExtResource("4_vshfe")]
+position = Vector2(1329, 377)
+dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_sp8bt"), SubResource("Resource_7pmmj"), SubResource("Resource_sy62c")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaErie" index="0" unique_id=742883100]
+position = Vector2(-10, 37.5)
+shape = SubResource("RectangleShape2D_evdd8")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaErie" index="1" unique_id=1923419492]
+offset_left = -113.0
+offset_top = -215.0
+offset_right = -63.0
+offset_bottom = -165.0
+
+[node name="DialogueAreaLenora" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="4" unique_id=1404828717 instance=ExtResource("4_vshfe")]
+position = Vector2(682, 819)
+dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_7dg7n"), SubResource("Resource_7qosw"), SubResource("Resource_u6a6h"), SubResource("Resource_s0xlc")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaLenora" index="0" unique_id=742883100]
+position = Vector2(2, 50)
+shape = SubResource("RectangleShape2D_eet7p")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaLenora" index="1" unique_id=1923419492]
+offset_left = -108.0
+offset_top = -175.0
+offset_right = -58.0
+offset_bottom = -125.0
 
 [node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(829600880) index="0" unique_id=689924629 instance=ExtResource("4_acua5")]
 position = Vector2(301, -7)
@@ -113,6 +291,32 @@ position = Vector2(-57, 108)
 shape = SubResource("RectangleShape2D_12j5o")
 
 [node name="Tio" parent="." index="5" unique_id=1222905426 instance=ExtResource("5_3g3of")]
-position = Vector2(266, 674)
+position = Vector2(639, 366)
 
-[editable path="Dialogues/DialogueArea"]
+[node name="Doctor" parent="." index="6" unique_id=1135015437 instance=ExtResource("5_3g3of")]
+position = Vector2(1280, 980)
+
+[node name="GeorgieOldMan" parent="." index="7" unique_id=806170560 instance=ExtResource("5_3g3of")]
+position = Vector2(1655, 605)
+
+[node name="Erie" parent="." index="8" unique_id=1436955038 instance=ExtResource("5_3g3of")]
+position = Vector2(1333, 428)
+
+[node name="Lenora" parent="." index="9" unique_id=1931741377 instance=ExtResource("5_3g3of")]
+position = Vector2(687, 908)
+
+[node name="Black" type="ColorRect" parent="." index="10" unique_id=1953077563]
+visible = false
+z_index = 999
+offset_right = 1920.0
+offset_bottom = 1080.0
+pivot_offset = Vector2(960, 540)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[editable path="Dialogues/DialogueAreaUncle"]
+[editable path="Dialogues/DialogueAreaDoctor"]
+[editable path="Dialogues/DialogueAreaOldGeorgie"]
+[editable path="Dialogues/DialogueAreaErie"]
+[editable path="Dialogues/DialogueAreaLenora"]
+[editable path="Lenora"]
