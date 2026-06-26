@@ -2,6 +2,7 @@ class_name BaseCharacter extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var autoplay: String = ""
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 var estatico: bool = true
 

@@ -3,25 +3,82 @@
 [ext_resource type="PackedScene" uid="uid://cqh8al5d54qgk" path="res://src/scenes/base_battle/base_battle.tscn" id="1_birwp"]
 [ext_resource type="Script" uid="uid://b5m1m05edxios" path="res://src/scenes/battle_1/battle_1.gd" id="2_2v75w"]
 [ext_resource type="PackedScene" uid="uid://clvwiqheagnma" path="res://src/objects/battle/boss_1/boss_1.tscn" id="3_ak64a"]
+[ext_resource type="Texture2D" uid="uid://b4fa4jmhjneb4" path="res://assets/backgrounds/dungeon/backgrounddungeon1.png" id="3_wnuf0"]
 [ext_resource type="PackedScene" uid="uid://ms8dfbjptulw" path="res://src/objects/battle/player_battle/player_battle.tscn" id="4_bkyu7"]
+[ext_resource type="Texture2D" uid="uid://c164rgxnl8u3a" path="res://assets/bosses/spinning-boss.png" id="5_mfb40"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfb40"]
+atlas = ExtResource("5_mfb40")
+region = Rect2(0, 0, 228, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouw0d"]
+atlas = ExtResource("5_mfb40")
+region = Rect2(228, 0, 228, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl8n4"]
+atlas = ExtResource("5_mfb40")
+region = Rect2(456, 0, 228, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnuf0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfb40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouw0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl8n4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"taking_damange",
+"speed": 5.0
+}]
 
 [node name="Battle1" unique_id=1484066849 instance=ExtResource("1_birwp")]
 script = ExtResource("2_2v75w")
 
-[node name="Boss" parent="." index="0" unique_id=867154428 instance=ExtResource("3_ak64a")]
+[node name="DungeonBkg" type="TextureRect" parent="." index="0" unique_id=1480853856]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_wnuf0")
+
+[node name="Boss" parent="." index="1" unique_id=867154428 instance=ExtResource("3_ak64a")]
 position = Vector2(958, 267)
 max_health = 30.0
 
-[node name="PlayerBattle" parent="." index="1" unique_id=2102725843 instance=ExtResource("4_bkyu7")]
-position = Vector2(969, 735)
+[node name="BossEnemy" type="AnimatedSprite2D" parent="Boss" index="0" unique_id=2011517825]
+texture_filter = 1
+position = Vector2(-17.00003, 264)
+scale = Vector2(4.5466666, 4.5466666)
+sprite_frames = SubResource("SpriteFrames_wnuf0")
+animation = &"idle"
+autoplay = "idle"
 
-[node name="Sprite2D" parent="." index="2" unique_id=1522995467]
+[node name="Sprite" parent="Boss" index="1" unique_id=685350226]
 visible = false
 
-[node name="HealthBarBoss" parent="." index="6" unique_id=755916960]
+[node name="PlayerBattle" parent="." index="2" unique_id=2102725843 instance=ExtResource("4_bkyu7")]
+position = Vector2(969, 735)
+
+[node name="Sprite2D" parent="." index="3" unique_id=1522995467]
+visible = false
+
+[node name="HealthBarBoss" parent="." index="7" unique_id=755916960]
 position = Vector2(58, 44)
 
 [connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]
 [connection signal="is_dead" from="PlayerBattle" to="." method="_on_player_battle_is_dead"]
 
+[editable path="Boss"]
+[editable path="Boss/Attacks/AttackBoss1"]
 [editable path="HealthBarPlayer"]

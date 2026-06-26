@@ -7,11 +7,113 @@
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_qrpvp"]
 [ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="4_46yio"]
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="5_46yio"]
+[ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/objects/dialogue/resources/dialogue_function_resource.gd" id="6_wd0pd"]
 [ext_resource type="PackedScene" uid="uid://dgeptvsmto7k7" path="res://src/objects/npcs/tio/tio.tscn" id="8_46yio"]
+
+[sub_resource type="Resource" id="Resource_46yio"]
+script = ExtResource("6_wd0pd")
+target_path = NodePath("../..")
+function_name = "start_grandpa_animation"
+hide_dialogue_box = true
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_wd0pd"]
+script = ExtResource("5_46yio")
+speaker_name = "???"
+text = "Oh! Hello son!"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_eafeo"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex"
+text = "[shake rate=20.0 level=5 connected=0]aahh! Who's talking to me??![/shake]"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_2gsd2"]
+script = ExtResource("5_46yio")
+speaker_name = "???"
+text = "Up here son, looks like you will face a challenge, right?"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_cxqnp"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex"
+text = "First of all, [shake rate=20.0 level=5 connected=0]WHO ARE YOU?[/shake] and what it's this challenge that you're talking about?"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_wn36d"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex Grandpa"
+text = "How dare you not recognize your [shake rate=20.0 level=5 connected=0]oh-so-beloved grandfather[/shake]—kids these days..."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_hxact"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex Grandpa"
+text = "Unfortunately, I couldn't go to the land of dead, and I'm trapped in this bottle for... well... multiple reasons. So, sometimes, I help the person holding this bottle awaken my [shake rate=20.0 level=5 connected=0]ultra special grandpa secret[/shake]."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_2amhu"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex"
+text = "[shake rate=20.0 level=5 connected=0]Grandpa Secret?[/shake]"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_qdwh1"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex Grandpa"
+text = "Oh yes, the abilitty of summon one of my golden age weapons to defeat your enemys, but be carefully you may invoke just one weapon at time. You will need this to the monster ahead."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_hxwkn"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex"
+text = " [shake rate=20.0 level=10 connected=0]Mo-monster?[/shake] You are tolding me that have monsters here?"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_ggxwx"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex Grandpa"
+text = "Good luck son..."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_tmuql"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex"
+text = "[shake rate=22.0 level=10 connected=0]NO! Wait grandpa[/shake]."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46yio"]
+size = Vector2(576, 20)
 
 [sub_resource type="Resource" id="Resource_pk6ct"]
 script = ExtResource("5_46yio")
-text = "churusbangus churusbagus!"
+speaker_name = "Uncle Reggie"
+text = "I think now it's time. You are growing up buddy. This has been families hairloom for a long time... [shake rate=20.0 level=5 connected=0]The Grandpa's Secret[/shake]"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_me2i1"]
+script = ExtResource("5_46yio")
+speaker_name = "ITEM"
+text = "[rainbow freq=0.2 sat=10.0 val=20.0]ALEX RECEIVED A BOX[/rainbow]"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_fg6a0"]
+script = ExtResource("5_46yio")
+speaker_name = "Alex"
+text = "Excuse-me... like... a bottle?"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_odb1k"]
+script = ExtResource("5_46yio")
+speaker_name = "Uncle Reggie"
+text = "This has more meaning then it appears..."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_s3hxo"]
+script = ExtResource("5_46yio")
+speaker_name = "Uncle Reggie"
+text = "So Alex, a little secret for you, if you face danger:[rainbow freq=0.2 sat=10.0 val=20.0] spin the bottle[/rainbow]."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61ot5"]
@@ -57,16 +159,35 @@ tile_map_data = PackedByteArray("AAAGAAoAAgAKAAMAAAAHAAoAAgALAAMAAAAHAAkAAgALAAI
 z_index = 1
 tile_map_data = PackedByteArray("AAAGAAcAAgAKAAAAAAAGAAgAAgAKAAEAAAAHAAcAAgALAAAAAAAHAAgAAgALAAEAAAA=")
 
-[node name="DialogueArea" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("3_pk6ct")]
+[node name="DialogueAreaGrandpa" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("3_pk6ct")]
+position = Vector2(914, 141)
+activate_instant = true
+only_activate_once = true
+lock_player = true
+dialogue = Array[ExtResource("4_46yio")]([SubResource("Resource_46yio"), SubResource("Resource_wd0pd"), SubResource("Resource_eafeo"), SubResource("Resource_2gsd2"), SubResource("Resource_cxqnp"), SubResource("Resource_wn36d"), SubResource("Resource_hxact"), SubResource("Resource_2amhu"), SubResource("Resource_qdwh1"), SubResource("Resource_hxwkn"), SubResource("Resource_ggxwx"), SubResource("Resource_tmuql")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaGrandpa" index="0" unique_id=742883100]
+position = Vector2(42, 41)
+shape = SubResource("RectangleShape2D_46yio")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaGrandpa" index="1" unique_id=1923419492]
+visible = false
+
+[node name="DialogueAreaUncleReggie" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="1" unique_id=1414078155 instance=ExtResource("3_pk6ct")]
 position = Vector2(969, 691)
 activate_instant = true
 only_activate_once = true
 lock_player = true
-dialogue = Array[ExtResource("4_46yio")]([SubResource("Resource_pk6ct")])
+override_dialogue_position = true
+override_position = Vector2(960, 220)
+dialogue = Array[ExtResource("4_46yio")]([SubResource("Resource_pk6ct"), SubResource("Resource_me2i1"), SubResource("Resource_fg6a0"), SubResource("Resource_odb1k"), SubResource("Resource_s3hxo")])
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogues/DialogueArea" index="1" unique_id=1406256292]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogues/DialogueAreaUncleReggie" index="1" unique_id=1406256292]
 position = Vector2(-13.5, 0)
 shape = SubResource("RectangleShape2D_61ot5")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaUncleReggie" index="2" unique_id=1923419492]
+visible = false
 
 [node name="Interactables" parent="." index="4" unique_id=829600880]
 position = Vector2(-16, -206)
@@ -92,4 +213,6 @@ position = Vector2(585, 616)
 [connection signal="body_entered" from="Interactables/TriggerNextScene" to="." method="_on_trigger_next_scene_body_entered"]
 
 [editable path="Player"]
+[editable path="Dialogues/DialogueAreaGrandpa"]
+[editable path="Dialogues/DialogueAreaUncleReggie"]
 [editable path="Tio"]
