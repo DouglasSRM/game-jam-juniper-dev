@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_i6k11"]
 [ext_resource type="Script" uid="uid://cscijbh45xxpk" path="res://src/objects/attacks/attack_boss_1/attack_boss_1.gd" id="2_2sg31"]
-[ext_resource type="Texture2D" uid="uid://bqk1u4iusjaxy" path="res://assets/attacks/attack_boss_1.png" id="3_35acx"]
+[ext_resource type="Texture2D" uid="uid://drdro60gpl4ty" path="res://assets/attacks/attack_boss_1.png" id="3_35acx"]
 
 [sub_resource type="Animation" id="Animation_35acx"]
 length = 0.001
@@ -43,11 +43,10 @@ _data = {
 }
 
 [node name="AttackBoss1" unique_id=1305917817 instance=ExtResource("1_i6k11")]
-visible = true
 script = ExtResource("2_2sg31")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
-visible = true
+position = Vector2(0, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("3_35acx")
 hframes = 4

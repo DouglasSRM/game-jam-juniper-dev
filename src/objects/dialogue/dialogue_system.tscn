@@ -73,9 +73,9 @@ layout_mode = 2
 max_polyphony = 1000
 
 [node name="SpeakerNameLabel" type="Label" parent="." unique_id=1520749437]
-offset_left = -399.0
-offset_top = -196.0
-offset_right = -56.0
-offset_bottom = -153.0
+offset_left = -715.0
+offset_top = -198.0
+offset_right = -372.0
+offset_bottom = -155.0
 theme_override_fonts/font = ExtResource("1_gsjv7")
 theme_override_font_sizes/font_size = 42

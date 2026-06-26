@@ -10,7 +10,7 @@ script = ExtResource("2_7l2rw")
 
 [node name="Boss" parent="." index="0" unique_id=867154428 instance=ExtResource("3_do80o")]
 position = Vector2(967, 288)
-max_health = 10.0
+max_health = 30.0
 
 [node name="PlayerBattle" parent="." index="1" unique_id=2102725843 instance=ExtResource("4_sttp2")]
 position = Vector2(949, 711)

@@ -2,10 +2,24 @@
 
 [ext_resource type="PackedScene" uid="uid://8ethmw1fgeh7" path="res://src/objects/attacks/base_attack/base_attack.tscn" id="1_58wi1"]
 [ext_resource type="Script" uid="uid://dh6wq8jw74jsp" path="res://src/objects/attacks/weapons_attacks/04_yoyo/attack_1/attack_yoyo_1.gd" id="2_2hudd"]
-[ext_resource type="Texture2D" uid="uid://duvitfl0ar2sp" path="res://assets/main_menu/yoyo_loop.png" id="3_sp0l4"]
+[ext_resource type="Texture2D" uid="uid://bnrfc0pjy070o" path="res://assets/attacks/attack_yoyo_1.png" id="3_sp0l4"]
 
 [sub_resource type="Animation" id="Animation_sp0l4"]
 resource_name = "attack"
+length = 4.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.52, 1, 1.75, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 2, 4, 5]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2uk3l"]
 _data = {
