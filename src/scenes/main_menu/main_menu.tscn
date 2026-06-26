@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dopyepl5l7hkm" path="res://assets/main_menu/bkg.png" id="2_frlin"]
 [ext_resource type="FontFile" uid="uid://dy7i7r8ltomuh" path="res://fonts/dungeon-mode.ttf" id="2_ob46e"]
 [ext_resource type="FontFile" uid="uid://3mpujxnlxp4g" path="res://fonts/antiquity-print.ttf" id="3_felax"]
-[ext_resource type="AudioStream" uid="uid://exwtiw36m3dl" path="res://soundtrack/music/placeholder.ogg" id="5_felax"]
+[ext_resource type="AudioStream" uid="uid://bkwte0bpmm74t" path="res://soundtrack/music/menumusic.ogg" id="7_frlin"]
 [ext_resource type="PackedScene" uid="uid://bgh6hynxcy5jk" path="res://src/scenes/settings_menu/settings_menu.tscn" id="9_5o0ss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgtrd"]
@@ -462,8 +462,7 @@ visible = false
 layout_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1670137563]
-stream = ExtResource("5_felax")
-volume_db = 19.172
+stream = ExtResource("7_frlin")
 autoplay = true
 parameters/looping = true
 

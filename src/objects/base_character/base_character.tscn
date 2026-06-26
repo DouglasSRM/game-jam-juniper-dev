@@ -96,6 +96,7 @@ size = Vector2(110, 50.25)
 
 [node name="BaseCharacter" type="CharacterBody2D" unique_id=1222905426]
 z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_yogsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=23594111]

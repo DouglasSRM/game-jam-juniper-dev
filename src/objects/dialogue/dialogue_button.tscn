@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://da5ak8t0bnxnw"]
 
-[ext_resource type="FontFile" uid="uid://dk4rc8edrx4rd" path="res://fonts/PixelOperator-Bold.ttf" id="1_adj0y"]
+[ext_resource type="FontFile" uid="uid://crrkhlfav8p2g" path="res://fonts/PixelOperator-Bold.ttf" id="1_adj0y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wu8dr"]
 
@@ -19,6 +19,7 @@ theme_override_colors/font_focus_color = Color(1, 0.4627451, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.4627451, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0.4627451, 0, 1)
 theme_override_fonts/font = ExtResource("1_adj0y")
+theme_override_font_sizes/font_size = 52
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wu8dr")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c1akt")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_fq1qi")

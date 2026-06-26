@@ -94,7 +94,6 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_me2i1"]
 script = ExtResource("5_46yio")
-speaker_name = "ITEM"
 text = "[rainbow freq=0.2 sat=10.0 val=20.0]ALEX RECEIVED A BOX[/rainbow]"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -156,7 +155,7 @@ tile_map_data = PackedByteArray("AAACAAcAAgAAAAAAAAACAAgAAgAAAAEAAAACAAkAAgAAAAQ
 tile_map_data = PackedByteArray("AAAGAAoAAgAKAAMAAAAHAAoAAgALAAMAAAAHAAkAAgALAAIAAAAGAAkAAgAKAAIAAAA=")
 
 [node name="Layer3" parent="TileMaps" parent_id_path=PackedInt32Array(189077090) index="5" unique_id=744383844]
-z_index = 1
+z_index = 2
 tile_map_data = PackedByteArray("AAAGAAcAAgAKAAAAAAAGAAgAAgAKAAEAAAAHAAcAAgALAAAAAAAHAAgAAgALAAEAAAA=")
 
 [node name="DialogueAreaGrandpa" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("3_pk6ct")]
@@ -179,7 +178,7 @@ activate_instant = true
 only_activate_once = true
 lock_player = true
 override_dialogue_position = true
-override_position = Vector2(960, 220)
+override_position = Vector2(960, 280)
 dialogue = Array[ExtResource("4_46yio")]([SubResource("Resource_pk6ct"), SubResource("Resource_me2i1"), SubResource("Resource_fg6a0"), SubResource("Resource_odb1k"), SubResource("Resource_s3hxo")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogues/DialogueAreaUncleReggie" index="1" unique_id=1406256292]
@@ -208,7 +207,8 @@ position = Vector2(996.25, 176)
 shape = SubResource("RectangleShape2D_ftswq")
 
 [node name="Tio" parent="." index="5" unique_id=1222905426 instance=ExtResource("8_46yio")]
-position = Vector2(585, 616)
+y_sort_enabled = false
+position = Vector2(566, 698)
 
 [connection signal="body_entered" from="Interactables/TriggerNextScene" to="." method="_on_trigger_next_scene_body_entered"]
 

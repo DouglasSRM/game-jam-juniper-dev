@@ -66,7 +66,6 @@ scroll_active = false
 visible_characters_behavior = 1
 
 [node name="ButtonContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1213518056]
-visible = false
 layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=341064714]
@@ -74,8 +73,12 @@ max_polyphony = 1000
 
 [node name="SpeakerNameLabel" type="Label" parent="." unique_id=1520749437]
 offset_left = -715.0
-offset_top = -198.0
+offset_top = -250.0
 offset_right = -372.0
-offset_bottom = -155.0
+offset_bottom = -207.0
+theme_override_colors/font_shadow_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
 theme_override_fonts/font = ExtResource("1_gsjv7")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 52
+text = "aaaaa"
