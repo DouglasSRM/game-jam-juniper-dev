@@ -25,7 +25,7 @@ func start_fight() -> void:
 	health_bar_player.set_health_component(player_battle.health_component)
 
 func attack(index: int) -> void:
-	player_battle.pause_animation()
+	player_battle.play_attack()
 	player_frame.pause_animation()
 
 	strength_meter.activate()

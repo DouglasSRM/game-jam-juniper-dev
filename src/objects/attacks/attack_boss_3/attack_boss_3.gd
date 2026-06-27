@@ -4,7 +4,7 @@ func _ready() -> void:
 	super()
 	damage = 3.3
 	step = 1
-	pre_step_duration = 1
+	pre_step_duration = 1.5
 	step_duration = 1
 
 func run_animation() -> void:

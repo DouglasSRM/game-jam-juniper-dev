@@ -14,4 +14,4 @@ scale = Vector2(0.65, 0.65)
 texture = ExtResource("2_tp21v")
 
 [node name="AttackBoss3" parent="Attacks" parent_id_path=PackedInt32Array(888676108) index="0" unique_id=1305917817 instance=ExtResource("4_cyrgl")]
-position = Vector2(-2, 389)
+position = Vector2(-2, 441)

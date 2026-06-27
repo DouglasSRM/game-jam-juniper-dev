@@ -54,13 +54,13 @@ options = Array[ExtResource("4_2okdr")]([SubResource("Resource_1li2o")])
 orientation = 1
 
 [node name="PlayerFrame" parent="." unique_id=1392328580 instance=ExtResource("7_qfl1a")]
-position = Vector2(1603, 607)
+position = Vector2(1603, 700)
 
 [node name="HealthBarBoss" parent="." unique_id=755916960 instance=ExtResource("8_iig4f")]
 position = Vector2(58, 29)
 
 [node name="HealthBarPlayer" parent="." unique_id=372692253 instance=ExtResource("8_iig4f")]
-position = Vector2(1605, 552)
+position = Vector2(1605, 645)
 color = Color(0.44313726, 0.7607843, 0.28235295, 1)
 
 [node name="ProgressBar" parent="HealthBarPlayer" index="0" unique_id=1241638578]

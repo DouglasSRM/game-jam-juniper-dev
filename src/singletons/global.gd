@@ -15,3 +15,5 @@ var current_weapon: PackedScene = null
 var potions_in_inventory: int = 3
 
 var health_to_append: float = 2
+
+var teve_dialogos_dungeon_entrance: bool = false

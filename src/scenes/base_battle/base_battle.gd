@@ -74,8 +74,8 @@ func select_attack() -> void:
 func select_item() -> void:
 	item_selection.activate_option_box()
 
-func attack(index: int) -> void:
-	print(index)
+func attack(_index: int) -> void:
+	pass
 
 func attack_1() -> void:
 	# Implementado na herança
