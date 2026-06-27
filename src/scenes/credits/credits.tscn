@@ -476,16 +476,17 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 307.0
-offset_top = 4284.0
+offset_top = 4265.0
 offset_right = 711.0
-offset_bottom = 4464.0
+offset_bottom = 4506.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("3_h3s88")
 theme_override_font_sizes/font_size = 65
-text = "aglasct
+text = "DUQUE
+aglasct
 Ishidaw
 PEDRA"
 horizontal_alignment = 1

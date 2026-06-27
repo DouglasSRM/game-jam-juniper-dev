@@ -12,7 +12,7 @@ class_name DialogueText extends DE
 @export_range(0.1, 30.0, 0.1) var text_speed: float = 15.0
 
 @export var text_sound: AudioStream
-@export var text_volume_db: float
+@export var text_volume_db: float = 0.
 @export var text_volume_pitch_min: float = 0.85
 @export var text_volume_pitch_max: float = 1.15
 

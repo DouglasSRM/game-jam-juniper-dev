@@ -210,7 +210,8 @@ func _text_resource(i: DialogueText) -> void:
 			dialogue_label.visible_characters += 1
 			if character != " ":
 				audio_stream_player.pitch_scale = randf_range(i.text_volume_pitch_min, i.text_volume_pitch_max)
-				audio_stream_player.play()
+				if dialogue_label.visible_characters % 2 == 0:
+					audio_stream_player.play()
 				if (speaker_parent.visible) and (i.speaker_img_HFrames > 1):
 					if count == 0:
 						speaker_sprite.frame = i.speaker_img_initial_frame

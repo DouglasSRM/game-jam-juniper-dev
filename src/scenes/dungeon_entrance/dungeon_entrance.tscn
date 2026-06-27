@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="10_eafeo"]
 [ext_resource type="Texture2D" uid="uid://c6td2itkko1g6" path="res://assets/portraits/reggieportraits/reggieconfuso_animado.png" id="10_me2i1"]
 [ext_resource type="Texture2D" uid="uid://dknxnkqo0cxrl" path="res://assets/portraits/alexportraits/alectriste_animado.png" id="11_2gsd2"]
+[ext_resource type="AudioStream" uid="uid://bp3ptupnqnb5o" path="res://soundtrack/e.ogg" id="13_cxqnp"]
 
 [sub_resource type="Resource" id="Resource_46yio"]
 script = ExtResource("6_wd0pd")
@@ -27,6 +28,7 @@ metadata/_custom_type_script = "uid://bwmccfplhqpda"
 script = ExtResource("5_46yio")
 speaker_name = "???"
 text = "Oh! Hello son!"
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_eafeo"]
@@ -35,6 +37,7 @@ speaker_name = "Alex"
 speaker_img = ExtResource("9_s3hxo")
 speaker_img_HFrames = 2
 text = "[shake rate=20.0 level=5 connected=0]aahh! Who's talking to me??![/shake]"
+text_sound = ExtResource("13_cxqnp")
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -42,6 +45,7 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 script = ExtResource("5_46yio")
 speaker_name = "???"
 text = "Up here son, looks like you will face a challenge, right?"
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_cxqnp"]
@@ -50,6 +54,7 @@ speaker_name = "Alex"
 speaker_img = ExtResource("9_fg6a0")
 speaker_img_HFrames = 2
 text = "First of all, [shake rate=20.0 level=5 connected=0]WHO ARE YOU?[/shake] and what it's this challenge that you're talking about?"
+text_sound = ExtResource("13_cxqnp")
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -57,12 +62,14 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 script = ExtResource("5_46yio")
 speaker_name = "Alex Grandpa"
 text = "How dare you not recognize your [shake rate=20.0 level=5 connected=0]oh-so-beloved grandfather[/shake]—kids these days..."
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_hxact"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex Grandpa"
 text = "Unfortunately, I couldn't go to the land of the dead, and I'm trapped in this bottle for... well... multiple reasons. So, sometimes, I help the person holding this bottle to awaken my [shake rate=20.0 level=5 connected=0]ultra special grandpa secret[/shake]."
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_2amhu"]
@@ -71,6 +78,7 @@ speaker_name = "Alex"
 speaker_img = ExtResource("10_eafeo")
 speaker_img_HFrames = 2
 text = "[shake rate=20.0 level=5 connected=0]Grandpa Secret?[/shake]"
+text_sound = ExtResource("13_cxqnp")
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -78,6 +86,7 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 script = ExtResource("5_46yio")
 speaker_name = "Alex Grandpa"
 text = "Oh yes, the ability to summon one of my golden age weapons to defeat your enemys! But be carefull... you may invoke just one weapon at time. You will need this to the monster ahead."
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_hxwkn"]
@@ -86,6 +95,7 @@ speaker_name = "Alex"
 speaker_img = ExtResource("11_2gsd2")
 speaker_img_HFrames = 2
 text = " [shake rate=20.0 level=10 connected=0]Mo-monster?[/shake] Are you teling me that there's monsters in here?"
+text_sound = ExtResource("13_cxqnp")
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -93,6 +103,7 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 script = ExtResource("5_46yio")
 speaker_name = "Alex Grandpa"
 text = "Good luck son..."
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_tmuql"]
@@ -101,6 +112,7 @@ speaker_name = "Alex"
 speaker_img = ExtResource("11_2gsd2")
 speaker_img_HFrames = 2
 text = "[shake rate=22.0 level=10 connected=0]NO! Wait grandpa[/shake]!!"
+text_sound = ExtResource("13_cxqnp")
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -113,11 +125,13 @@ speaker_name = "Uncle Reggie"
 speaker_img = ExtResource("8_odb1k")
 speaker_img_HFrames = 2
 text = "I think now it's time. You are growing up buddy. This has been the familie's hairloom for a long time... [shake rate=20.0 level=5 connected=0]The Grandpa's Secret[/shake]"
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_me2i1"]
 script = ExtResource("5_46yio")
 text = "[rainbow freq=0.2 sat=10.0 val=20.0]ALEX RECEIVED A BOX[/rainbow]"
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_fg6a0"]
@@ -126,6 +140,7 @@ speaker_name = "Alex"
 speaker_img = ExtResource("9_s3hxo")
 speaker_img_HFrames = 2
 text = "Excuse-me... like... a bottle?"
+text_sound = ExtResource("13_cxqnp")
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -135,6 +150,7 @@ speaker_name = "Uncle Reggie"
 speaker_img = ExtResource("10_me2i1")
 speaker_img_HFrames = 2
 text = "This has more meaning than it appears..."
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_s3hxo"]
@@ -143,6 +159,7 @@ speaker_name = "Uncle Reggie"
 speaker_img = ExtResource("8_odb1k")
 speaker_img_HFrames = 2
 text = "So Alex, a little secret for you, if you face danger:[rainbow freq=0.2 sat=10.0 val=20.0] spin the bottle[/rainbow]."
+text_sound = ExtResource("13_cxqnp")
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61ot5"]

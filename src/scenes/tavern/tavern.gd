@@ -23,6 +23,7 @@ class_name Tavern extends BaseScene
 @onready var door: TileMapLayer = $TileMaps/Door
 
 signal plimbous
+signal bubble
 
 func _ready() -> void:
 	switch_portinhola(false)
@@ -59,6 +60,9 @@ func play_bubble_sound() -> void:
 	audio_player.stream = bubble_sound
 	audio_player.play()
 	audio_player.finished.connect(audio_player.queue_free)
+	await audio_player.finished
+	await Utils.sleep(0.2)
+	bubble.emit()
 
 func accept_quest() -> void:
 	black.visible = true
