@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="2_xgfv5"]
 [ext_resource type="FontFile" uid="uid://dy7i7r8ltomuh" path="res://fonts/dungeon-mode.ttf" id="3_h3s88"]
 [ext_resource type="AudioStream" uid="uid://cob6ia0whe50u" path="res://soundtrack/music/MenuMusic.ogg" id="4_awbur"]
+[ext_resource type="FontFile" uid="uid://crrkhlfav8p2g" path="res://fonts/PixelOperator-Bold.ttf" id="4_xgfv5"]
 
 [node name="Credits" type="Node2D" unique_id=536292343]
 texture_filter = 1
@@ -100,10 +101,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1148.0
-offset_top = 5189.0
-offset_right = 1610.0
-offset_bottom = 5247.0
+offset_left = 1097.5
+offset_top = 4914.0
+offset_right = 1666.5
+offset_bottom = 4986.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -120,10 +121,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1217.0
-offset_top = 5259.0
-offset_right = 1679.0
-offset_bottom = 5378.0
+offset_left = 1220.0
+offset_top = 4991.0
+offset_right = 1682.0
+offset_bottom = 5110.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -202,10 +203,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 915.0
-offset_top = 6085.0
-offset_right = 1666.0
-offset_bottom = 6143.0
+offset_left = 921.0
+offset_top = 6254.0
+offset_right = 1672.0
+offset_bottom = 6312.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -222,10 +223,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1094.0
-offset_top = 6173.0
-offset_right = 1614.0
-offset_bottom = 6292.0
+offset_left = 1057.0
+offset_top = 6329.0
+offset_right = 1577.0
+offset_bottom = 6448.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -328,10 +329,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 340.0
-offset_top = 8500.0
-offset_right = 1553.0
-offset_bottom = 8558.0
+offset_left = 337.0
+offset_top = 8536.0
+offset_right = 1550.0
+offset_bottom = 8594.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -348,10 +349,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 377.0
-offset_top = 8130.0
-offset_right = 1532.0
-offset_bottom = 8310.0
+offset_left = 374.0
+offset_top = 8166.0
+offset_right = 1529.0
+offset_bottom = 8346.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -370,10 +371,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 694.5
-offset_top = 8093.0
-offset_right = 1174.5
-offset_bottom = 8151.0
+offset_left = 691.5
+offset_top = 8129.0
+offset_right = 1171.5
+offset_bottom = 8187.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -394,11 +395,12 @@ texture_filter = 1
 
 [node name="btn_voltar" type="Button" parent="." unique_id=1383519463]
 texture_filter = 1
-offset_left = 719.0
-offset_top = 8805.0
-offset_right = 1136.0
-offset_bottom = 8882.0
-theme_override_font_sizes/font_size = 50
+offset_left = 689.0
+offset_top = 8824.0
+offset_right = 1184.0
+offset_bottom = 8905.0
+theme_override_fonts/font = ExtResource("4_xgfv5")
+theme_override_font_sizes/font_size = 72
 text = "Go Back to Menu"
 metadata/_edit_use_anchors_ = true
 
@@ -422,7 +424,7 @@ size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("3_h3s88")
 theme_override_font_sizes/font_size = 65
 text = "aglasct
-Wila"
+Ishidaw"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -432,10 +434,10 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1071.0
-offset_top = 5342.0
-offset_right = 1533.0
-offset_bottom = 5461.0
+offset_left = 1074.0
+offset_top = 5074.0
+offset_right = 1536.0
+offset_bottom = 5193.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -483,8 +485,8 @@ size_flags_vertical = 6
 theme_override_fonts/font = ExtResource("3_h3s88")
 theme_override_font_sizes/font_size = 65
 text = "aglasct
-Wila
-Marselo"
+Ishidaw
+PEDRA"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
