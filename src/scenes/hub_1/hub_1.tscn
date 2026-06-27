@@ -4,8 +4,45 @@
 [ext_resource type="Script" uid="uid://dlv8oth65oh6x" path="res://src/scenes/hub_1/hub_1.gd" id="2_k1ovh"]
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="3_m7kes"]
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_wducn"]
+[ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="4_hgu1q"]
+[ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="5_hj1w7"]
 [ext_resource type="Texture2D" uid="uid://cp43ut14e6hlf" path="res://assets/characters/npcs/dungeon_npcs/npcsnail.png" id="5_m7kes"]
 [ext_resource type="Texture2D" uid="uid://cgwcvo73utgii" path="res://assets/gfx/sparkle.png" id="6_yd4cg"]
+[ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_yebo0"]
+[ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="7_yebo0"]
+
+[sub_resource type="Resource" id="Resource_hgu1q"]
+script = ExtResource("6_yebo0")
+speaker_name = "Alex"
+speaker_img = ExtResource("7_yebo0")
+speaker_img_HFrames = 2
+text = "Oh thats so glowy..."
+speaker_on_right = false
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_yebo0"]
+script = ExtResource("6_yebo0")
+speaker_name = "Snail"
+text = "Thanks boy!"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_jkeby"]
+script = ExtResource("6_yebo0")
+speaker_name = "Alex"
+speaker_img = ExtResource("7_yebo0")
+speaker_img_HFrames = 2
+text = "Ow you can talk? What is it like to live around here?"
+speaker_on_right = false
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_u0m48"]
+script = ExtResource("6_yebo0")
+speaker_name = "Snail"
+text = "Its like I'm spinning in circles forever."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16ywo"]
+size = Vector2(388, 259)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wducn"]
 size = Vector2(149.5, 85)
@@ -42,6 +79,155 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3er6r"]
+size = Vector2(26.988905, 16.098644)
+
+[sub_resource type="Animation" id="Animation_jkeby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SnailLeft:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SnailLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(259, 622)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SnailLeft:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SnailRight:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1700.0001, 400.00003)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SnailRight:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_yebo0"]
+resource_name = "left_snail"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SnailLeft:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SnailLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 5, 9.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(200, 622), Vector2(600, 622), Vector2(200, 622)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SnailLeft:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 5, 9.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SnailRight:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SnailRight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.03333334, 4.9666667, 9.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1700.0001, 400.00003), Vector2(1320, 400), Vector2(1700, 400)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SnailRight:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.033333335, 4.9666667, 9.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jkeby"]
+_data = {
+&"RESET": SubResource("Animation_jkeby"),
+&"left_snail": SubResource("Animation_yebo0")
+}
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m7kes"]
 particle_flag_disable_z = true
 emission_shape = 1
@@ -76,14 +262,32 @@ tile_set = ExtResource("3_m7kes")
 [node name="Ground" parent="TileMaps" parent_id_path=PackedInt32Array(189077090) index="3" unique_id=1266151623]
 tile_map_data = PackedByteArray("AAAKAAkAAgACAAIAAAAKAAoAAgACAAMAAAALAAkAAgADAAIAAAALAAoAAgADAAMAAAAKAAsAAgACAAIAAAAKAAwAAgACAAMAAAALAAsAAgADAAIAAAALAAwAAgADAAMAAAAKAA0AAgACAAIAAAAKAA4AAgACAAMAAAALAA0AAgADAAIAAAALAA4AAgADAAMAAAAMAAkAAgACAAIAAAAMAAoAAgACAAMAAAANAAkAAgADAAIAAAANAAoAAgADAAMAAAAMAAsAAgACAAIAAAAMAAwAAgACAAMAAAANAAsAAgADAAIAAAANAAwAAgADAAMAAAAMAA0AAgACAAIAAAAMAA4AAgACAAMAAAANAA0AAgADAAIAAAANAA4AAgADAAMAAAAOAA0AAgAEAAIAAAAOAA4AAgAEAAMAAAAPAA0AAgAFAAIAAAAPAA4AAgAFAAMAAAAOAAsAAgAEAAIAAAAOAAwAAgAEAAMAAAAPAAsAAgAFAAIAAAAPAAwAAgAFAAMAAAAOAAkAAgAGAAAAAAAOAAoAAgAGAAEAAAAPAAkAAgAHAAAAAAAPAAoAAgAHAAEAAAAIAA0AAgAAAAIAAAAIAA4AAgAAAAMAAAAJAA0AAgABAAIAAAAJAA4AAgABAAMAAAAIAAsAAgAAAAIAAAAIAAwAAgAAAAMAAAAJAAsAAgABAAIAAAAJAAwAAgABAAMAAAAIAAkAAgAIAAAAAAAIAAoAAgAIAAEAAAAJAAkAAgAJAAAAAAAJAAoAAgAJAAEAAAAGAAoAAgACAAUAAAAHAAoAAgADAAUAAAAGAAkAAgACAAQAAAAHAAkAAgADAAQAAAAEAAkAAgACAAQAAAAEAAoAAgACAAUAAAAFAAkAAgADAAQAAAAFAAoAAgADAAUAAAACAAkAAgACAAQAAAACAAoAAgACAAUAAAADAAkAAgADAAQAAAADAAoAAgADAAUAAAAAAAkAAgAAAAQAAAAAAAoAAgAAAAUAAAABAAkAAgABAAQAAAABAAoAAgABAAUAAAAAAAcAAgAAAAIAAAAAAAgAAgAAAAMAAAABAAcAAgABAAIAAAABAAgAAgABAAMAAAAAAAUAAgAAAAIAAAAAAAYAAgAAAAMAAAABAAUAAgABAAIAAAABAAYAAgABAAMAAAAAAAMAAgAAAAAAAAAAAAQAAgAAAAEAAAABAAMAAgABAAAAAAABAAQAAgABAAEAAAACAAMAAgACAAAAAAACAAQAAgACAAEAAAADAAMAAgADAAAAAAADAAQAAgADAAEAAAAEAAMAAgACAAAAAAAEAAQAAgACAAEAAAAFAAMAAgADAAAAAAAFAAQAAgADAAEAAAAGAAMAAgACAAAAAAAGAAQAAgACAAEAAAAHAAMAAgADAAAAAAAHAAQAAgADAAEAAAAIAAMAAgAIAAIAAAAIAAQAAgAIAAMAAAAJAAMAAgAJAAIAAAAJAAQAAgAJAAMAAAAIAAEAAgAAAAIAAAAIAAIAAgAAAAMAAAAJAAEAAgABAAIAAAAJAAIAAgABAAMAAAAIAP//AgAAAAIAAAAIAAAAAgAAAAMAAAAJAP//AgABAAIAAAAJAAAAAgABAAMAAAAQAAkAAgACAAQAAAAQAAoAAgACAAUAAAARAAkAAgADAAQAAAARAAoAAgADAAUAAAASAAkAAgACAAQAAAASAAoAAgACAAUAAAATAAkAAgADAAQAAAATAAoAAgADAAUAAAAUAAkAAgACAAQAAAAUAAoAAgACAAUAAAAVAAkAAgADAAQAAAAVAAoAAgADAAUAAAAWAAkAAgAEAAQAAAAWAAoAAgAEAAUAAAAXAAkAAgAFAAQAAAAXAAoAAgAFAAUAAAAWAAcAAgAEAAIAAAAWAAgAAgAEAAMAAAAXAAcAAgAFAAIAAAAXAAgAAgAFAAMAAAAWAAUAAgAEAAIAAAAWAAYAAgAEAAMAAAAXAAUAAgAFAAIAAAAXAAYAAgAFAAMAAAAWAAMAAgAEAAAAAAAWAAQAAgAEAAEAAAAXAAMAAgAFAAAAAAAXAAQAAgAFAAEAAAAUAAMAAgACAAAAAAAUAAQAAgACAAEAAAAVAAMAAgADAAAAAAAVAAQAAgADAAEAAAASAAMAAgACAAAAAAASAAQAAgACAAEAAAATAAMAAgADAAAAAAATAAQAAgADAAEAAAAQAAMAAgACAAAAAAAQAAQAAgACAAEAAAARAAMAAgADAAAAAAARAAQAAgADAAEAAAAOAAMAAgAGAAIAAAAOAAQAAgAGAAMAAAAPAAMAAgAHAAIAAAAPAAQAAgAHAAMAAAAOAAEAAgAEAAIAAAAOAAIAAgAEAAMAAAAPAAEAAgAFAAIAAAAPAAIAAgAFAAMAAAAOAP//AgAEAAIAAAAOAAAAAgAEAAMAAAAPAP//AgAFAAIAAAAPAAAAAgAFAAMAAAACAAUAAgACAAIAAAACAAYAAgACAAMAAAADAAUAAgADAAIAAAADAAYAAgADAAMAAAACAAcAAgACAAIAAAACAAgAAgACAAMAAAADAAcAAgADAAIAAAADAAgAAgADAAMAAAAEAAcAAgACAAIAAAAEAAgAAgACAAMAAAAFAAcAAgADAAIAAAAFAAgAAgADAAMAAAAGAAcAAgACAAIAAAAGAAgAAgACAAMAAAAHAAcAAgADAAIAAAAHAAgAAgADAAMAAAAIAAUAAgACAAIAAAAIAAYAAgACAAMAAAAJAAUAAgADAAIAAAAJAAYAAgADAAMAAAAKAAUAAgACAAIAAAAKAAYAAgACAAMAAAALAAUAAgADAAIAAAALAAYAAgADAAMAAAAMAAUAAgACAAIAAAAMAAYAAgACAAMAAAANAAUAAgADAAIAAAANAAYAAgADAAMAAAAEAAUAAgACAAIAAAAEAAYAAgACAAMAAAAFAAUAAgADAAIAAAAFAAYAAgADAAMAAAAGAAUAAgACAAIAAAAGAAYAAgACAAMAAAAHAAUAAgADAAIAAAAHAAYAAgADAAMAAAAIAAcAAgACAAIAAAAIAAgAAgACAAMAAAAJAAcAAgADAAIAAAAJAAgAAgADAAMAAAAKAAcAAgACAAIAAAAKAAgAAgACAAMAAAALAAcAAgADAAIAAAALAAgAAgADAAMAAAAMAAcAAgACAAIAAAAMAAgAAgACAAMAAAANAAcAAgADAAIAAAANAAgAAgADAAMAAAAOAAcAAgACAAIAAAAOAAgAAgACAAMAAAAPAAcAAgADAAIAAAAPAAgAAgADAAMAAAAQAAcAAgACAAIAAAAQAAgAAgACAAMAAAARAAcAAgADAAIAAAARAAgAAgADAAMAAAASAAcAAgACAAIAAAASAAgAAgACAAMAAAATAAcAAgADAAIAAAATAAgAAgADAAMAAAAUAAcAAgACAAIAAAAUAAgAAgACAAMAAAAVAAcAAgADAAIAAAAVAAgAAgADAAMAAAAUAAUAAgACAAIAAAAUAAYAAgACAAMAAAAVAAUAAgADAAIAAAAVAAYAAgADAAMAAAASAAUAAgACAAIAAAASAAYAAgACAAMAAAATAAUAAgADAAIAAAATAAYAAgADAAMAAAAQAAUAAgACAAIAAAAQAAYAAgACAAMAAAARAAUAAgADAAIAAAARAAYAAgADAAMAAAAOAAUAAgACAAIAAAAOAAYAAgACAAMAAAAPAAUAAgADAAIAAAAPAAYAAgADAAMAAAAKAAMAAgACAAIAAAAKAAQAAgACAAMAAAALAAMAAgADAAIAAAALAAQAAgADAAMAAAAMAAMAAgACAAIAAAAMAAQAAgACAAMAAAANAAMAAgADAAIAAAANAAQAAgADAAMAAAAMAAAAAgACAAMAAAAMAAEAAgACAAIAAAANAAAAAgADAAMAAAANAAEAAgADAAIAAAAKAAAAAgACAAMAAAAKAAEAAgACAAIAAAALAAAAAgADAAMAAAALAAEAAgADAAIAAAAMAAIAAgACAAMAAAANAAIAAgADAAMAAAAKAAIAAgACAAMAAAALAAIAAgADAAMAAAAKAP//AgACAAIAAAALAP//AgADAAIAAAAMAP//AgACAAIAAAANAP//AgADAAIAAAA=")
 
+[node name="DialogueAreaSnail" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_hgu1q")]
+position = Vector2(662, 423)
+lock_player = true
+dialogue = Array[ExtResource("5_hj1w7")]([SubResource("Resource_hgu1q"), SubResource("Resource_yebo0"), SubResource("Resource_jkeby"), SubResource("Resource_u0m48")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaSnail" index="0" unique_id=742883100]
+position = Vector2(29, 4.5)
+shape = SubResource("RectangleShape2D_16ywo")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaSnail" index="1" unique_id=1923419492]
+offset_left = 195.0
+offset_top = -234.0
+offset_right = 245.0
+offset_bottom = -184.0
+
 [node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(829600880) index="0" unique_id=689924629 instance=ExtResource("3_wducn")]
+visible = false
 position = Vector2(968, 181)
 function_call = "go_to_next_scene"
 
 [node name="CollisionShape2D" parent="Interactables/Interactable" index="0" unique_id=1559650857]
-visible = false
 position = Vector2(-43.75, 27)
 shape = SubResource("RectangleShape2D_wducn")
+
+[node name="KeyHint" parent="Interactables/Interactable" index="1" unique_id=316488180]
+visible = true
 
 [node name="TriggerNextScene" type="Area2D" parent="Interactables/Interactable" index="2" unique_id=564457636]
 position = Vector2(-956, -356)
@@ -92,7 +296,24 @@ position = Vector2(-956, -356)
 position = Vector2(967, 117)
 shape = SubResource("RectangleShape2D_m7kes")
 
-[node name="Snail" type="AnimatedSprite2D" parent="." index="5" unique_id=1314691777]
+[node name="SnailLeft" type="AnimatedSprite2D" parent="." index="5" unique_id=742607778]
+texture_filter = 1
+position = Vector2(259, 622)
+scale = Vector2(5.210935, 5.210935)
+sprite_frames = SubResource("SpriteFrames_dvw3h")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="SnailRight" type="AnimatedSprite2D" parent="." index="6" unique_id=755328514]
+texture_filter = 1
+position = Vector2(1700.0001, 400.00003)
+scale = Vector2(5.210935, 5.210935)
+sprite_frames = SubResource("SpriteFrames_dvw3h")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="Snail" type="AnimatedSprite2D" parent="." index="7" unique_id=1314691777]
 texture_filter = 1
 position = Vector2(680, 265)
 scale = Vector2(12.671876, 12.671876)
@@ -100,25 +321,27 @@ sprite_frames = SubResource("SpriteFrames_dvw3h")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="Snail2" type="AnimatedSprite2D" parent="." index="6" unique_id=742607778]
-texture_filter = 1
-position = Vector2(216, 453.00003)
-scale = Vector2(5.210935, 5.210935)
-sprite_frames = SubResource("SpriteFrames_dvw3h")
-animation = &"idle"
-autoplay = "idle"
+[node name="Area2D" type="Area2D" parent="." index="8" unique_id=1394412012]
+position = Vector2(680, 265)
+scale = Vector2(12.671876, 12.671876)
+collision_layer = 15
+collision_mask = 15
 
-[node name="Snail3" type="AnimatedSprite2D" parent="." index="7" unique_id=755328514]
-texture_filter = 1
-position = Vector2(1700.0001, 400.00003)
-scale = Vector2(5.210935, 5.210935)
-sprite_frames = SubResource("SpriteFrames_dvw3h")
-animation = &"idle"
-autoplay = "idle"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=631790377]
+light_mask = 31
+visibility_layer = 31
+position = Vector2(-0.5524101, 8.049322)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_3er6r")
 
-[node name="Particles" type="Node" parent="." index="8" unique_id=2136807975]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9" unique_id=350257007]
+libraries/ = SubResource("AnimationLibrary_jkeby")
+autoplay = &"left_snail"
+
+[node name="Particles" type="Node" parent="." index="10" unique_id=2136807975]
 
 [node name="Sparkles" type="GPUParticles2D" parent="Particles" index="0" unique_id=1868836005]
+visible = false
 texture_filter = 1
 position = Vector2(706, 360)
 scale = Vector2(2, 2)
@@ -127,6 +350,7 @@ lifetime = 0.5
 process_material = SubResource("ParticleProcessMaterial_m7kes")
 
 [node name="PointLight2D" type="PointLight2D" parent="Particles" index="1" unique_id=2106660442]
+visible = false
 position = Vector2(677, 390)
 color = Color(1, 1, 0.4977886, 1)
 energy = 0.8
@@ -135,4 +359,5 @@ texture_scale = 24.05
 
 [connection signal="body_entered" from="Interactables/Interactable/TriggerNextScene" to="." method="_on_trigger_next_scene_body_entered"]
 
+[editable path="Dialogues/DialogueAreaSnail"]
 [editable path="Interactables/Interactable"]
