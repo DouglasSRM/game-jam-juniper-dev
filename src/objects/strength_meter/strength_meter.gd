@@ -50,8 +50,13 @@ func next_round() -> void:
 	is_active = true
 	rotating = true
 
+func set_attack_2() -> void:
+	rotation_speeds = [250., 275., 290., 320., 400.] # graus por segundo
 
-func activate() -> void:
+func activate(index: int) -> void:
+	if index == 1:
+		set_attack_2()
+	
 	sprite_result.visible = false
 	sprite_multiplicator.visible = true
 	visible = true
@@ -213,8 +218,8 @@ func _draw():
 	
 	var end_point: Vector2
 	# linha superior
-	end_point = BASE_DIR.rotated(deg_to_rad(0)) * radius
-	draw_line(Vector2.ZERO, end_point, Color.DARK_RED, 5)
+	#end_point = BASE_DIR.rotated(deg_to_rad(0)) * radius
+	#draw_line(Vector2.ZERO, end_point, Color.DARK_RED, 5)
 	
 	# linha movimentada
 	end_point = BASE_DIR.rotated(angle) * radius

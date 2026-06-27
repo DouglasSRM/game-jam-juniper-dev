@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://4aeln3ayeu4j" path="res://assets/cutcene/cutcene 2.png" id="3_04w7k"]
 [ext_resource type="Texture2D" uid="uid://csi62y2gjo7bv" path="res://assets/cutcene/cutcene 3.png" id="4_4jv4a"]
 [ext_resource type="Texture2D" uid="uid://bjw6d4opa68cw" path="res://assets/cutcene/cutcene 4.png" id="5_k8hcd"]
-[ext_resource type="AudioStream" uid="uid://ucwrtyfkxg2k" path="res://soundtrack/music/cutscenequstionmark.ogg" id="6_4jv4a"]
+[ext_resource type="AudioStream" uid="uid://cucagpv456f18" path="res://soundtrack/music/Cutscene.ogg" id="6_4jv4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6m0li"]
 atlas = ExtResource("3_04w7k")

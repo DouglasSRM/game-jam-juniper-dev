@@ -385,8 +385,6 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Lenora" parent="." index="14" unique_id=97282244 instance=ExtResource("16_hpiy0")]
-texture_filter = 1
-position = Vector2(686, 901)
 
 [editable path="Dialogues/DialogueAreaUncle"]
 [editable path="Dialogues/DialogueAreaDoctor"]

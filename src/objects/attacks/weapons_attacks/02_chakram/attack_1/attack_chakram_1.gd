@@ -4,7 +4,7 @@ extends BaseAttack
 func _ready() -> void:
 	super()
 
-	attack_name = 'Ataque Chakram 1'
+	attack_name = 'Attack Chakram 1'
 
 	damage = 5
 	step = 7

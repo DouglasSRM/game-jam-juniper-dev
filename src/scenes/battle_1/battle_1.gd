@@ -28,7 +28,7 @@ func attack(index: int) -> void:
 	player_battle.play_attack()
 	player_frame.pause_animation()
 
-	strength_meter.activate()
+	strength_meter.activate(index)
 
 	var multiplier: float = await strength_meter.return_multiplier
 
