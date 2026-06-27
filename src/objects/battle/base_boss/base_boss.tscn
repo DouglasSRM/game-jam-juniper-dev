@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xcx7r21ircnt"]
 
 [ext_resource type="Script" uid="uid://lq0yrdeikhfl" path="res://src/objects/battle/base_boss/base_boss.gd" id="1_w7vfi"]
-[ext_resource type="Texture2D" uid="uid://c8rurv0ap6lru" path="res://assets/bosses/template.png" id="1_w253h"]
+[ext_resource type="Texture2D" uid="uid://f7tf52f4rbl1" path="res://assets/bosses/template.png" id="1_w253h"]
 
 [sub_resource type="Animation" id="Animation_omt2a"]
 length = 0.001
