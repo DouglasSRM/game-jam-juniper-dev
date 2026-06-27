@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ms8dfbjptulw"]
 
 [ext_resource type="Script" uid="uid://bs50mofbvitxl" path="res://src/objects/battle/player_battle/player_battle.gd" id="1_lit63"]
-[ext_resource type="Texture2D" uid="uid://3v7v70nu2l4h" path="res://assets/battle/alex_animado.png" id="2_lo2qk"]
+[ext_resource type="Texture2D" uid="uid://20uvhqagmxbm" path="res://assets/battle/animatedalex.png" id="2_lo2qk"]
 
 [sub_resource type="Animation" id="Animation_v8jab"]
 length = 0.001
@@ -16,23 +16,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_lo2qk"]
-resource_name = "attacking"
-length = 4.0
-step = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [7, 8, 9, 11, 9, 8, 7, 6]
 }
 
 [sub_resource type="Animation" id="Animation_c470t"]
@@ -53,11 +36,27 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_lo2qk"]
+resource_name = "take_damage"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f15hq"]
 _data = {
 &"RESET": SubResource("Animation_v8jab"),
-&"attacking": SubResource("Animation_lo2qk"),
-&"idle": SubResource("Animation_c470t")
+&"idle": SubResource("Animation_c470t"),
+&"take_damage": SubResource("Animation_lo2qk")
 }
 
 [node name="PlayerBattle" type="Node2D" unique_id=2102725843]
@@ -71,8 +70,7 @@ texture_filter = 1
 position = Vector2(0, 150)
 scale = Vector2(5, 5)
 texture = ExtResource("2_lo2qk")
-hframes = 6
-vframes = 2
+hframes = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=433044189]
 libraries/ = SubResource("AnimationLibrary_f15hq")
