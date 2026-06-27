@@ -41,3 +41,5 @@ func show_boss_text() -> void:
 	interactable.visible = false
 	boss_label.visible = true
 	parchment.visible = false
+	
+	await Utils.sleep(3)

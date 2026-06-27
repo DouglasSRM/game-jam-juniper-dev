@@ -60,7 +60,7 @@ texture = ExtResource("3_sttp2")
 
 [node name="Boss" parent="." index="1" unique_id=867154428 instance=ExtResource("3_do80o")]
 position = Vector2(967, 288)
-max_health = 30.0
+max_health = 50.0
 
 [node name="BossEnemy" type="AnimatedSprite2D" parent="Boss" index="0" unique_id=164820862]
 texture_filter = 1
