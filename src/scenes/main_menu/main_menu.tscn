@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dy7i7r8ltomuh" path="res://fonts/dungeon-mode.ttf" id="2_ob46e"]
 [ext_resource type="FontFile" uid="uid://3mpujxnlxp4g" path="res://fonts/antiquity-print.ttf" id="3_felax"]
 [ext_resource type="Texture2D" uid="uid://dk8j82ju4onw4" path="res://assets/logojam.png" id="6_0y5yg"]
-[ext_resource type="AudioStream" uid="uid://cob6ia0whe50u" path="res://soundtrack/music/menumusic.ogg" id="7_frlin"]
+[ext_resource type="AudioStream" uid="uid://cob6ia0whe50u" path="res://soundtrack/music/MenuMusic.ogg" id="7_frlin"]
 [ext_resource type="PackedScene" uid="uid://bgh6hynxcy5jk" path="res://src/scenes/settings_menu/settings_menu.tscn" id="9_5o0ss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgtrd"]

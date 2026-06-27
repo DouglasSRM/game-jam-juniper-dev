@@ -35,11 +35,18 @@ func _process(delta: float) -> void:
 		update_water()
 
 func go_to_next_scene() -> void:
-	SceneManager.change_scene(self, 'tavern_2')
+	SceneManager.change_scene(self, 'cutscenes/cutscene_final/cutscene_final', true, true)
 
 func show_boss_text() -> void:
 	interactable.visible = false
 	boss_label.visible = true
 	parchment.visible = false
-	
-	await Utils.sleep(3)
+	player.can_move = false
+	await Utils.sleep(0.1)
+	player.walk("down", 1, 0.01)
+	await Utils.sleep(2)
+	go_to_next_scene()
+
+func _on_trigger_next_scene_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		go_to_next_scene()

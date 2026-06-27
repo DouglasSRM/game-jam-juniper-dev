@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://d4h0i1vg4k0ap"]
 
+[ext_resource type="Script" uid="uid://b8vmvcevc1hmt" path="res://src/scenes/cutscenes/cutscene_final/cutscene_final.gd" id="1_ndmvy"]
+[ext_resource type="Texture2D" uid="uid://buy2kdod3b8cd" path="res://assets/cutcene/amuleto cutcene.png" id="1_y3dmp"]
+
 [node name="CutsceneFinal" type="Node2D" unique_id=1417579837]
+script = ExtResource("1_ndmvy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1448015740]
+position = Vector2(960, 540)
+texture = ExtResource("1_y3dmp")

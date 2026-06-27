@@ -7,7 +7,7 @@ var camera_inicial: float
 var moto_inicial: float
 
 var carimbao: bool = true
-var step: float = 15
+var step: float = 2
 var wait_audio: float = 1
 var wait: float = 2
 var tempo_acumulado := 0.0
