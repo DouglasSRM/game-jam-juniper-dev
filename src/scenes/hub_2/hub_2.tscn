@@ -4,7 +4,49 @@
 [ext_resource type="Script" uid="uid://c6lf27sfo1onb" path="res://src/scenes/hub_2/hub_2.gd" id="2_8pbxq"]
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_ei37o"]
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="3_qsxt5"]
-[ext_resource type="Texture2D" uid="uid://n83repvctywj" path="res://assets/characters/npcs/dungeon_npcs/npcmushroom.png" id="5_qsxt5"]
+[ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="4_x6tt8"]
+[ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="5_43pc8"]
+[ext_resource type="Texture2D" uid="uid://cnyr2sbbi0sqp" path="res://assets/characters/npcs/dungeon_npcs/npcmushroom.png" id="5_qsxt5"]
+[ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_itq37"]
+[ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="7_fb7il"]
+[ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="7_tyr75"]
+[ext_resource type="Texture2D" uid="uid://cv022pdjlcqtr" path="res://assets/characters/npcs/dungeon_npcs/npcmouse.png" id="9_itq37"]
+
+[sub_resource type="Resource" id="Resource_x6tt8"]
+script = ExtResource("6_itq37")
+speaker_name = "Alex"
+speaker_img = ExtResource("7_fb7il")
+speaker_img_HFrames = 2
+text = "I wonder if I eat this, it would make me bigger..."
+speaker_on_right = false
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_43pc8"]
+script = ExtResource("6_itq37")
+speaker_name = "Mushroom"
+text = "[shake rate=20.0 level=5 connected=0]Big... Smal... Big... Smal...[/shake]"
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6tt8"]
+size = Vector2(267, 182)
+
+[sub_resource type="Resource" id="Resource_itq37"]
+script = ExtResource("6_itq37")
+speaker_name = "Alex"
+speaker_img = ExtResource("7_tyr75")
+speaker_img_HFrames = 2
+text = "Oh, I wonder if this mouse can talk too?"
+speaker_on_right = false
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_tyr75"]
+script = ExtResource("6_itq37")
+speaker_name = "Rat"
+text = "Squeak, squeak."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itq37"]
+size = Vector2(265, 243)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qsxt5"]
 size = Vector2(196, 159)
@@ -41,8 +83,34 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvw3h"]
-size = Vector2(23.7193, 19.31579)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyr75"]
+atlas = ExtResource("9_itq37")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb7il"]
+atlas = ExtResource("9_itq37")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwubk"]
+atlas = ExtResource("9_itq37")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvw3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyr75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb7il")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwubk")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}]
 
 [node name="Hub2" unique_id=823413629 instance=ExtResource("1_s3wny")]
 script = ExtResource("2_8pbxq")
@@ -77,7 +145,38 @@ tile_map_data = PackedByteArray("AAAVAAIAAQAKAAAAAAAVAAMAAQAKAAEAAAAVAAQAAQAKAAI
 [node name="Layer3" parent="TileMaps" parent_id_path=PackedInt32Array(189077090) index="5" unique_id=744383844]
 tile_map_data = PackedByteArray("AAAUAAUAAQAGAAUAAAAWAAYAAQAHAAUAAAARAAUAAQAGAAYAAAADAAMAAQAHAAUAAAAEAAQAAQAGAAUAAAAFAAUAAQAHAAYAAAAGAAMAAQAHAAUAAAAGAAQAAQAGAAUAAAAFAAQAAQAIAAUAAAALAAgAAQAGAAQAAAALAAoAAQAHAAUAAAANAAoAAQAIAAUAAAAMAAkAAQAIAAQAAAAKAAMAAQAGAAYAAAALAAEAAQAGAAUAAAALAAIAAQAIAAQAAAAQAAAAAQAHAAUAAAAQAAIAAQAHAAYAAAAPAAAAAQAIAAQAAAA=")
 
+[node name="DialogueAreaMushroom" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_x6tt8")]
+position = Vector2(709, 278)
+lock_player = true
+dialogue = Array[ExtResource("5_43pc8")]([SubResource("Resource_x6tt8"), SubResource("Resource_43pc8")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaMushroom" index="0" unique_id=742883100]
+position = Vector2(7.5, 35)
+shape = SubResource("RectangleShape2D_x6tt8")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaMushroom" index="1" unique_id=1923419492]
+offset_left = 100.0
+offset_top = -191.0
+offset_right = 150.0
+offset_bottom = -141.0
+
+[node name="DialogueAreaMouse" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="1" unique_id=820719068 instance=ExtResource("4_x6tt8")]
+position = Vector2(1719, 498)
+lock_player = true
+dialogue = Array[ExtResource("5_43pc8")]([SubResource("Resource_itq37"), SubResource("Resource_tyr75")])
+
+[node name="CollisionShape" parent="Dialogues/DialogueAreaMouse" index="0" unique_id=742883100]
+position = Vector2(-3.5, 41.5)
+shape = SubResource("RectangleShape2D_itq37")
+
+[node name="KeyHint" parent="Dialogues/DialogueAreaMouse" index="1" unique_id=1923419492]
+offset_left = 50.0
+offset_top = -142.0
+offset_right = 100.0
+offset_bottom = -92.0
+
 [node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(829600880) index="0" unique_id=689924629 instance=ExtResource("3_ei37o")]
+visible = false
 position = Vector2(967, 201)
 function_call = "go_to_next_scene"
 
@@ -107,12 +206,16 @@ sprite_frames = SubResource("SpriteFrames_ei37o")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="Area2D" type="Area2D" parent="mushroom" index="0" unique_id=80945765]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mushroom/Area2D" index="0" unique_id=911099061]
-position = Vector2(-0.07017517, 5.587721)
-shape = SubResource("RectangleShape2D_dvw3h")
+[node name="mouse" type="AnimatedSprite2D" parent="." index="6" unique_id=1635873384]
+texture_filter = 1
+position = Vector2(1717, 490.00006)
+scale = Vector2(3.3125, 3.3125)
+sprite_frames = SubResource("SpriteFrames_dvw3h")
+animation = &"idle"
+autoplay = "idle"
 
 [connection signal="body_entered" from="Interactables/TriggerNextScene" to="." method="_on_trigger_next_scene_body_entered"]
 
+[editable path="Dialogues/DialogueAreaMushroom"]
+[editable path="Dialogues/DialogueAreaMouse"]
 [editable path="Interactables/Interactable"]
