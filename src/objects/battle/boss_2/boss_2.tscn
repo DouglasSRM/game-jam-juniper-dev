@@ -13,4 +13,4 @@ max_health = 40.0
 texture = ExtResource("3_hih5n")
 
 [node name="AttackBoss2" parent="Attacks" parent_id_path=PackedInt32Array(888676108) index="0" unique_id=1305917817 instance=ExtResource("4_t3v86")]
-position = Vector2(0, 268)
+position = Vector2(0, 550)

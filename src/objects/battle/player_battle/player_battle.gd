@@ -19,6 +19,9 @@ func pause_animation() -> void:
 func resume_animation() -> void:
 	animation_player.play("idle")
 
+func play_attack() -> void:
+	animation_player.play("attacking")
+
 func set_health(value: float) -> void:
 	super(value)
 

@@ -27,10 +27,10 @@ func run_animation() -> void:
 func execute() -> void:
 	run_animation()
 
-	var effective_damage = damage * multiplier
+	var effective_damage: float = damage * multiplier
 
 	await Utils.sleep(pre_step_duration)
-	var step_damage = effective_damage / step # Tem que cuidar aqui
+	var step_damage: float = effective_damage / step # Tem que cuidar aqui
 	# Caso o step seja 0, o godot vai crashar.
 
 	if effective_damage <= 0:

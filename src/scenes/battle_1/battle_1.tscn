@@ -74,8 +74,15 @@ autoplay = "idle"
 [node name="Sprite" parent="Boss" index="1" unique_id=685350226]
 visible = false
 
+[node name="AttackBoss1" parent="Boss/Attacks" parent_id_path=PackedInt32Array(867154428, 888676108) index="0" unique_id=1305917817]
+texture_filter = 1
+position = Vector2(-1, 620)
+
+[node name="Sprite" parent="Boss/Attacks/AttackBoss1" index="0" unique_id=451462687]
+texture_filter = 0
+
 [node name="PlayerBattle" parent="." index="2" unique_id=2102725843 instance=ExtResource("4_bkyu7")]
-position = Vector2(969, 735)
+position = Vector2(950, 710)
 
 [node name="Sprite2D" parent="." index="3" unique_id=1522995467]
 visible = false

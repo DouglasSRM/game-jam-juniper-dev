@@ -7,9 +7,9 @@ func _ready() -> void:
 	attack_name = 'Ataque Chakram 2'
 
 	damage = 5
-	step = 3
-	pre_step_duration = 1
-	step_duration = 0.75
+	step = 7
+	pre_step_duration = 0.5
+	step_duration = 0.5
 
 func run_animation() -> void:
 	sprite.visible = true

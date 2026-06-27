@@ -5,9 +5,16 @@ var timer_water_animation: float = 0.
 @onready var agua_3: TileMapLayer = $TileMaps/Agua3
 @onready var agua_2: TileMapLayer = $TileMaps/Agua2
 
+@onready var dialogue_area_grandpa: DialogArea = $Dialogues/DialogueAreaGrandpa
+@onready var dialogue_area_uncle_reggie: DialogArea = $Dialogues/DialogueAreaUncleReggie
+
 func _ready() -> void:
 	agua_2.visible = false
 	agua_3.visible = false
+	
+	if Global.teve_dialogos_dungeon_entrance:
+		dialogue_area_grandpa.visible = false
+		dialogue_area_uncle_reggie.visible = false
 
 func update_water() -> void:
 	if (not agua_2.visible) and (not agua_3.visible):
@@ -23,6 +30,7 @@ func update_water() -> void:
 		agua_3.visible = false
 
 func go_to_next_scene() -> void:
+	Global.teve_dialogos_dungeon_entrance = true
 	Global.next_battle_scene = 'battle_1'
 	SceneManager.change_scene(self, 'pre_turn')
 

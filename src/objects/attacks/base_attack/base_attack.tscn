@@ -47,8 +47,10 @@ z_index = 1
 script = ExtResource("1_jllfs")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=451462687]
+texture_filter = 1
 position = Vector2(0, -250)
-hframes = 6
+scale = Vector2(3, 3)
+hframes = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1776610203]
 libraries/ = SubResource("AnimationLibrary_dpygy")

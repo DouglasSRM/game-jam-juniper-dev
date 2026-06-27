@@ -37,7 +37,7 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 script = ExtResource("6_a01i5")
 speaker_name = "Uncle Reggie"
 speaker_img = ExtResource("9_5tpw2")
-text = "[shake rate=20.0 level=5 connected=0]Not in my tavern![/shake] And if you raise your hand to [shake rate=20.0 level=5 connected=0]ANY[/shake]  customer again, I [shake rate=20.0 level=5 connected=0]WILL[/shake] beat your ass up!"
+text = "[shake rate=20.0 level=5 connected=0]Not in my tavern![/shake] And if you raise your hand to [shake rate=20.0 level=5 connected=0]ANY[/shake]  customer again, you're gonna be grounded for a week!"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_eet7p"]

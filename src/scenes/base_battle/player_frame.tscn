@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsbvolwejgyty"]
 
-[ext_resource type="Texture2D" uid="uid://db25ad24qt64f" path="res://assets/characters/npcs/npc1/npc1_1.png" id="1_3a67r"]
 [ext_resource type="Script" uid="uid://cyh3fxxayor7b" path="res://src/scenes/base_battle/player_frame.gd" id="1_rlpe7"]
+[ext_resource type="Texture2D" uid="uid://cxwra521o75v8" path="res://assets/portraits/alexportraits/alecbravo.png" id="2_rlpe7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12j5o"]
 bg_color = Color(0.16862746, 0.16862746, 0.27058825, 1)
@@ -42,15 +42,15 @@ script = ExtResource("1_rlpe7")
 
 [node name="Panel" type="Panel" parent="." unique_id=978551826]
 offset_right = 225.0
-offset_bottom = 320.0
+offset_bottom = 225.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_12j5o")
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=1586212254]
-scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_3a67r")
+position = Vector2(-21, -71)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("2_rlpe7")
 offset = Vector2(360, 500)
-hframes = 2
-frame = 1
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=492278186]
 libraries/ = SubResource("AnimationLibrary_et7jy")

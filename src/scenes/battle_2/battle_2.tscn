@@ -72,7 +72,7 @@ autoplay = "idle"
 visible = false
 
 [node name="PlayerBattle" parent="." index="2" unique_id=2102725843 instance=ExtResource("4_pal0i")]
-position = Vector2(948, 657)
+position = Vector2(950, 710)
 
 [node name="Sprite2D" parent="." index="3" unique_id=1522995467]
 visible = false

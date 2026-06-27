@@ -30,8 +30,8 @@ _data = {
 script = ExtResource("2_obbcy")
 
 [node name="Sprite" parent="." index="0" unique_id=451462687]
+position = Vector2(0, -200)
 texture = ExtResource("3_3h3lm")
-frame = 2
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=1776610203]
 libraries/ = SubResource("AnimationLibrary_t4b02")
