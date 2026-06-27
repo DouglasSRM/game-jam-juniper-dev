@@ -44,14 +44,15 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 
 [node name="SpeakerSprite" type="Sprite2D" parent="HBoxContainer/SpeakerParent" unique_id=2128957327]
-position = Vector2(150, -1)
-scale = Vector2(0.625, 0.625)
+position = Vector2(150, 130)
+scale = Vector2(0.575, 0.575)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1501866499]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="DialogueLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer" unique_id=1791115249]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("1_gsjv7")

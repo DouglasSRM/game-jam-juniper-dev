@@ -8,30 +8,36 @@
 [ext_resource type="PackedScene" uid="uid://dgeptvsmto7k7" path="res://src/objects/npcs/tio/tio.tscn" id="5_3g3of"]
 [ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="5_ois6d"]
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_a01i5"]
-[ext_resource type="Texture2D" uid="uid://db25ad24qt64f" path="res://assets/characters/npcs/npc1/npc1_1.png" id="7_cr8rw"]
+[ext_resource type="Texture2D" uid="uid://bkwyydyq3r1hj" path="res://assets/portraits/alexportraits/alecbravo_animado.png" id="8_5tpw2"]
 [ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/objects/dialogue/resources/dialogue_function_resource.gd" id="8_a01i5"]
+[ext_resource type="Texture2D" uid="uid://3ga52uksfn2k" path="res://assets/portraits/reggieportraits/reggiefalando2.png" id="9_5tpw2"]
 [ext_resource type="Script" uid="uid://dvqw2l4htwcuf" path="res://src/objects/dialogue/resources/dialogue_choice_resource.gd" id="9_cr8rw"]
+[ext_resource type="Texture2D" uid="uid://dr7p4hsm2d8x7" path="res://assets/portraits/reggieportraits/reggienormal_falando_animado.png" id="11_5tpw2"]
+[ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="12_i0pll"]
 
 [sub_resource type="Resource" id="Resource_gygia"]
 script = ExtResource("6_a01i5")
 speaker_name = "Uncle Reggie"
-speaker_img = ExtResource("7_cr8rw")
+speaker_img = ExtResource("11_5tpw2")
 speaker_img_HFrames = 2
 speaker_img_step_frame = 2
-text = "Ok, now that you finished the cleaning on tavern room, we can talk about what happened early"
-speaker_on_right = false
+text = "Ok, now that you've finished the cleaning on the  tavern room, we can talk about what happened earlier."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_a01i5"]
 script = ExtResource("6_a01i5")
 speaker_name = "Alex"
-text = "This is not fair, if you haven't [shake rate=20.0 level=5 connected=0]stopped me[/shake], I would beaten his ass up"
+speaker_img = ExtResource("8_5tpw2")
+speaker_img_HFrames = 2
+text = "This is not fair! if you [shake rate=20.0 level=5 connected=0]didn't stop me[/shake], I would've beaten his ass up!"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_5tpw2"]
 script = ExtResource("6_a01i5")
 speaker_name = "Uncle Reggie"
-text = "[shake rate=20.0 level=5 connected=0]Not in my tavern![/shake] And if you raise your hand to [shake rate=20.0 level=5 connected=0]ANY[/shake  customer again, I would beat your ass"
+speaker_img = ExtResource("9_5tpw2")
+text = "[shake rate=20.0 level=5 connected=0]Not in my tavern![/shake] And if you raise your hand to [shake rate=20.0 level=5 connected=0]ANY[/shake]  customer again, I [shake rate=20.0 level=5 connected=0]WILL[/shake] beat your ass up!"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_eet7p"]
@@ -45,15 +51,18 @@ metadata/_custom_type_script = "uid://bwmccfplhqpda"
 [sub_resource type="Resource" id="Resource_cr8rw"]
 script = ExtResource("6_a01i5")
 speaker_name = "Uncle"
-speaker_img = ExtResource("7_cr8rw")
+speaker_img = ExtResource("11_5tpw2")
 speaker_img_HFrames = 2
-text = "Common', you have more homework to do"
+text = "Common', you have more work to do."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_i0pll"]
 script = ExtResource("6_a01i5")
 speaker_name = "Alex"
-text = "Oh... I will not clean the toilets again! [shake rate=20.0 level=5 connected=0]Georgie was here today![/shake"
+speaker_img = ExtResource("12_i0pll")
+speaker_img_HFrames = 2
+text = "Oh... I will not clean the toilets again! [shake rate=20.0 level=5 connected=0]Georgie was here today...[/shake"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_evdd8"]
@@ -213,7 +222,6 @@ tile_map_data = PackedByteArray("AAACAAEAAwAMAAgAAAA=")
 tile_set = ExtResource("3_jqwga")
 
 [node name="DialogueAreaUncle" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_vshfe")]
-visible = false
 position = Vector2(269, 632)
 only_activate_once = true
 lock_player = true
