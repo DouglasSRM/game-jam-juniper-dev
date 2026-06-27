@@ -1,11 +1,15 @@
 class_name Tavern extends BaseScene
 
 @onready var tio: Tio = $Tio
-@onready var doctor: Tio = $Doctor
-@onready var georgie: Tio = $GeorgieOldMan
-@onready var erie: Tio = $Erie
+@onready var doctor: Sprite2D = $Doctor
+@onready var georgie: Sprite2D = $GeorgieOldMan
+@onready var erie: Sprite2D = $Erie
 @onready var lenora: Tio = $Lenora
 @onready var black: ColorRect = $Black
+@onready var bully: Sprite2D = $Bully
+@onready var random_1: Sprite2D = $Random1
+@onready var random_2: Sprite2D = $Random2
+
 
 @onready var dialogue_area_uncle: DialogArea = $Dialogues/DialogueAreaUncle
 @onready var dialogue_area_doctor: DialogArea = $Dialogues/DialogueAreaDoctor
@@ -67,11 +71,15 @@ func accept_quest() -> void:
 	georgie.visible = false
 	erie.visible = false
 	lenora.visible = false
+	bully.visible = false
+	random_1.visible = false
+	random_2.visible = false
+
 
 	# collisions
-	doctor.collision_shape.disabled = true
-	georgie.collision_shape.disabled = true
-	erie.collision_shape.disabled = true
+	# doctor.collision_shape.disabled = true
+	# georgie.collision_shape.disabled = true
+	# erie.collision_shape.disabled = true
 	lenora.collision_shape.disabled = true
 	
 	# dialogues
