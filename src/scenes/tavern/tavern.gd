@@ -25,7 +25,7 @@ func _ready() -> void:
 	door.visible = false
 	black.visible = false
 	black.modulate.a = 0.
-	dialogue_area_uncle.visible = false
+	#dialogue_area_uncle.visible = false
 
 func go_to_next_scene() -> void:
 	SceneManager.change_scene(self, 'dungeon_entrance')

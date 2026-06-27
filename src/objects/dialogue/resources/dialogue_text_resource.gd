@@ -9,7 +9,7 @@ class_name DialogueText extends DE
 @export var font_size: int = 52
 
 @export_multiline var text: String
-@export_range(0.1, 30.0, 0.1) var text_speed: float = 10.0
+@export_range(0.1, 30.0, 0.1) var text_speed: float = 15.0
 
 @export var text_sound: AudioStream
 @export var text_volume_db: float

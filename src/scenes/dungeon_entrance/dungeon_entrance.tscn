@@ -9,6 +9,12 @@
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="5_46yio"]
 [ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/objects/dialogue/resources/dialogue_function_resource.gd" id="6_wd0pd"]
 [ext_resource type="PackedScene" uid="uid://dgeptvsmto7k7" path="res://src/objects/npcs/tio/tio.tscn" id="8_46yio"]
+[ext_resource type="Texture2D" uid="uid://dr7p4hsm2d8x7" path="res://assets/portraits/reggieportraits/reggienormal_falando_animado.png" id="8_odb1k"]
+[ext_resource type="Texture2D" uid="uid://bkwyydyq3r1hj" path="res://assets/portraits/alexportraits/alecbravo_animado.png" id="9_fg6a0"]
+[ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="9_s3hxo"]
+[ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="10_eafeo"]
+[ext_resource type="Texture2D" uid="uid://c6td2itkko1g6" path="res://assets/portraits/reggieportraits/reggieconfuso_animado.png" id="10_me2i1"]
+[ext_resource type="Texture2D" uid="uid://dknxnkqo0cxrl" path="res://assets/portraits/alexportraits/alectriste_animado.png" id="11_2gsd2"]
 
 [sub_resource type="Resource" id="Resource_46yio"]
 script = ExtResource("6_wd0pd")
@@ -26,7 +32,10 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 [sub_resource type="Resource" id="Resource_eafeo"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex"
+speaker_img = ExtResource("9_s3hxo")
+speaker_img_HFrames = 2
 text = "[shake rate=20.0 level=5 connected=0]aahh! Who's talking to me??![/shake]"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_2gsd2"]
@@ -38,7 +47,10 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 [sub_resource type="Resource" id="Resource_cxqnp"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex"
+speaker_img = ExtResource("9_fg6a0")
+speaker_img_HFrames = 2
 text = "First of all, [shake rate=20.0 level=5 connected=0]WHO ARE YOU?[/shake] and what it's this challenge that you're talking about?"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_wn36d"]
@@ -50,25 +62,31 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 [sub_resource type="Resource" id="Resource_hxact"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex Grandpa"
-text = "Unfortunately, I couldn't go to the land of dead, and I'm trapped in this bottle for... well... multiple reasons. So, sometimes, I help the person holding this bottle awaken my [shake rate=20.0 level=5 connected=0]ultra special grandpa secret[/shake]."
+text = "Unfortunately, I couldn't go to the land of the dead, and I'm trapped in this bottle for... well... multiple reasons. So, sometimes, I help the person holding this bottle to awaken my [shake rate=20.0 level=5 connected=0]ultra special grandpa secret[/shake]."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_2amhu"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex"
+speaker_img = ExtResource("10_eafeo")
+speaker_img_HFrames = 2
 text = "[shake rate=20.0 level=5 connected=0]Grandpa Secret?[/shake]"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_qdwh1"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex Grandpa"
-text = "Oh yes, the abilitty of summon one of my golden age weapons to defeat your enemys, but be carefully you may invoke just one weapon at time. You will need this to the monster ahead."
+text = "Oh yes, the ability to summon one of my golden age weapons to defeat your enemys! But be carefull... you may invoke just one weapon at time. You will need this to the monster ahead."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_hxwkn"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex"
-text = " [shake rate=20.0 level=10 connected=0]Mo-monster?[/shake] You are tolding me that have monsters here?"
+speaker_img = ExtResource("11_2gsd2")
+speaker_img_HFrames = 2
+text = " [shake rate=20.0 level=10 connected=0]Mo-monster?[/shake] Are you teling me that there's monsters in here?"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_ggxwx"]
@@ -80,7 +98,10 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 [sub_resource type="Resource" id="Resource_tmuql"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex"
-text = "[shake rate=22.0 level=10 connected=0]NO! Wait grandpa[/shake]."
+speaker_img = ExtResource("11_2gsd2")
+speaker_img_HFrames = 2
+text = "[shake rate=22.0 level=10 connected=0]NO! Wait grandpa[/shake]!!"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46yio"]
@@ -89,7 +110,9 @@ size = Vector2(576, 20)
 [sub_resource type="Resource" id="Resource_pk6ct"]
 script = ExtResource("5_46yio")
 speaker_name = "Uncle Reggie"
-text = "I think now it's time. You are growing up buddy. This has been families hairloom for a long time... [shake rate=20.0 level=5 connected=0]The Grandpa's Secret[/shake]"
+speaker_img = ExtResource("8_odb1k")
+speaker_img_HFrames = 2
+text = "I think now it's time. You are growing up buddy. This has been the familie's hairloom for a long time... [shake rate=20.0 level=5 connected=0]The Grandpa's Secret[/shake]"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_me2i1"]
@@ -100,18 +123,25 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 [sub_resource type="Resource" id="Resource_fg6a0"]
 script = ExtResource("5_46yio")
 speaker_name = "Alex"
+speaker_img = ExtResource("9_s3hxo")
+speaker_img_HFrames = 2
 text = "Excuse-me... like... a bottle?"
+speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_odb1k"]
 script = ExtResource("5_46yio")
 speaker_name = "Uncle Reggie"
-text = "This has more meaning then it appears..."
+speaker_img = ExtResource("10_me2i1")
+speaker_img_HFrames = 2
+text = "This has more meaning than it appears..."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_s3hxo"]
 script = ExtResource("5_46yio")
 speaker_name = "Uncle Reggie"
+speaker_img = ExtResource("8_odb1k")
+speaker_img_HFrames = 2
 text = "So Alex, a little secret for you, if you face danger:[rainbow freq=0.2 sat=10.0 val=20.0] spin the bottle[/rainbow]."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
