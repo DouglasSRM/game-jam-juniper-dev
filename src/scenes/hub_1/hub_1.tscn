@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cgwcvo73utgii" path="res://assets/gfx/sparkle.png" id="6_yd4cg"]
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_yebo0"]
 [ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="7_yebo0"]
+[ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/objects/dialogue/resources/dialogue_function_resource.gd" id="8_jkeby"]
 
 [sub_resource type="Resource" id="Resource_hgu1q"]
 script = ExtResource("6_yebo0")
@@ -39,6 +40,23 @@ metadata/_custom_type_script = "uid://bu36cy11lb2of"
 script = ExtResource("6_yebo0")
 speaker_name = "Snail"
 text = "Its like I'm spinning in circles forever."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_ao6qc"]
+script = ExtResource("6_yebo0")
+speaker_name = "Snail"
+text = "Take a sip if your glow fades out."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_h3rrm"]
+script = ExtResource("8_jkeby")
+target_path = NodePath("../..")
+function_name = "add_potions"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_t2h6i"]
+script = ExtResource("6_yebo0")
+text = "[rainbow freq=0.2 sat=10.0 val=20.0] +1 Health Potion added to the inventory.[/rainbow]"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16ywo"]
@@ -79,8 +97,14 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3er6r"]
-size = Vector2(26.988905, 16.098644)
+[sub_resource type="CircleShape2D" id="CircleShape2D_jkeby"]
+radius = 12.678749
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yebo0"]
+radius = 11.520646
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yebo0"]
+size = Vector2(27.225647, 18.939587)
 
 [sub_resource type="Animation" id="Animation_jkeby"]
 length = 0.001
@@ -265,7 +289,7 @@ tile_map_data = PackedByteArray("AAAKAAkAAgACAAIAAAAKAAoAAgACAAMAAAALAAkAAgADAAI
 [node name="DialogueAreaSnail" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_hgu1q")]
 position = Vector2(662, 423)
 lock_player = true
-dialogue = Array[ExtResource("5_hj1w7")]([SubResource("Resource_hgu1q"), SubResource("Resource_yebo0"), SubResource("Resource_jkeby"), SubResource("Resource_u0m48")])
+dialogue = Array[ExtResource("5_hj1w7")]([SubResource("Resource_hgu1q"), SubResource("Resource_yebo0"), SubResource("Resource_jkeby"), SubResource("Resource_u0m48"), SubResource("Resource_ao6qc"), SubResource("Resource_h3rrm"), SubResource("Resource_t2h6i")])
 
 [node name="CollisionShape" parent="Dialogues/DialogueAreaSnail" index="0" unique_id=742883100]
 position = Vector2(29, 4.5)
@@ -304,6 +328,12 @@ sprite_frames = SubResource("SpriteFrames_dvw3h")
 animation = &"idle"
 autoplay = "idle"
 
+[node name="CharacterBody2D" type="CharacterBody2D" parent="SnailLeft" index="0" unique_id=650153843]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnailLeft/CharacterBody2D" index="0" unique_id=955756456]
+position = Vector2(-0.9595206, 5.3733153)
+shape = SubResource("CircleShape2D_jkeby")
+
 [node name="SnailRight" type="AnimatedSprite2D" parent="." index="6" unique_id=755328514]
 texture_filter = 1
 position = Vector2(1700.0001, 400.00003)
@@ -313,6 +343,12 @@ animation = &"idle"
 autoplay = "idle"
 flip_h = true
 
+[node name="CharacterBody2D" type="CharacterBody2D" parent="SnailRight" index="0" unique_id=1125816902]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnailRight/CharacterBody2D" index="0" unique_id=1823563965]
+position = Vector2(0.38378483, 5.9490223)
+shape = SubResource("CircleShape2D_yebo0")
+
 [node name="Snail" type="AnimatedSprite2D" parent="." index="7" unique_id=1314691777]
 texture_filter = 1
 position = Vector2(680, 265)
@@ -321,24 +357,18 @@ sprite_frames = SubResource("SpriteFrames_dvw3h")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="Area2D" type="Area2D" parent="." index="8" unique_id=1394412012]
-position = Vector2(680, 265)
-scale = Vector2(12.671876, 12.671876)
-collision_layer = 15
-collision_mask = 15
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Snail" index="0" unique_id=679061045]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=631790377]
-light_mask = 31
-visibility_layer = 31
-position = Vector2(-0.5524101, 8.049322)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snail/CharacterBody2D" index="0" unique_id=323281437]
+position = Vector2(-0.5129509, 6.4710255)
 scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_3er6r")
+shape = SubResource("RectangleShape2D_yebo0")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9" unique_id=350257007]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8" unique_id=350257007]
 libraries/ = SubResource("AnimationLibrary_jkeby")
 autoplay = &"left_snail"
 
-[node name="Particles" type="Node" parent="." index="10" unique_id=2136807975]
+[node name="Particles" type="Node" parent="." index="9" unique_id=2136807975]
 
 [node name="Sparkles" type="GPUParticles2D" parent="Particles" index="0" unique_id=1868836005]
 visible = false
