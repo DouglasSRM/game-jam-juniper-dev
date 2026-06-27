@@ -5,7 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dopyepl5l7hkm" path="res://assets/main_menu/bkg.png" id="2_frlin"]
 [ext_resource type="FontFile" uid="uid://dy7i7r8ltomuh" path="res://fonts/dungeon-mode.ttf" id="2_ob46e"]
 [ext_resource type="FontFile" uid="uid://3mpujxnlxp4g" path="res://fonts/antiquity-print.ttf" id="3_felax"]
-[ext_resource type="AudioStream" uid="uid://bkwte0bpmm74t" path="res://soundtrack/music/menumusic.ogg" id="7_frlin"]
+[ext_resource type="Texture2D" uid="uid://dk8j82ju4onw4" path="res://assets/logojam.png" id="6_0y5yg"]
+[ext_resource type="AudioStream" uid="uid://cob6ia0whe50u" path="res://soundtrack/music/MenuMusic.ogg" id="7_frlin"]
 [ext_resource type="PackedScene" uid="uid://bgh6hynxcy5jk" path="res://src/scenes/settings_menu/settings_menu.tscn" id="9_5o0ss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgtrd"]
@@ -455,6 +456,12 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_5seab")
 text = "MENU_EXIT"
 flat = true
 alignment = 0
+
+[node name="Title" type="Sprite2D" parent="background" unique_id=1687131898]
+texture_filter = 1
+position = Vector2(1436, 300)
+scale = Vector2(5, 5)
+texture = ExtResource("6_0y5yg")
 
 [node name="settings_menu" parent="." unique_id=100246387 instance=ExtResource("9_5o0ss")]
 unique_name_in_owner = true

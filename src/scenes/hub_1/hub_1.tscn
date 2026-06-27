@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_wducn"]
 [ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="4_hgu1q"]
 [ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="5_hj1w7"]
-[ext_resource type="Texture2D" uid="uid://cp43ut14e6hlf" path="res://assets/characters/npcs/dungeon_npcs/npcsnail.png" id="5_m7kes"]
+[ext_resource type="Texture2D" uid="uid://tuy1k1dpssbd" path="res://assets/characters/npcs/dungeon_npcs/npcsnail.png" id="5_m7kes"]
 [ext_resource type="Texture2D" uid="uid://cgwcvo73utgii" path="res://assets/gfx/sparkle.png" id="6_yd4cg"]
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_yebo0"]
 [ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="7_yebo0"]

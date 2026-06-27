@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="12_i0pll"]
 [ext_resource type="Texture2D" uid="uid://ctvyhqp15x6el" path="res://assets/characters/npcs/main_characters/sprites_taverna.png" id="15_i0pll"]
 [ext_resource type="PackedScene" uid="uid://dan8i2g5ui2bc" path="res://src/objects/npcs/lenora/lenora.tscn" id="16_hpiy0"]
+[ext_resource type="Texture2D" uid="uid://djwglxopmaxs3" path="res://assets/general_assets/candlesjam/candlejam.png" id="17_qodsb"]
+[ext_resource type="Texture2D" uid="uid://cwu24xj0w1dpd" path="res://assets/general_assets/candlesjam/skullcandlejam.png" id="18_ruki8"]
 
 [sub_resource type="Resource" id="Resource_gygia"]
 script = ExtResource("6_a01i5")
@@ -206,6 +208,62 @@ region = Rect2(123, 13, 35, 42)
 atlas = ExtResource("15_i0pll")
 region = Rect2(7, 7, 21, 49)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qodsb"]
+atlas = ExtResource("17_qodsb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruki8"]
+atlas = ExtResource("17_qodsb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_12j5o"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qodsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruki8")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_630xs"]
+atlas = ExtResource("18_ruki8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hte2"]
+atlas = ExtResource("18_ruki8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgskh"]
+atlas = ExtResource("18_ruki8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61ot5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_630xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hte2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgskh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Tavern" unique_id=823413629 instance=ExtResource("1_u13is")]
 y_sort_enabled = true
 script = ExtResource("2_q1jmn")
@@ -385,8 +443,49 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Lenora" parent="." index="14" unique_id=97282244 instance=ExtResource("16_hpiy0")]
+position = Vector2(685, 911)
+
+[node name="Candle" type="AnimatedSprite2D" parent="." index="15" unique_id=1334256787]
 texture_filter = 1
-position = Vector2(686, 901)
+position = Vector2(1032, 43)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_12j5o")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.7928171
+
+[node name="Candle2" type="AnimatedSprite2D" parent="." index="16" unique_id=1537759742]
+texture_filter = 1
+position = Vector2(1517.0001, 42)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_12j5o")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.8083045
+
+[node name="CandleTable" type="AnimatedSprite2D" parent="." index="17" unique_id=117405026]
+texture_filter = 1
+position = Vector2(1475, 264)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_61ot5")
+autoplay = "default"
+frame_progress = 0.38849524
+
+[node name="CandleTable2" type="AnimatedSprite2D" parent="." index="18" unique_id=1224151137]
+texture_filter = 1
+position = Vector2(1587, 273)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_61ot5")
+autoplay = "default"
+frame_progress = 0.9255392
+
+[node name="CandleTable3" type="AnimatedSprite2D" parent="." index="19" unique_id=1060640836]
+texture_filter = 1
+position = Vector2(1382, 741)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_61ot5")
+autoplay = "default"
+frame_progress = 0.7429055
 
 [editable path="Dialogues/DialogueAreaUncle"]
 [editable path="Dialogues/DialogueAreaDoctor"]

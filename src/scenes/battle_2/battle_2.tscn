@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpxe5aouv1wed" path="res://src/objects/battle/boss_2/boss_2.tscn" id="3_husgc"]
 [ext_resource type="PackedScene" uid="uid://ms8dfbjptulw" path="res://src/objects/battle/player_battle/player_battle.tscn" id="4_pal0i"]
 [ext_resource type="Texture2D" uid="uid://cndgl4gmoo5ue" path="res://assets/bosses/willhelm-boss.png" id="5_843k2"]
+[ext_resource type="AudioStream" uid="uid://4i7wrok7ao3g" path="res://soundtrack/music/Wilhelm.ogg" id="7_4v56s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v56s"]
 atlas = ExtResource("5_843k2")
@@ -79,6 +80,12 @@ visible = false
 
 [node name="Label" parent="HealthBarPlayer/CanvasLayer" parent_id_path=PackedInt32Array(372692253, 1803561100) index="0" unique_id=862547356]
 text = "Wilhelm"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="10" unique_id=808076211]
+stream = ExtResource("7_4v56s")
+volume_db = -2.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]
 [connection signal="is_dead" from="PlayerBattle" to="." method="_on_player_battle_is_dead"]

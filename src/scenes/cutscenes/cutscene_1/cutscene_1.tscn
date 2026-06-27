@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnlkvyjdytkel"]
 
 [ext_resource type="Script" uid="uid://cs8yi7qb47vn6" path="res://src/scenes/cutscenes/cutscene_1/cutscene_1.gd" id="1_shaul"]
-[ext_resource type="AudioStream" uid="uid://ucwrtyfkxg2k" path="res://soundtrack/music/cutscenequstionmark.ogg" id="6_4jv4a"]
+[ext_resource type="AudioStream" uid="uid://cucagpv456f18" path="res://soundtrack/music/Cutscene.ogg" id="2_k8hcd"]
 [ext_resource type="Texture2D" uid="uid://dn8gw2n231tc4" path="res://assets/cutcene/cutcene_longada.png" id="7_6m0li"]
 [ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="7_k8hcd"]
 [ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="8_43xwa"]
@@ -68,7 +68,7 @@ metadata/_custom_type_script = "uid://bwmccfplhqpda"
 script = ExtResource("1_shaul")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1831267039]
-stream = ExtResource("6_4jv4a")
+stream = ExtResource("2_k8hcd")
 volume_db = 12.055
 
 [node name="DialogueArea" parent="." unique_id=369042241 instance=ExtResource("7_k8hcd")]

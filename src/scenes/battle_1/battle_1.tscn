@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b4fa4jmhjneb4" path="res://assets/backgrounds/dungeon/backgrounddungeon1.png" id="3_wnuf0"]
 [ext_resource type="PackedScene" uid="uid://ms8dfbjptulw" path="res://src/objects/battle/player_battle/player_battle.tscn" id="4_bkyu7"]
 [ext_resource type="Texture2D" uid="uid://c164rgxnl8u3a" path="res://assets/bosses/spinning-boss.png" id="5_mfb40"]
+[ext_resource type="AudioStream" uid="uid://cjk2bodk4b37o" path="res://soundtrack/music/Spinnel.ogg" id="7_ouw0d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfb40"]
 atlas = ExtResource("5_mfb40")
@@ -61,7 +62,7 @@ texture = ExtResource("3_wnuf0")
 
 [node name="Boss" parent="." index="1" unique_id=867154428 instance=ExtResource("3_ak64a")]
 position = Vector2(958, 267)
-max_health = 30.0
+max_health = 22.5
 
 [node name="BossEnemy" type="AnimatedSprite2D" parent="Boss" index="0" unique_id=2011517825]
 texture_filter = 1
@@ -92,6 +93,12 @@ position = Vector2(58, 44)
 
 [node name="Label" parent="HealthBarBoss/CanvasLayer" parent_id_path=PackedInt32Array(755916960, 1803561100) index="0" unique_id=862547356]
 text = "Spinnel"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="10" unique_id=998072561]
+stream = ExtResource("7_ouw0d")
+volume_db = 5.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]
 [connection signal="is_dead" from="PlayerBattle" to="." method="_on_player_battle_is_dead"]
