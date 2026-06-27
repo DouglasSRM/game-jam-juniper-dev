@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cnnrauyadydy0" path="res://assets/tilesets/TilesetFloor.png" id="1_flp0l"]
 [ext_resource type="Texture2D" uid="uid://d201e1yd7c46y" path="res://assets/tilesets/tilesetdungeonjam2.png" id="2_252ht"]
 [ext_resource type="Texture2D" uid="uid://cv3fmcqviliy1" path="res://assets/tilesets/tilesetdungeonjam.png" id="3_252ht"]
-[ext_resource type="Texture2D" uid="uid://cix3ja60qkiaq" path="res://assets/tilesets/tilesetjam.png" id="4_252ht"]
-[ext_resource type="Texture2D" uid="uid://dh2g867rvknuf" path="res://assets/tilesets/tilesetdungeonjam3.png" id="5_kc42h"]
+[ext_resource type="Texture2D" uid="uid://ct5kfm87r43g3" path="res://assets/tilesets/tilesetjam.png" id="4_252ht"]
+[ext_resource type="Texture2D" uid="uid://bcluahd6gbqfb" path="res://assets/tilesets/tilesetdungeonjam3.png" id="5_kc42h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yneea"]
 texture = ExtResource("1_flp0l")

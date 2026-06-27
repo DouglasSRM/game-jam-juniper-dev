@@ -37,3 +37,6 @@ func go_to_next_scene() -> void:
 func _on_trigger_next_scene_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		go_to_next_scene()
+		
+func add_potions() -> void:
+	Global.potions_in_inventory += 1

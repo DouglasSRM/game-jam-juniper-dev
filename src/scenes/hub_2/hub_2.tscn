@@ -83,6 +83,10 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dvw3h"]
+radius = 12.070175
+height = 34.245617
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tyr75"]
 atlas = ExtResource("9_itq37")
 region = Rect2(0, 0, 32, 32)
@@ -111,6 +115,10 @@ animations = [{
 "name": &"idle",
 "speed": 3.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3er6r"]
+radius = 16.90564
+height = 38.03772
 
 [node name="Hub2" unique_id=823413629 instance=ExtResource("1_s3wny")]
 script = ExtResource("2_8pbxq")
@@ -206,6 +214,11 @@ sprite_frames = SubResource("SpriteFrames_ei37o")
 animation = &"idle"
 autoplay = "idle"
 
+[node name="CharacterBody2D" type="CharacterBody2D" parent="mushroom" index="0" unique_id=1448396381]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mushroom/CharacterBody2D" index="0" unique_id=784948483]
+shape = SubResource("CapsuleShape2D_dvw3h")
+
 [node name="mouse" type="AnimatedSprite2D" parent="." index="6" unique_id=1635873384]
 texture_filter = 1
 position = Vector2(1717, 490.00006)
@@ -213,6 +226,11 @@ scale = Vector2(3.3125, 3.3125)
 sprite_frames = SubResource("SpriteFrames_dvw3h")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="mouse" index="0" unique_id=827960872]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse/CharacterBody2D" index="0" unique_id=861268556]
+shape = SubResource("CapsuleShape2D_3er6r")
 
 [connection signal="body_entered" from="Interactables/TriggerNextScene" to="." method="_on_trigger_next_scene_body_entered"]
 

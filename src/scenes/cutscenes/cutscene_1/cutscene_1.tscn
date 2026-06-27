@@ -1,57 +1,91 @@
 [gd_scene format=3 uid="uid://cnlkvyjdytkel"]
 
 [ext_resource type="Script" uid="uid://cs8yi7qb47vn6" path="res://src/scenes/cutscenes/cutscene_1/cutscene_1.gd" id="1_shaul"]
-[ext_resource type="Texture2D" uid="uid://05uh8icm1im" path="res://assets/cutcene/cutcene 1.png" id="2_t6k3h"]
-[ext_resource type="Texture2D" uid="uid://4aeln3ayeu4j" path="res://assets/cutcene/cutcene 2.png" id="3_04w7k"]
-[ext_resource type="Texture2D" uid="uid://csi62y2gjo7bv" path="res://assets/cutcene/cutcene 3.png" id="4_4jv4a"]
-[ext_resource type="Texture2D" uid="uid://bjw6d4opa68cw" path="res://assets/cutcene/cutcene 4.png" id="5_k8hcd"]
 [ext_resource type="AudioStream" uid="uid://ucwrtyfkxg2k" path="res://soundtrack/music/cutscenequstionmark.ogg" id="6_4jv4a"]
+[ext_resource type="Texture2D" uid="uid://dn8gw2n231tc4" path="res://assets/cutcene/cutcene_longada.png" id="7_6m0li"]
+[ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="7_k8hcd"]
+[ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="8_43xwa"]
+[ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="9_44iko"]
+[ext_resource type="Script" uid="uid://bwmccfplhqpda" path="res://src/objects/dialogue/resources/dialogue_function_resource.gd" id="10_44iko"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6m0li"]
-atlas = ExtResource("3_04w7k")
-region = Rect2(0, 0, 1920, 1080)
+[sub_resource type="Resource" id="Resource_k8hcd"]
+script = ExtResource("9_44iko")
+font_size = 42
+text = "After spending some time helping his uncle run the inn, Alex begins hearing rumors of numerous dungeons appearing across the continent and after hearing Alex bragging, an adventurer grows irritated by his arrogance. and bluntly tells him that if he can't even save his uncle's struggling inn from bankruptcy, he has no chance of surviving a single dungeon."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_43xwa"]
-atlas = ExtResource("4_4jv4a")
-region = Rect2(0, 0, 1920, 1080)
+[sub_resource type="Resource" id="Resource_43xwa"]
+script = ExtResource("10_44iko")
+target_path = NodePath("..")
+function_name = "next_frame"
+hide_dialogue_box = true
+wait_for_signal_to_continue = "next"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_44iko"]
-atlas = ExtResource("5_k8hcd")
-region = Rect2(0, 0, 1920, 1080)
+[sub_resource type="Resource" id="Resource_6m0li"]
+script = ExtResource("9_44iko")
+font_size = 42
+text = "They bluntly tells him that if he can't even save his uncle's struggling inn from bankruptcy, he has no chance of surviving a single dungeon. He goes on to say that dungeons are deadly places, not for spoiled, snot-nosed brats."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_12j5o"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_t6k3h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6m0li")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_43xwa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44iko")
-}],
-"loop": 0,
-"name": &"cutscene",
-"speed": 0.3
-}, {
-"frames": [],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="Resource" id="Resource_44iko"]
+script = ExtResource("10_44iko")
+target_path = NodePath("..")
+function_name = "next_frame"
+hide_dialogue_box = true
+wait_for_signal_to_continue = "next"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_01068"]
+script = ExtResource("9_44iko")
+font_size = 42
+text = "Believing there is no evil in the boy's heart, his uncle decides to train him so that he can follow whatever path his heart chooses."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_5sxc0"]
+script = ExtResource("10_44iko")
+target_path = NodePath("..")
+function_name = "next_frame"
+hide_dialogue_box = true
+wait_for_signal_to_continue = "next"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
+
+[sub_resource type="Resource" id="Resource_vxosj"]
+script = ExtResource("9_44iko")
+font_size = 42
+text = "He promises the boy that he will prepare him for the challenges ahead, train him to enter a dungeon, and entrust him with powerful artifacts that have been in their family's possession for generations."
+metadata/_custom_type_script = "uid://bu36cy11lb2of"
+
+[sub_resource type="Resource" id="Resource_xqisk"]
+script = ExtResource("10_44iko")
+target_path = NodePath("..")
+function_name = "next_frame"
+hide_dialogue_box = true
+wait_for_signal_to_continue = "next"
+metadata/_custom_type_script = "uid://bwmccfplhqpda"
 
 [node name="Cutscene1" type="Node2D" unique_id=911243837]
 script = ExtResource("1_shaul")
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1280117717]
-position = Vector2(960, 540)
-sprite_frames = SubResource("SpriteFrames_12j5o")
-animation = &"cutscene"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1831267039]
 stream = ExtResource("6_4jv4a")
 volume_db = 12.055
+
+[node name="DialogueArea" parent="." unique_id=369042241 instance=ExtResource("7_k8hcd")]
+position = Vector2(882, 624)
+activate_instant = true
+only_activate_once = true
+dialogue = Array[ExtResource("8_43xwa")]([SubResource("Resource_k8hcd"), SubResource("Resource_43xwa"), SubResource("Resource_6m0li"), SubResource("Resource_44iko"), SubResource("Resource_01068"), SubResource("Resource_5sxc0"), SubResource("Resource_vxosj"), SubResource("Resource_xqisk")])
+
+[node name="CollisionShape" parent="DialogueArea" index="0" unique_id=742883100]
+visible = false
+
+[node name="KeyHint" parent="DialogueArea" index="1" unique_id=1923419492]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1564111266]
+position = Vector2(960, 540)
+texture = ExtResource("7_6m0li")
+hframes = 4
+
+[editable path="DialogueArea"]
