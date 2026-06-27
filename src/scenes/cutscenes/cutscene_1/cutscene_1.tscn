@@ -70,6 +70,8 @@ script = ExtResource("1_shaul")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1831267039]
 stream = ExtResource("2_k8hcd")
 volume_db = 12.055
+autoplay = true
+parameters/looping = true
 
 [node name="DialogueArea" parent="." unique_id=369042241 instance=ExtResource("7_k8hcd")]
 position = Vector2(882, 624)

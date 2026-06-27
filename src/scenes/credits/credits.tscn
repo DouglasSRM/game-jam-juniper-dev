@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://3lsg8nfch3f7" path="res://src/scenes/credits/credits.gd" id="1_awbur"]
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="2_xgfv5"]
 [ext_resource type="FontFile" uid="uid://dy7i7r8ltomuh" path="res://fonts/dungeon-mode.ttf" id="3_h3s88"]
-[ext_resource type="AudioStream" uid="uid://cob6ia0whe50u" path="res://soundtrack/music/MenuMusic.ogg" id="4_awbur"]
 [ext_resource type="FontFile" uid="uid://crrkhlfav8p2g" path="res://fonts/PixelOperator-Bold.ttf" id="4_xgfv5"]
+[ext_resource type="AudioStream" uid="uid://dcxp4chnpkgqn" path="res://soundtrack/music/CreditSong.ogg" id="5_xgfv5"]
 
 [node name="Credits" type="Node2D" unique_id=536292343]
 texture_filter = 1
@@ -405,7 +405,8 @@ text = "Go Back to Menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2015097226]
-stream = ExtResource("4_awbur")
+stream = ExtResource("5_xgfv5")
+volume_db = 17.038
 parameters/looping = true
 
 [node name="Label6" type="Label" parent="." unique_id=1479577417]

@@ -7,7 +7,7 @@ class_name Cutscene1 extends Node2D
 signal next
 
 func _ready() -> void:
-	audio_stream_player.play()
+	#audio_stream_player.play()
 	
 	await Utils.sleep(2)
 	

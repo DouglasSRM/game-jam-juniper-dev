@@ -105,7 +105,7 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(-7.2, 0)
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "OM_FULL_SCREEN"
 text_overrun_behavior = 2
 autowrap_trim_flags = 192
@@ -114,7 +114,7 @@ autowrap_trim_flags = 192
 layout_mode = 2
 offset_transform_enabled = true
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "OM_WINDOWED"
 
 [node name="Resolution" type="OptionButton" parent="InnerSquare/VContainer" unique_id=592898710]
@@ -158,7 +158,7 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(-7.2, 0)
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 button_pressed = true
 text = "OM_GRAIN"
 text_overrun_behavior = 2
@@ -169,7 +169,7 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(-7.2, 0)
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 button_pressed = true
 text = "CRT"
 text_overrun_behavior = 2
@@ -230,7 +230,7 @@ horizontal_alignment = 3
 [node name="lbl_volume" type="Label" parent="InnerSquare/VContainer" unique_id=937749757]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "OM_VOLUME"
 
 [node name="Soundtrack" type="HSlider" parent="InnerSquare/VContainer" unique_id=2052620939]
@@ -244,7 +244,7 @@ bus_name = "Master"
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_tqtwh")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 20
 theme_override_styles/panel = SubResource("StyleBoxFlat_tqtwh")
 allow_search = false
 auto_width = true
