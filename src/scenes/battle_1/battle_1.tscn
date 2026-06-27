@@ -19,6 +19,10 @@ region = Rect2(228, 0, 228, 150)
 atlas = ExtResource("5_mfb40")
 region = Rect2(456, 0, 228, 150)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8glk5"]
+atlas = ExtResource("5_mfb40")
+region = Rect2(684, 0, 228, 150)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_wnuf0"]
 animations = [{
 "frames": [{
@@ -35,10 +39,13 @@ animations = [{
 "name": &"idle",
 "speed": 3.0
 }, {
-"frames": [],
-"loop": 1,
-"name": &"taking_damange",
-"speed": 5.0
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8glk5")
+}],
+"loop": 0,
+"name": &"taking_damage",
+"speed": 4.0
 }]
 
 [node name="Battle1" unique_id=1484066849 instance=ExtResource("1_birwp")]
@@ -58,10 +65,10 @@ max_health = 30.0
 
 [node name="BossEnemy" type="AnimatedSprite2D" parent="Boss" index="0" unique_id=2011517825]
 texture_filter = 1
-position = Vector2(-17.00003, 264)
-scale = Vector2(4.5466666, 4.5466666)
+position = Vector2(3.000023, 311)
+scale = Vector2(4.073333, 4.073333)
 sprite_frames = SubResource("SpriteFrames_wnuf0")
-animation = &"idle"
+animation = &"taking_damage"
 autoplay = "idle"
 
 [node name="Sprite" parent="Boss" index="1" unique_id=685350226]
@@ -76,9 +83,13 @@ visible = false
 [node name="HealthBarBoss" parent="." index="7" unique_id=755916960]
 position = Vector2(58, 44)
 
+[node name="Label" parent="HealthBarBoss/CanvasLayer" parent_id_path=PackedInt32Array(755916960, 1803561100) index="0" unique_id=862547356]
+text = "Spinnel"
+
 [connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]
 [connection signal="is_dead" from="PlayerBattle" to="." method="_on_player_battle_is_dead"]
 
 [editable path="Boss"]
 [editable path="Boss/Attacks/AttackBoss1"]
+[editable path="HealthBarBoss"]
 [editable path="HealthBarPlayer"]

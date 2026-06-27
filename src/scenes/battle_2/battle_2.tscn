@@ -5,6 +5,48 @@
 [ext_resource type="Texture2D" uid="uid://dps3ucqchfjc6" path="res://assets/backgrounds/dungeon/backgrounddungeon2.png" id="3_hnhex"]
 [ext_resource type="PackedScene" uid="uid://bpxe5aouv1wed" path="res://src/objects/battle/boss_2/boss_2.tscn" id="3_husgc"]
 [ext_resource type="PackedScene" uid="uid://ms8dfbjptulw" path="res://src/objects/battle/player_battle/player_battle.tscn" id="4_pal0i"]
+[ext_resource type="Texture2D" uid="uid://cndgl4gmoo5ue" path="res://assets/bosses/willhelm-boss.png" id="5_843k2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v56s"]
+atlas = ExtResource("5_843k2")
+region = Rect2(0, 0, 207, 202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqj1s"]
+atlas = ExtResource("5_843k2")
+region = Rect2(207, 0, 207, 202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0rfg"]
+atlas = ExtResource("5_843k2")
+region = Rect2(414, 0, 207, 202)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_843k2"]
+atlas = ExtResource("5_843k2")
+region = Rect2(621, 0, 207, 202)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hnhex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v56s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqj1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0rfg")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_843k2")
+}],
+"loop": 0,
+"name": &"taking_damage",
+"speed": 4.0
+}]
 
 [node name="Battle2" unique_id=1484066849 instance=ExtResource("1_1qo5t")]
 script = ExtResource("2_2x7ed")
@@ -18,13 +60,28 @@ texture = ExtResource("3_hnhex")
 [node name="Boss" parent="." index="1" unique_id=867154428 instance=ExtResource("3_husgc")]
 position = Vector2(965, 324)
 
+[node name="BossEnemy" type="AnimatedSprite2D" parent="Boss" index="0" unique_id=1131299972]
+texture_filter = 1
+position = Vector2(-17.999992, 301)
+scale = Vector2(2.6930697, 2.6930692)
+sprite_frames = SubResource("SpriteFrames_hnhex")
+animation = &"taking_damage"
+autoplay = "idle"
+
+[node name="Sprite" parent="Boss" index="1" unique_id=685350226]
+visible = false
+
 [node name="PlayerBattle" parent="." index="2" unique_id=2102725843 instance=ExtResource("4_pal0i")]
 position = Vector2(948, 657)
 
 [node name="Sprite2D" parent="." index="3" unique_id=1522995467]
 visible = false
 
+[node name="Label" parent="HealthBarPlayer/CanvasLayer" parent_id_path=PackedInt32Array(372692253, 1803561100) index="0" unique_id=862547356]
+text = "Wilhelm"
+
 [connection signal="is_dead" from="Boss" to="." method="_on_boss_is_dead"]
 [connection signal="is_dead" from="PlayerBattle" to="." method="_on_player_battle_is_dead"]
 
+[editable path="Boss"]
 [editable path="HealthBarPlayer"]
