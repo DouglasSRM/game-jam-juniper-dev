@@ -24,6 +24,8 @@ func _ready() -> void:
 	main_menu.modulate.a = 0.
 	art.modulate.a = 0.
 	title.modulate.a = 0.
+	
+	main_menu.visible = false
 
 func opcoes():
 	quit.disabled = settings_menu.visible
@@ -73,5 +75,7 @@ func show_title() -> void:
 
 func show_menu() -> void:
 	var tween = create_tween()
-
+	main_menu.visible = true
 	tween.tween_property(main_menu, "modulate:a", 1., 1.)
+	await tween.finished
+	

@@ -32,6 +32,7 @@ _data = {
 script = ExtResource("2_tyx6l")
 
 [node name="Sprite2D" parent="." index="0" unique_id=23594111]
+texture_filter = 1
 texture = ExtResource("2_xboeo")
 hframes = 11
 vframes = 1

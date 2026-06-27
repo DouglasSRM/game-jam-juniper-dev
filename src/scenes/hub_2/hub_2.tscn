@@ -6,25 +6,25 @@
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="3_qsxt5"]
 [ext_resource type="PackedScene" uid="uid://b66r2lj2gxbmv" path="res://src/objects/dialogue/dialogue_area.tscn" id="4_x6tt8"]
 [ext_resource type="Script" uid="uid://bkjdqrlbk0p6h" path="res://src/objects/dialogue/resources/dialogue_export_resource.gd" id="5_43pc8"]
-[ext_resource type="Texture2D" uid="uid://cnyr2sbbi0sqp" path="res://assets/characters/npcs/dungeon_npcs/npcmushroom.png" id="5_qsxt5"]
+[ext_resource type="Texture2D" uid="uid://n83repvctywj" path="res://assets/characters/npcs/dungeon_npcs/npcmushroom.png" id="5_qsxt5"]
 [ext_resource type="Script" uid="uid://bu36cy11lb2of" path="res://src/objects/dialogue/resources/dialogue_text_resource.gd" id="6_itq37"]
 [ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="7_fb7il"]
 [ext_resource type="Texture2D" uid="uid://nfdacxxvhj3y" path="res://assets/portraits/alexportraits/alecnormal_animado.png" id="7_tyr75"]
-[ext_resource type="Texture2D" uid="uid://cv022pdjlcqtr" path="res://assets/characters/npcs/dungeon_npcs/npcmouse.png" id="9_itq37"]
+[ext_resource type="Texture2D" uid="uid://cmabid5fh8y8j" path="res://assets/characters/npcs/dungeon_npcs/npcmouse.png" id="9_itq37"]
 
 [sub_resource type="Resource" id="Resource_x6tt8"]
 script = ExtResource("6_itq37")
 speaker_name = "Alex"
 speaker_img = ExtResource("7_fb7il")
 speaker_img_HFrames = 2
-text = "I wonder if I eat this, it would make me bigger..."
+text = "I wonder if I eat this, would it make me bigger..."
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_43pc8"]
 script = ExtResource("6_itq37")
 speaker_name = "Mushroom"
-text = "[shake rate=20.0 level=5 connected=0]Big... Smal... Big... Smal...[/shake]"
+text = "[shake rate=20.0 level=5 connected=0]Big... Small... Big... Small...[/shake]"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6tt8"]

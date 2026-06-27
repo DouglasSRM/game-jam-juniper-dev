@@ -11,7 +11,7 @@
 [sub_resource type="Resource" id="Resource_k8hcd"]
 script = ExtResource("9_44iko")
 font_size = 42
-text = "After spending some time helping his uncle run the inn, Alex begins hearing rumors of numerous dungeons appearing across the continent and after hearing Alex bragging, an adventurer grows irritated by his arrogance. and bluntly tells him that if he can't even save his uncle's struggling inn from bankruptcy, he has no chance of surviving a single dungeon."
+text = "After spending some time helping his uncle with running the inn, Alex begins hearing rumors of numerous dungeons appearing across the continent. After hearing Alex bragging, an adventurer grows irritated by his arrogance, and bluntly tells him that if he can't even save his uncle's struggling inn from bankruptcy, he has no chance of surviving a single dungeon."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_43xwa"]
@@ -25,7 +25,7 @@ metadata/_custom_type_script = "uid://bwmccfplhqpda"
 [sub_resource type="Resource" id="Resource_6m0li"]
 script = ExtResource("9_44iko")
 font_size = 42
-text = "They bluntly tells him that if he can't even save his uncle's struggling inn from bankruptcy, he has no chance of surviving a single dungeon. He goes on to say that dungeons are deadly places, not for spoiled, snot-nosed brats."
+text = "He goes on to say that dungeons are deadly places, not for spoiled, snot-nosed brats."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_44iko"]
@@ -53,7 +53,7 @@ metadata/_custom_type_script = "uid://bwmccfplhqpda"
 [sub_resource type="Resource" id="Resource_vxosj"]
 script = ExtResource("9_44iko")
 font_size = 42
-text = "He promises the boy that he will prepare him for the challenges ahead, train him to enter a dungeon, and entrust him with powerful artifacts that have been in their family's possession for generations."
+text = "He promises to the boy that he will prepare him for the challenges ahead, train him to enter a dungeon, and entrust him with powerful artifacts that have been in their family's possession for generations."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="Resource" id="Resource_xqisk"]
