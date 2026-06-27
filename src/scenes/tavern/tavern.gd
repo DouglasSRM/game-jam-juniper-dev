@@ -4,7 +4,7 @@ class_name Tavern extends BaseScene
 @onready var doctor: Sprite2D = $Doctor
 @onready var georgie: Sprite2D = $GeorgieOldMan
 @onready var erie: Sprite2D = $Erie
-@onready var lenora: Tio = $Lenora
+@onready var lenora: BaseCharacter = $Lenora
 @onready var black: ColorRect = $Black
 @onready var bully: Sprite2D = $Bully
 @onready var random_1: Sprite2D = $Random1
@@ -29,7 +29,7 @@ func _ready() -> void:
 	door.visible = false
 	black.visible = false
 	black.modulate.a = 0.
-	#dialogue_area_uncle.visible = false
+	dialogue_area_uncle.visible = false
 
 func go_to_next_scene() -> void:
 	SceneManager.change_scene(self, 'dungeon_entrance')
@@ -38,6 +38,7 @@ func tio_vai_embora() -> void:
 	switch_portinhola(true)
 	await tio.walk("up", 250, 1.5)
 	tio.stop_walking(0)
+	tio.animation_player.play("local/down")
 	plimbous.emit()
 
 func porta_abre() -> void:
@@ -91,7 +92,7 @@ func accept_quest() -> void:
 	dialogue_area_uncle.visible = true
 
 	# New uncle pos: 270.0, 667.0
-	tio.position = Vector2(270., 667.)
+	tio.position = Vector2(250., 667.)
 
 	await Utils.sleep(1)
 	

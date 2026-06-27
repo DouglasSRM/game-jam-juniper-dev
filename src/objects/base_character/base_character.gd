@@ -32,7 +32,7 @@ func walk(direction: String, speed, duration: float):
 		self.velocity = Vector2(-speed,0)
 		await Utils.sleep(duration)
 	elif (direction == "up"):
-		self.animation_player.play("walk_up")
+		self.animation_player.play("local/walk_up")
 		self.velocity = Vector2(0,-speed)
 		await Utils.sleep(duration)
 	elif (direction == "down"):
