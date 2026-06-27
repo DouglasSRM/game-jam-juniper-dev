@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dvqw2l4htwcuf" path="res://src/objects/dialogue/resources/dialogue_choice_resource.gd" id="9_cr8rw"]
 [ext_resource type="Texture2D" uid="uid://dr7p4hsm2d8x7" path="res://assets/portraits/reggieportraits/reggienormal_falando_animado.png" id="11_5tpw2"]
 [ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="12_i0pll"]
+[ext_resource type="Texture2D" uid="uid://ctvyhqp15x6el" path="res://assets/characters/npcs/main_characters/sprites_taverna.png" id="15_i0pll"]
 
 [sub_resource type="Resource" id="Resource_gygia"]
 script = ExtResource("6_a01i5")
@@ -94,7 +95,7 @@ text = "... ..."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a01i5"]
-size = Vector2(270, 159.25)
+size = Vector2(384, 187.25)
 
 [sub_resource type="Resource" id="Resource_630xs"]
 script = ExtResource("6_a01i5")
@@ -115,7 +116,7 @@ text = "[shake rate=20.0 level=5 connected=0]W-what was that?[/shake]"
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cr8rw"]
-size = Vector2(222, 178)
+size = Vector2(249, 234)
 
 [sub_resource type="Resource" id="Resource_sp8bt"]
 script = ExtResource("6_a01i5")
@@ -136,7 +137,7 @@ text = "[shake rate=20.0 level=5 connected=0]Haha! He's a great liar[/shake]."
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evdd8"]
-size = Vector2(178, 227)
+size = Vector2(197, 227)
 
 [sub_resource type="Resource" id="Resource_7dg7n"]
 script = ExtResource("6_a01i5")
@@ -180,6 +181,30 @@ size = Vector2(245, 199)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12j5o"]
 size = Vector2(155, 146)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgwus"]
+atlas = ExtResource("15_i0pll")
+region = Rect2(223, 8, 28, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpiy0"]
+atlas = ExtResource("15_i0pll")
+region = Rect2(171, 9, 28, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a0xs"]
+atlas = ExtResource("15_i0pll")
+region = Rect2(81, 8, 33, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0pll"]
+atlas = ExtResource("15_i0pll")
+region = Rect2(44, 13, 28, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvw3h"]
+atlas = ExtResource("15_i0pll")
+region = Rect2(123, 13, 35, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3er6r"]
+atlas = ExtResource("15_i0pll")
+region = Rect2(7, 7, 21, 49)
+
 [node name="Tavern" unique_id=823413629 instance=ExtResource("1_u13is")]
 y_sort_enabled = true
 script = ExtResource("2_q1jmn")
@@ -222,6 +247,7 @@ tile_map_data = PackedByteArray("AAACAAEAAwAMAAgAAAA=")
 tile_set = ExtResource("3_jqwga")
 
 [node name="DialogueAreaUncle" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="0" unique_id=369042241 instance=ExtResource("4_vshfe")]
+visible = false
 position = Vector2(269, 632)
 only_activate_once = true
 lock_player = true
@@ -238,12 +264,12 @@ offset_right = 135.0
 offset_bottom = -150.0
 
 [node name="DialogueAreaDoctor" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="1" unique_id=956657140 instance=ExtResource("4_vshfe")]
-position = Vector2(1266, 899)
+position = Vector2(1421, 871)
 lock_player = true
 dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_hpiy0"), SubResource("Resource_qodsb"), SubResource("Resource_ruki8")])
 
 [node name="CollisionShape" parent="Dialogues/DialogueAreaDoctor" index="0" unique_id=742883100]
-position = Vector2(18, 41.375)
+position = Vector2(18, 55.375)
 shape = SubResource("RectangleShape2D_a01i5")
 
 [node name="KeyHint" parent="Dialogues/DialogueAreaDoctor" index="1" unique_id=1923419492]
@@ -253,12 +279,12 @@ offset_right = -57.0
 offset_bottom = -104.0
 
 [node name="DialogueAreaOldGeorgie" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="2" unique_id=482591157 instance=ExtResource("4_vshfe")]
-position = Vector2(1648, 542)
+position = Vector2(1608, 446)
 lock_player = true
 dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_630xs"), SubResource("Resource_sgskh"), SubResource("Resource_1hte2")])
 
 [node name="CollisionShape" parent="Dialogues/DialogueAreaOldGeorgie" index="0" unique_id=742883100]
-position = Vector2(-14, 46)
+position = Vector2(1.5, 74)
 shape = SubResource("RectangleShape2D_cr8rw")
 
 [node name="KeyHint" parent="Dialogues/DialogueAreaOldGeorgie" index="1" unique_id=1923419492]
@@ -268,12 +294,12 @@ offset_right = -43.0
 offset_bottom = -167.0
 
 [node name="DialogueAreaErie" parent="Dialogues" parent_id_path=PackedInt32Array(818597174) index="3" unique_id=601839262 instance=ExtResource("4_vshfe")]
-position = Vector2(1329, 377)
+position = Vector2(1357, 299)
 lock_player = true
 dialogue = Array[ExtResource("5_ois6d")]([SubResource("Resource_sp8bt"), SubResource("Resource_7pmmj"), SubResource("Resource_sy62c")])
 
 [node name="CollisionShape" parent="Dialogues/DialogueAreaErie" index="0" unique_id=742883100]
-position = Vector2(-10, 37.5)
+position = Vector2(-45.5, 37.5)
 shape = SubResource("RectangleShape2D_evdd8")
 
 [node name="KeyHint" parent="Dialogues/DialogueAreaErie" index="1" unique_id=1923419492]
@@ -311,22 +337,47 @@ shape = SubResource("RectangleShape2D_12j5o")
 y_sort_enabled = false
 position = Vector2(639, 366)
 
-[node name="Doctor" parent="." index="7" unique_id=1135015437 instance=ExtResource("5_3g3of")]
-y_sort_enabled = false
-position = Vector2(1280, 980)
+[node name="Random1" type="Sprite2D" parent="." index="7" unique_id=1761482032]
+texture_filter = 1
+position = Vector2(954.99994, 531)
+scale = Vector2(4.723, 4.723)
+texture = SubResource("AtlasTexture_tgwus")
 
-[node name="GeorgieOldMan" parent="." index="8" unique_id=806170560 instance=ExtResource("5_3g3of")]
-y_sort_enabled = false
-position = Vector2(1655, 605)
+[node name="Random2" type="Sprite2D" parent="." index="8" unique_id=127870861]
+texture_filter = 1
+position = Vector2(472, 531)
+scale = Vector2(4.723, 4.723)
+texture = SubResource("AtlasTexture_hpiy0")
 
-[node name="Erie" parent="." index="9" unique_id=1436955038 instance=ExtResource("5_3g3of")]
-y_sort_enabled = false
-position = Vector2(1333, 428)
+[node name="Bully" type="Sprite2D" parent="." index="9" unique_id=399634750]
+texture_filter = 1
+position = Vector2(717, 523)
+scale = Vector2(4.723, 4.723)
+texture = SubResource("AtlasTexture_1a0xs")
 
-[node name="Lenora" parent="." index="10" unique_id=1931741377 instance=ExtResource("5_3g3of")]
+[node name="Doctor" type="Sprite2D" parent="." index="10" unique_id=1685651522]
+texture_filter = 1
+position = Vector2(1440, 805.00006)
+scale = Vector2(4.723209, 4.7232084)
+texture = SubResource("AtlasTexture_i0pll")
+
+[node name="GeorgieOldMan" type="Sprite2D" parent="." index="11" unique_id=979607333]
+texture_filter = 1
+position = Vector2(1600, 420)
+scale = Vector2(4.723, 4.723)
+texture = SubResource("AtlasTexture_dvw3h")
+
+[node name="Erie" type="Sprite2D" parent="." index="12" unique_id=496301668]
+z_index = 1
+texture_filter = 1
+position = Vector2(1361, 271)
+scale = Vector2(4.723, 4.723)
+texture = SubResource("AtlasTexture_3er6r")
+
+[node name="Lenora" parent="." index="13" unique_id=1931741377 instance=ExtResource("5_3g3of")]
 position = Vector2(687, 908)
 
-[node name="Black" type="ColorRect" parent="." index="11" unique_id=1953077563]
+[node name="Black" type="ColorRect" parent="." index="14" unique_id=1953077563]
 visible = false
 z_index = 999
 offset_right = 1920.0
@@ -340,4 +391,5 @@ color = Color(0, 0, 0, 1)
 [editable path="Dialogues/DialogueAreaOldGeorgie"]
 [editable path="Dialogues/DialogueAreaErie"]
 [editable path="Dialogues/DialogueAreaLenora"]
+[editable path="Tio"]
 [editable path="Lenora"]
