@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dan8i2g5ui2bc"]
+
+[ext_resource type="PackedScene" uid="uid://btwtjqlno0g88" path="res://src/objects/base_character/base_character.tscn" id="1_46k86"]
+[ext_resource type="Script" uid="uid://dt387u6d4a52d" path="res://src/objects/npcs/lenora/lenora.gd" id="2_tyx6l"]
+[ext_resource type="Texture2D" uid="uid://csn3aobv71h3x" path="res://assets/characters/npcs/main_characters/lenora_esposa-Sheet.png" id="2_xboeo"]
+
+[sub_resource type="Animation" id="Animation_xboeo"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_tyx6l"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xboeo"]
+_data = {
+&"idle": SubResource("Animation_xboeo"),
+&"new_animation": SubResource("Animation_tyx6l")
+}
+
+[node name="Lenora" unique_id=1222905426 instance=ExtResource("1_46k86")]
+script = ExtResource("2_tyx6l")
+
+[node name="Sprite2D" parent="." index="0" unique_id=23594111]
+texture = ExtResource("2_xboeo")
+hframes = 11
+vframes = 1
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=2083828268]
+libraries/idle = SubResource("AnimationLibrary_xboeo")

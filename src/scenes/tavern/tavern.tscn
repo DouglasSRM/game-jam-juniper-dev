@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dr7p4hsm2d8x7" path="res://assets/portraits/reggieportraits/reggienormal_falando_animado.png" id="11_5tpw2"]
 [ext_resource type="Texture2D" uid="uid://dt4bouhththg6" path="res://assets/portraits/alexportraits/alecconfuso_animado.png" id="12_i0pll"]
 [ext_resource type="Texture2D" uid="uid://ctvyhqp15x6el" path="res://assets/characters/npcs/main_characters/sprites_taverna.png" id="15_i0pll"]
+[ext_resource type="PackedScene" uid="uid://dan8i2g5ui2bc" path="res://src/objects/npcs/lenora/lenora.tscn" id="16_hpiy0"]
 
 [sub_resource type="Resource" id="Resource_gygia"]
 script = ExtResource("6_a01i5")
@@ -30,7 +31,7 @@ script = ExtResource("6_a01i5")
 speaker_name = "Alex"
 speaker_img = ExtResource("8_5tpw2")
 speaker_img_HFrames = 2
-text = "This is not fair! if you [shake rate=20.0 level=5 connected=0]didn't stop me[/shake], I would've beaten his ass up!"
+text = "This is not fair! if you [shake rate=20.0 level=5 connected=0]didn't stop me[/shake], I would've taught him a lesson!"
 speaker_on_right = false
 metadata/_custom_type_script = "uid://bu36cy11lb2of"
 
@@ -374,10 +375,7 @@ position = Vector2(1361, 271)
 scale = Vector2(4.723, 4.723)
 texture = SubResource("AtlasTexture_3er6r")
 
-[node name="Lenora" parent="." index="13" unique_id=1931741377 instance=ExtResource("5_3g3of")]
-position = Vector2(687, 908)
-
-[node name="Black" type="ColorRect" parent="." index="14" unique_id=1953077563]
+[node name="Black" type="ColorRect" parent="." index="13" unique_id=1953077563]
 visible = false
 z_index = 999
 offset_right = 1920.0
@@ -385,6 +383,10 @@ offset_bottom = 1080.0
 pivot_offset = Vector2(960, 540)
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Lenora" parent="." index="14" unique_id=97282244 instance=ExtResource("16_hpiy0")]
+texture_filter = 1
+position = Vector2(686, 901)
 
 [editable path="Dialogues/DialogueAreaUncle"]
 [editable path="Dialogues/DialogueAreaDoctor"]

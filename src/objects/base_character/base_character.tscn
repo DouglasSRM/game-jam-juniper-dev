@@ -2,93 +2,24 @@
 
 [ext_resource type="Script" uid="uid://bjgff8nka7rvg" path="res://src/objects/base_character/base_character.gd" id="1_yogsp"]
 
-[sub_resource type="Animation" id="Animation_8afob"]
+[sub_resource type="Animation" id="Animation_f0r87"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_gmlin"]
-resource_name = "walk_left"
-length = 1.6
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(6, 0), Vector2i(7, 0), Vector2i(6, 0), Vector2i(7, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_lvxji"]
-resource_name = "walk_right"
-length = 1.6
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(6, 0), Vector2i(7, 0), Vector2i(6, 0), Vector2i(7, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_p47bc"]
-resource_name = "walk_up"
-length = 1.6
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(8, 0), Vector2i(9, 0), Vector2i(10, 0), Vector2i(9, 0)]
+"values": [7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vtukt"]
 _data = {
-&"RESET": SubResource("Animation_8afob"),
-&"walk_left": SubResource("Animation_gmlin"),
-&"walk_right": SubResource("Animation_lvxji"),
-&"walk_up": SubResource("Animation_p47bc")
+&"RESET": SubResource("Animation_f0r87")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yogsp"]
@@ -104,6 +35,7 @@ scale = Vector2(6, 6)
 offset = Vector2(0, -16)
 hframes = 4
 vframes = 4
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2083828268]
 libraries/ = SubResource("AnimationLibrary_vtukt")
