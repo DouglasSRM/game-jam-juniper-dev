@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://du4qg8fqa1s0m" path="res://src/scenes/dungeon_floor_2/dungeon_floor_2.gd" id="2_qdbnf"]
 [ext_resource type="PackedScene" uid="uid://yi2f5p61t3oc" path="res://src/objects/interactable/interactable.tscn" id="3_b14tc"]
 [ext_resource type="TileSet" uid="uid://bsllcumvbuyx2" path="res://src/resources/tile_set.tres" id="3_ppyxc"]
+[ext_resource type="FontFile" uid="uid://3mpujxnlxp4g" path="res://fonts/antiquity-print.ttf" id="5_e1bqj"]
+[ext_resource type="Texture2D" uid="uid://clo17x6ajdadg" path="res://assets/general_assets/parchment.png" id="6_j74jb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppyxc"]
 size = Vector2(222, 191)
@@ -45,16 +47,15 @@ tile_map_data = PackedByteArray("AAACAP//AQAKAAAAAAACAAAAAQAKAAEAAAACAAEAAQAKAAI
 tile_map_data = PackedByteArray("AAAPAAgAAQAGAAQAAAAQAAgAAQAGAAYAAAAKAAMAAQAGAAQAAAALAAMAAQAIAAQAAAACAAMAAQAHAAYAAAADAAMAAQAHAAQAAAACAAYAAQAHAAUAAAAEAAEAAQAHAAYAAAAHAAIAAQAHAAYAAAAJAAEAAQAGAAUAAAAVAAMAAQAGAAQAAAAUAAMAAQAHAAUAAAAVAAQAAQAGAAYAAAAWAAMAAQAHAAYAAAATAAgAAQAHAAYAAAAUAAYAAQAHAAYAAAAXAAYAAQAHAAYAAAAWAAYAAQAHAAQAAAAHAAEAAQAHAAUAAAAKAAcAAQAHAAUAAAAKAA0AAQAGAAUAAAANAAwAAQAGAAYAAAAKAAsAAQAHAAUAAAANAAkAAQAGAAQAAAAKAAkAAQAHAAYAAAA=")
 
 [node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(829600880) index="0" unique_id=689924629 instance=ExtResource("3_b14tc")]
-visible = false
-position = Vector2(958, 248)
-function_call = "go_to_next_scene"
+position = Vector2(554, 270)
+function_call = "show_boss_text"
 
 [node name="CollisionShape2D" parent="Interactables/Interactable" index="0" unique_id=1559650857]
-visible = false
 position = Vector2(16, 29)
 shape = SubResource("RectangleShape2D_ppyxc")
 
 [node name="KeyHint" parent="Interactables/Interactable" index="1" unique_id=316488180]
+visible = true
 offset_left = 145.0
 offset_top = -112.0
 offset_right = 195.0
@@ -67,6 +68,25 @@ rotation = 1.5707964
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactables/TriggerNextScene" index="0" unique_id=1191863159]
 position = Vector2(978, 132)
 shape = SubResource("RectangleShape2D_b14tc")
+
+[node name="BossLabel" type="Label" parent="." index="5" unique_id=939188182]
+texture_filter = 1
+offset_left = 383.0
+offset_top = 145.0
+offset_right = 768.0
+offset_bottom = 199.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("5_e1bqj")
+theme_override_font_sizes/font_size = 36
+text = "Wilhelm Defeated"
+
+[node name="Parchment" type="Sprite2D" parent="." index="6" unique_id=504027682]
+texture_filter = 1
+position = Vector2(572, 293)
+scale = Vector2(4, 4)
+texture = ExtResource("6_j74jb")
 
 [connection signal="body_entered" from="Interactables/TriggerNextScene" to="." method="_on_trigger_next_scene_body_entered"]
 
