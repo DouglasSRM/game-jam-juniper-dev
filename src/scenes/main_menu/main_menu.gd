@@ -10,6 +10,7 @@ class_name MainMenu extends Control
 @onready var pendulum: AnimatedSprite2D = $background/pendulum
 @onready var main_menu: VBoxContainer = $background/main_menu
 @onready var art: Sprite2D = $background/art
+@onready var title: Sprite2D = $background/Title
 
 var acc := 0.6
 
@@ -22,6 +23,7 @@ func _ready() -> void:
 	settings_menu.visibility_changed.connect(Callable(self, "opcoes"))
 	main_menu.modulate.a = 0.
 	art.modulate.a = 0.
+	title.modulate.a = 0.
 
 func opcoes():
 	quit.disabled = settings_menu.visible
@@ -55,10 +57,19 @@ func _on_pendulun_animation_finished() -> void:
 func show_art() -> void:
 	var tween = create_tween()
 
+	#var tween_title = create_tween()
+	#tween_title.tween_property(title, "modulate:a", 1., .5)
+	
 	tween.tween_property(art, "modulate:a", 1., .5)
-
+	show_title()
 	await tween.finished
+	
 	show_menu()
+
+func show_title() -> void:
+	var tween_title = create_tween()
+	tween_title.tween_property(title, "modulate:a", 1., .3)
+	await tween_title.finished
 
 func show_menu() -> void:
 	var tween = create_tween()
